@@ -38,6 +38,7 @@ VM_USER_CFLAGS = \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
+	/home/hamna/Baby-Kyber-Accelerator/random_generator.o \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
@@ -45,7 +46,7 @@ VM_USER_CLASSES = \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-	/home/hamna/Baby-Kyber-Accelerator/src \
+	. \
 
 
 ### Default rules...
@@ -57,7 +58,7 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-RandomNumberGenerator_tb.o: /home/hamna/Baby-Kyber-Accelerator/src/RandomNumberGenerator_tb.cpp
+RandomNumberGenerator_tb.o: RandomNumberGenerator_tb.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)

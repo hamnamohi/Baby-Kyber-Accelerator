@@ -7,31 +7,35 @@
 
 #include "verilated.h"
 
+
 class VRandomNumberGenerator__Syms;
 
-class VRandomNumberGenerator___024root final : public VerilatedModule {
+class alignas(VL_CACHE_LINE_BYTES) VRandomNumberGenerator___024root final : public VerilatedModule {
   public:
 
     // DESIGN SPECIFIC STATE
     VL_IN8(clk,0,0);
     VL_IN8(rst_n,0,0);
     VL_IN8(enable,0,0);
-    VL_OUT8(random_number,5,0);
-    CData/*5:0*/ rng__DOT__rand_value;
-    CData/*0:0*/ __Vclklast__TOP__clk;
-    CData/*0:0*/ __Vclklast__TOP__rst_n;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__clk__0;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__rst_n__0;
+    CData/*0:0*/ __VactContinue;
+    VL_OUT(random_number,31,0);
+    IData/*31:0*/ __VactIterCount;
+    VlTriggerVec<1> __VactTriggered;
+    VlTriggerVec<1> __VnbaTriggered;
 
     // INTERNAL VARIABLES
     VRandomNumberGenerator__Syms* const vlSymsp;
 
     // CONSTRUCTORS
-    VRandomNumberGenerator___024root(VRandomNumberGenerator__Syms* symsp, const char* name);
+    VRandomNumberGenerator___024root(VRandomNumberGenerator__Syms* symsp, const char* v__name);
     ~VRandomNumberGenerator___024root();
     VL_UNCOPYABLE(VRandomNumberGenerator___024root);
 
     // INTERNAL METHODS
     void __Vconfigure(bool first);
-} VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
+};
 
 
 #endif  // guard
