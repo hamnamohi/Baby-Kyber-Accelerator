@@ -167,13 +167,7 @@ VL_ATTR_COLD void VPolynomialMatrixMultiplication___024root___ctor_var_reset(VPo
         vlSelf->polynomial_out[__Vi0] = VL_RAND_RESET_I(32);
     }
     for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
-        vlSelf->PolynomialMatrixMultiplication__DOT__result[__Vi0] = VL_RAND_RESET_I(32);
-    }
-    for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
         vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[__Vi0] = VL_RAND_RESET_I(32);
-    }
-    for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
-        vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[__Vi0] = VL_RAND_RESET_I(32);
     }
     vlSelf->__Vtrigprevexpr___TOP__clk__0 = VL_RAND_RESET_I(1);
     vlSelf->__Vtrigprevexpr___TOP__rst_n__0 = VL_RAND_RESET_I(1);

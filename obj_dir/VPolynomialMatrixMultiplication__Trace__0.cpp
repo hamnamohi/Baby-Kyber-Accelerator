@@ -24,34 +24,26 @@ void VPolynomialMatrixMultiplication___024root__trace_chg_0_sub_0(VPolynomialMat
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 1);
     // Body
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[1U])) {
-        bufp->chgIData(oldp+0,(vlSelf->PolynomialMatrixMultiplication__DOT__result[0]),32);
-        bufp->chgIData(oldp+1,(vlSelf->PolynomialMatrixMultiplication__DOT__result[1]),32);
-        bufp->chgIData(oldp+2,(vlSelf->PolynomialMatrixMultiplication__DOT__result[2]),32);
-        bufp->chgIData(oldp+3,(vlSelf->PolynomialMatrixMultiplication__DOT__result[3]),32);
-        bufp->chgIData(oldp+4,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[0]),32);
-        bufp->chgIData(oldp+5,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[1]),32);
-        bufp->chgIData(oldp+6,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[2]),32);
-        bufp->chgIData(oldp+7,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[3]),32);
-        bufp->chgIData(oldp+8,(vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[0]),32);
-        bufp->chgIData(oldp+9,(vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[1]),32);
-        bufp->chgIData(oldp+10,(vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[2]),32);
-        bufp->chgIData(oldp+11,(vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[3]),32);
+        bufp->chgIData(oldp+0,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[0]),32);
+        bufp->chgIData(oldp+1,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[1]),32);
+        bufp->chgIData(oldp+2,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[2]),32);
+        bufp->chgIData(oldp+3,(vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[3]),32);
     }
-    bufp->chgBit(oldp+12,(vlSelf->clk));
-    bufp->chgBit(oldp+13,(vlSelf->rst_n));
-    bufp->chgBit(oldp+14,(vlSelf->enable));
-    bufp->chgIData(oldp+15,(vlSelf->polynomial1[0]),32);
-    bufp->chgIData(oldp+16,(vlSelf->polynomial1[1]),32);
-    bufp->chgIData(oldp+17,(vlSelf->polynomial1[2]),32);
-    bufp->chgIData(oldp+18,(vlSelf->polynomial1[3]),32);
-    bufp->chgIData(oldp+19,(vlSelf->polynomial2[0]),32);
-    bufp->chgIData(oldp+20,(vlSelf->polynomial2[1]),32);
-    bufp->chgIData(oldp+21,(vlSelf->polynomial2[2]),32);
-    bufp->chgIData(oldp+22,(vlSelf->polynomial2[3]),32);
-    bufp->chgIData(oldp+23,(vlSelf->polynomial_out[0]),32);
-    bufp->chgIData(oldp+24,(vlSelf->polynomial_out[1]),32);
-    bufp->chgIData(oldp+25,(vlSelf->polynomial_out[2]),32);
-    bufp->chgIData(oldp+26,(vlSelf->polynomial_out[3]),32);
+    bufp->chgBit(oldp+4,(vlSelf->clk));
+    bufp->chgBit(oldp+5,(vlSelf->rst_n));
+    bufp->chgBit(oldp+6,(vlSelf->enable));
+    bufp->chgIData(oldp+7,(vlSelf->polynomial1[0]),32);
+    bufp->chgIData(oldp+8,(vlSelf->polynomial1[1]),32);
+    bufp->chgIData(oldp+9,(vlSelf->polynomial1[2]),32);
+    bufp->chgIData(oldp+10,(vlSelf->polynomial1[3]),32);
+    bufp->chgIData(oldp+11,(vlSelf->polynomial2[0]),32);
+    bufp->chgIData(oldp+12,(vlSelf->polynomial2[1]),32);
+    bufp->chgIData(oldp+13,(vlSelf->polynomial2[2]),32);
+    bufp->chgIData(oldp+14,(vlSelf->polynomial2[3]),32);
+    bufp->chgIData(oldp+15,(vlSelf->polynomial_out[0]),32);
+    bufp->chgIData(oldp+16,(vlSelf->polynomial_out[1]),32);
+    bufp->chgIData(oldp+17,(vlSelf->polynomial_out[2]),32);
+    bufp->chgIData(oldp+18,(vlSelf->polynomial_out[3]),32);
 }
 
 void VPolynomialMatrixMultiplication___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {

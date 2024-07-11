@@ -26,9 +26,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPolynomialMatrixMultiplication___024root fin
     VL_IN(polynomial1[4],31,0);
     VL_IN(polynomial2[4],31,0);
     VL_OUT(polynomial_out[4],31,0);
-    VlUnpacked<IData/*31:0*/, 4> PolynomialMatrixMultiplication__DOT__result;
     VlUnpacked<IData/*31:0*/, 4> PolynomialMatrixMultiplication__DOT__temp_result;
-    VlUnpacked<IData/*31:0*/, 4> PolynomialMatrixMultiplication__DOT__subtracted_result;
     VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
     VlTriggerVec<1> __VstlTriggered;
     VlTriggerVec<1> __VicoTriggered;

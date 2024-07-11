@@ -24,13 +24,9 @@ VL_INLINE_OPT void VPolynomialMatrixMultiplication___024root___ico_sequent__TOP_
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPolynomialMatrixMultiplication___024root___ico_sequent__TOP__0\n"); );
     // Body
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[0U] = 0U;
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[0U] = 0U;
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[1U] = 0U;
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[1U] = 0U;
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[2U] = 0U;
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[2U] = 0U;
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[3U] = 0U;
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[3U] = 0U;
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[0U] 
         = (vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
            [0U] + VL_MULS_III(32, vlSelf->polynomial1
@@ -111,30 +107,18 @@ VL_INLINE_OPT void VPolynomialMatrixMultiplication___024root___ico_sequent__TOP_
            [2U] - VL_MULS_III(32, vlSelf->polynomial1
                               [3U], vlSelf->polynomial2
                               [3U]));
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[0U] 
+    vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[0U] 
         = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                          [0U], (IData)(0x11U));
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[1U] 
+    vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[1U] 
         = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                          [1U], (IData)(0x11U));
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[2U] 
+    vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[2U] 
         = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                          [2U], (IData)(0x11U));
-    vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result[3U] 
+    vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[3U] 
         = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                          [3U], (IData)(0x11U));
-    vlSelf->PolynomialMatrixMultiplication__DOT__result[0U] 
-        = vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result
-        [0U];
-    vlSelf->PolynomialMatrixMultiplication__DOT__result[1U] 
-        = vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result
-        [1U];
-    vlSelf->PolynomialMatrixMultiplication__DOT__result[2U] 
-        = vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result
-        [2U];
-    vlSelf->PolynomialMatrixMultiplication__DOT__result[3U] 
-        = vlSelf->PolynomialMatrixMultiplication__DOT__subtracted_result
-        [3U];
 }
 
 void VPolynomialMatrixMultiplication___024root___eval_triggers__ico(VPolynomialMatrixMultiplication___024root* vlSelf);
@@ -194,14 +178,14 @@ VL_INLINE_OPT void VPolynomialMatrixMultiplication___024root___nba_sequent__TOP_
     __VdlySet__polynomial_out__v4 = 0U;
     if (vlSelf->rst_n) {
         if (vlSelf->enable) {
-            __VdlyVal__polynomial_out__v0 = vlSelf->PolynomialMatrixMultiplication__DOT__result
+            __VdlyVal__polynomial_out__v0 = vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                 [0U];
             __VdlySet__polynomial_out__v0 = 1U;
-            __VdlyVal__polynomial_out__v1 = vlSelf->PolynomialMatrixMultiplication__DOT__result
+            __VdlyVal__polynomial_out__v1 = vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                 [1U];
-            __VdlyVal__polynomial_out__v2 = vlSelf->PolynomialMatrixMultiplication__DOT__result
+            __VdlyVal__polynomial_out__v2 = vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                 [2U];
-            __VdlyVal__polynomial_out__v3 = vlSelf->PolynomialMatrixMultiplication__DOT__result
+            __VdlyVal__polynomial_out__v3 = vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
                 [3U];
         }
     } else {
