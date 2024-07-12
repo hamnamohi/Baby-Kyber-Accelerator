@@ -8,33 +8,26 @@ vluint64_t sim_time = 0;
 int main(int argc, char** argv) {
     Verilated::commandArgs(argc, argv);
 
-    // Instantiate the Verilated model
     VPolynomialMatrixMultiplication* dut = new VPolynomialMatrixMultiplication;
 
-    // Enable tracing with VCD file
     Verilated::traceEverOn(true);
     VerilatedVcdC* m_trace = new VerilatedVcdC;
-    dut->trace(m_trace, 99); // Trace 99 levels of hierarchy
+    dut->trace(m_trace, 99); 
     m_trace->open("pmm.vcd");
 
-    // Initialize signals
     dut->clk = 0;
     dut->rst_n = 0;
     dut->enable = 0;
 
-    // Reset and initial evaluation
     dut->eval();
-    m_trace->dump(sim_time++); // Dump initial state
+    m_trace->dump(sim_time++); 
 
-    // Release reset
     dut->rst_n = 1;
     dut->eval();
-    m_trace->dump(sim_time++); // Dump after releasing reset
+    m_trace->dump(sim_time++); 
 
-    // Enable and run for several cycles
     dut->enable = 1;
 
-    // Set polynomial inputs
     dut->polynomial1[0] = 11;
     dut->polynomial1[1] = 16;
     dut->polynomial1[2] = 16;
@@ -46,11 +39,9 @@ int main(int argc, char** argv) {
     dut->polynomial2[3] = -1;
 
     for (int i = 0; i < 2; i++) {
-        dut->clk = !dut->clk; // Toggle clock
+        dut->clk = !dut->clk; 
         dut->eval();
-        m_trace->dump(sim_time++); // Dump each clock cycle
-
-        // Print polynomial output on positive clock edge
+        m_trace->dump(sim_time++);
         if (dut->clk) {
             std::cout << "Time: " << sim_time << std::endl;
             for (int k = 0; k < 4; k++) {
@@ -59,7 +50,6 @@ int main(int argc, char** argv) {
         }
     }
 
-    // Final evaluation and close VCD trace file
     dut->final();
     m_trace->close();
     delete dut;
