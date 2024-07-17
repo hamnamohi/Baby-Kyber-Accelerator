@@ -16,7 +16,7 @@ extern "C" {
 
 
     // DPI IMPORTS
-    // DPI import at RandomNumberGenerator.sv:12:33
+    // DPI import at RandomNumberGenerator.sv:11:33
     extern int generate_random_number(int min_value, int max_value);
 
 #ifdef __cplusplus

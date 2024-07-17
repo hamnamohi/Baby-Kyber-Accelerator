@@ -30,6 +30,7 @@ VM_CLASSES_FAST += \
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
 	VKeyGeneration___024root__Slow \
+	VKeyGeneration___024root__DepSet_h4b0e8078__0__Slow \
 	VKeyGeneration___024root__DepSet_h316aa19a__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization

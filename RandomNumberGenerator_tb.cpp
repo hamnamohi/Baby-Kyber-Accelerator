@@ -7,17 +7,13 @@ vluint64_t sim_time = 0;
 
 int main(int argc, char** argv) {
     Verilated::commandArgs(argc, argv);
-
-    // Instantiate the Verilated model
     VRandomNumberGenerator* dut = new VRandomNumberGenerator;
 
-    // Enable tracing with VCD file
     Verilated::traceEverOn(true);
     VerilatedVcdC* m_trace = new VerilatedVcdC;
-    dut->trace(m_trace, 99); // Trace 99 levels of hierarchy
+    dut->trace(m_trace, 99); 
     m_trace->open("rng.vcd");
 
-    // Initialize signals
     dut->clk = 0;
     dut->rst_n = 0;
     dut->enable = 0;

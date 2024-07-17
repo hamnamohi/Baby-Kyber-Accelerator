@@ -108,17 +108,49 @@ VL_INLINE_OPT void VPolynomialMatrixMultiplication___024root___ico_sequent__TOP_
                               [3U], vlSelf->polynomial2
                               [3U]));
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[0U] 
-        = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
-                         [0U], (IData)(0x11U));
+        = (VL_GTS_III(32, 0U, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                      [0U]) ? VL_MODDIVS_III(32, ((IData)(0x11U) 
+                                                  + 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                                                                 [0U], (IData)(0x11U))), (IData)(0x11U))
+            : VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                             [0U], (IData)(0x11U)));
+    VL_WRITEF_NX("%11d\n",0,32,vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                 [0U]);
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[1U] 
-        = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
-                         [1U], (IData)(0x11U));
+        = (VL_GTS_III(32, 0U, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                      [1U]) ? VL_MODDIVS_III(32, ((IData)(0x11U) 
+                                                  + 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                                                                 [1U], (IData)(0x11U))), (IData)(0x11U))
+            : VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                             [1U], (IData)(0x11U)));
+    VL_WRITEF_NX("%11d\n",0,32,vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                 [1U]);
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[2U] 
-        = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
-                         [2U], (IData)(0x11U));
+        = (VL_GTS_III(32, 0U, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                      [2U]) ? VL_MODDIVS_III(32, ((IData)(0x11U) 
+                                                  + 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                                                                 [2U], (IData)(0x11U))), (IData)(0x11U))
+            : VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                             [2U], (IData)(0x11U)));
+    VL_WRITEF_NX("%11d\n",0,32,vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                 [2U]);
     vlSelf->PolynomialMatrixMultiplication__DOT__temp_result[3U] 
-        = VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
-                         [3U], (IData)(0x11U));
+        = (VL_GTS_III(32, 0U, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                      [3U]) ? VL_MODDIVS_III(32, ((IData)(0x11U) 
+                                                  + 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                                                                 [3U], (IData)(0x11U))), (IData)(0x11U))
+            : VL_MODDIVS_III(32, vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                             [3U], (IData)(0x11U)));
+    VL_WRITEF_NX("%11d\n",0,32,vlSelf->PolynomialMatrixMultiplication__DOT__temp_result
+                 [3U]);
 }
 
 void VPolynomialMatrixMultiplication___024root___eval_triggers__ico(VPolynomialMatrixMultiplication___024root* vlSelf);

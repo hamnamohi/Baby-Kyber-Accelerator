@@ -13,7 +13,8 @@ VKeyGeneration::VKeyGeneration(VerilatedContext* _vcontextp__, const char* _vcna
     , clk{vlSymsp->TOP.clk}
     , rst_n{vlSymsp->TOP.rst_n}
     , enable{vlSymsp->TOP.enable}
-    , keys{vlSymsp->TOP.keys}
+    , secretkey{vlSymsp->TOP.secretkey}
+    , result{vlSymsp->TOP.result}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

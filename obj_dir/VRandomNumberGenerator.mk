@@ -38,7 +38,7 @@ VM_USER_CFLAGS = \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
-	/home/hamna/Baby-Kyber-Accelerator/random_generator.o \
+	/home/hamna/Baby-Kyber-Accelerator/generate_random_number.o \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \

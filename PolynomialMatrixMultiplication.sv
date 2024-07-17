@@ -27,8 +27,14 @@ module PolynomialMatrixMultiplication #() (
         end
 
         for (int k = 0; k < 4; k++) begin
-            temp_result[k] = temp_result[k] % 17;
-        end
+    if (temp_result[k] < 0) begin
+        temp_result[k] = (temp_result[k] % 17 + 17) % 17;
+    end else begin
+        temp_result[k] = temp_result[k] % 17;
+    end
+    // $display(temp_result[k]);
+end
+
 
     end
 

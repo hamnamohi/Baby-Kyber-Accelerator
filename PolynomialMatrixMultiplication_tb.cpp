@@ -33,9 +33,9 @@ int main(int argc, char** argv) {
     dut->polynomial1[2] = 16;
     dut->polynomial1[3] = 6;
 
-    dut->polynomial2[0] = 0;
-    dut->polynomial2[1] = 0;
-    dut->polynomial2[2] = 1;
+    dut->polynomial2[0] = 0;   
+    dut->polynomial2[1] = 1;
+    dut->polynomial2[2] = -1;
     dut->polynomial2[3] = -1;
 
     for (int i = 0; i < 2; i++) {

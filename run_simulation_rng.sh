@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Clean previous build files
-g++ -c random_generator.cpp
+g++ -c generate_random_number.cpp
 
-verilator -Wall --trace -cc RandomNumberGenerator.sv --exe RandomNumberGenerator_tb.cpp /home/hamna/Baby-Kyber-Accelerator/random_generator.o
+verilator -Wall --trace -cc RandomNumberGenerator.sv --exe RandomNumberGenerator_tb.cpp /home/hamna/Baby-Kyber-Accelerator/generate_random_number.o
 
 make -j -C obj_dir -f VRandomNumberGenerator.mk VRandomNumberGenerator
 
  ./obj_dir/VRandomNumberGenerator
 
- gtkwave rng.vcd
+#  gtkwave rng.vcd
