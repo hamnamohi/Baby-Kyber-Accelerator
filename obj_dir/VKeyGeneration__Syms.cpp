@@ -18,7 +18,7 @@ VKeyGeneration__Syms::VKeyGeneration__Syms(VerilatedContext* contextp, const cha
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(2113);
+        Verilated::stackCheck(1973);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);

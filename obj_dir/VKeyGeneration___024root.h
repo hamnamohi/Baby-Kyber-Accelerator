@@ -64,7 +64,6 @@ class alignas(VL_CACHE_LINE_BYTES) VKeyGeneration___024root final : public Veril
         IData/*31:0*/ KeyGeneration__DOT__unnamedblk3__DOT__unnamedblk4__DOT__j;
         IData/*31:0*/ KeyGeneration__DOT__unnamedblk6__DOT__i;
         IData/*31:0*/ KeyGeneration__DOT__unnamedblk7__DOT__i;
-        IData/*31:0*/ KeyGeneration__DOT__unnamedblk5__DOT__i;
         IData/*31:0*/ __VactIterCount;
         VL_OUT(secretkey[2][4],31,0);
         VL_OUT(result[2][4],31,0);
@@ -80,9 +79,9 @@ class alignas(VL_CACHE_LINE_BYTES) VKeyGeneration___024root final : public Veril
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellout__poly_mult0__polynomial_out;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellinp__poly_mult0__polynomial2;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellinp__poly_mult0__polynomial1;
+        VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellout__poly_mult1__polynomial_out;
     };
     struct {
-        VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellout__poly_mult1__polynomial_out;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellinp__poly_mult1__polynomial2;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellinp__poly_mult1__polynomial1;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT____Vcellout__poly_mult2__polynomial_out;
@@ -95,7 +94,7 @@ class alignas(VL_CACHE_LINE_BYTES) VKeyGeneration___024root final : public Veril
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__poly_mult1__DOT__temp_result;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__poly_mult2__DOT__temp_result;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__poly_mult3__DOT__temp_result;
-        VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
+        VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
     };
     VlTriggerVec<1> __VstlTriggered;
     VlTriggerVec<1> __VicoTriggered;

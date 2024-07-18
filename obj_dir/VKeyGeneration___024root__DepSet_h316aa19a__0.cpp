@@ -14,6 +14,7 @@ void VKeyGeneration___024root___eval_ico(VKeyGeneration___024root* vlSelf) {
     // Body
     if ((1ULL & vlSelf->__VicoTriggered.word(0U))) {
         VKeyGeneration___024root___ico_sequent__TOP__0(vlSelf);
+        vlSelf->__Vm_traceActivity[1U] = 1U;
     }
 }
 
@@ -22,9 +23,222 @@ VL_INLINE_OPT void VKeyGeneration___024root___ico_sequent__TOP__0(VKeyGeneration
     VKeyGeneration__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VKeyGeneration___024root___ico_sequent__TOP__0\n"); );
     // Body
-    vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable 
-        = ((~ (IData)(vlSelf->KeyGeneration__DOT__stop_random_generation)) 
-           & (IData)(vlSelf->enable));
+    if (vlSelf->enable) {
+        vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable 
+            = (1U & (~ (IData)(vlSelf->KeyGeneration__DOT__stop_random_generation)));
+        vlSelf->KeyGeneration__DOT__added[0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[0U] = 0U;
+        vlSelf->result[0U][0U] = 0U;
+        vlSelf->result[1U][0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[1U] = 0U;
+        vlSelf->result[0U][1U] = 0U;
+        vlSelf->result[1U][1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[2U] = 0U;
+        vlSelf->result[0U][2U] = 0U;
+        vlSelf->result[1U][2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[3U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[3U] = 0U;
+        vlSelf->result[0U][3U] = 0U;
+        vlSelf->result[1U][3U] = 0U;
+        vlSelf->KeyGeneration__DOT__unnamedblk6__DOT__i = 4U;
+        vlSelf->KeyGeneration__DOT__unnamedblk7__DOT__i = 4U;
+        vlSelf->KeyGeneration__DOT__added[0U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [0U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [0U]);
+        vlSelf->KeyGeneration__DOT__added1[0U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [0U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [0U]);
+        vlSelf->KeyGeneration__DOT__added[0U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [0U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [0U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [0U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[0U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [0U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [0U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [0U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added[1U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [1U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [1U]);
+        vlSelf->KeyGeneration__DOT__added1[1U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [1U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [1U]);
+        vlSelf->KeyGeneration__DOT__added[1U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [1U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [1U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [1U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[1U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [1U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [1U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [1U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added[2U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [2U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [2U]);
+        vlSelf->KeyGeneration__DOT__added1[2U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [2U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [2U]);
+        vlSelf->KeyGeneration__DOT__added[2U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [2U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [2U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [2U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[2U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [2U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [2U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [2U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added[3U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [3U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [3U]);
+        vlSelf->KeyGeneration__DOT__added1[3U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [3U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [3U]);
+        vlSelf->KeyGeneration__DOT__added[3U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [3U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [3U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [3U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[3U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [3U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [3U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [3U], (IData)(0x11U)));
+        vlSelf->result[0U][0U] = (vlSelf->KeyGeneration__DOT__added
+                                  [0U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][0U]);
+        vlSelf->result[1U][0U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [0U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][0U]);
+        vlSelf->result[0U][1U] = (vlSelf->KeyGeneration__DOT__added
+                                  [1U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][1U]);
+        vlSelf->result[1U][1U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [1U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][1U]);
+        vlSelf->result[0U][2U] = (vlSelf->KeyGeneration__DOT__added
+                                  [2U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][2U]);
+        vlSelf->result[1U][2U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [2U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][2U]);
+        vlSelf->result[0U][3U] = (vlSelf->KeyGeneration__DOT__added
+                                  [3U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][3U]);
+        vlSelf->result[1U][3U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [3U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][3U]);
+    } else {
+        vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable = 0U;
+        vlSelf->KeyGeneration__DOT__added[0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[0U] = 0U;
+        vlSelf->result[0U][0U] = 0U;
+        vlSelf->result[1U][0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[1U] = 0U;
+        vlSelf->result[0U][1U] = 0U;
+        vlSelf->result[1U][1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[2U] = 0U;
+        vlSelf->result[0U][2U] = 0U;
+        vlSelf->result[1U][2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[3U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[3U] = 0U;
+        vlSelf->result[0U][3U] = 0U;
+        vlSelf->result[1U][3U] = 0U;
+    }
 }
 
 void VKeyGeneration___024root___eval_triggers__ico(VKeyGeneration___024root* vlSelf);
@@ -59,7 +273,7 @@ void VKeyGeneration___024root___eval_nba(VKeyGeneration___024root* vlSelf) {
     // Body
     if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
         VKeyGeneration___024root___nba_sequent__TOP__0(vlSelf);
-        vlSelf->__Vm_traceActivity[1U] = 1U;
+        vlSelf->__Vm_traceActivity[2U] = 1U;
     }
 }
 
@@ -198,38 +412,6 @@ VL_INLINE_OPT void VKeyGeneration___024root___nba_sequent__TOP__0(VKeyGeneration
     __VdlyVal__KeyGeneration__DOT__e__v6 = 0;
     IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__e__v7;
     __VdlyVal__KeyGeneration__DOT__e__v7 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added__v0;
-    __VdlyVal__KeyGeneration__DOT__added__v0 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added__v1;
-    __VdlyVal__KeyGeneration__DOT__added__v1 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added__v2;
-    __VdlyVal__KeyGeneration__DOT__added__v2 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added__v3;
-    __VdlyVal__KeyGeneration__DOT__added__v3 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added1__v0;
-    __VdlyVal__KeyGeneration__DOT__added1__v0 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added1__v1;
-    __VdlyVal__KeyGeneration__DOT__added1__v1 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added1__v2;
-    __VdlyVal__KeyGeneration__DOT__added1__v2 = 0;
-    IData/*31:0*/ __VdlyVal__KeyGeneration__DOT__added1__v3;
-    __VdlyVal__KeyGeneration__DOT__added1__v3 = 0;
-    IData/*31:0*/ __VdlyVal__result__v0;
-    __VdlyVal__result__v0 = 0;
-    IData/*31:0*/ __VdlyVal__result__v1;
-    __VdlyVal__result__v1 = 0;
-    IData/*31:0*/ __VdlyVal__result__v2;
-    __VdlyVal__result__v2 = 0;
-    IData/*31:0*/ __VdlyVal__result__v3;
-    __VdlyVal__result__v3 = 0;
-    IData/*31:0*/ __VdlyVal__result__v4;
-    __VdlyVal__result__v4 = 0;
-    IData/*31:0*/ __VdlyVal__result__v5;
-    __VdlyVal__result__v5 = 0;
-    IData/*31:0*/ __VdlyVal__result__v6;
-    __VdlyVal__result__v6 = 0;
-    IData/*31:0*/ __VdlyVal__result__v7;
-    __VdlyVal__result__v7 = 0;
     IData/*31:0*/ __VdlyVal__KeyGeneration__DOT____Vcellout__poly_mult0__polynomial_out__v0;
     __VdlyVal__KeyGeneration__DOT____Vcellout__poly_mult0__polynomial_out__v0 = 0;
     IData/*31:0*/ __VdlyVal__KeyGeneration__DOT____Vcellout__poly_mult0__polynomial_out__v1;
@@ -274,18 +456,6 @@ VL_INLINE_OPT void VKeyGeneration___024root___nba_sequent__TOP__0(VKeyGeneration
     __VdlySet__KeyGeneration__DOT__e__v0 = 0;
     CData/*0:0*/ __VdlySet__KeyGeneration__DOT__e__v8;
     __VdlySet__KeyGeneration__DOT__e__v8 = 0;
-    CData/*0:0*/ __VdlySet__KeyGeneration__DOT__added__v0;
-    __VdlySet__KeyGeneration__DOT__added__v0 = 0;
-    CData/*0:0*/ __VdlySet__KeyGeneration__DOT__added__v4;
-    __VdlySet__KeyGeneration__DOT__added__v4 = 0;
-    CData/*0:0*/ __VdlySet__KeyGeneration__DOT__added1__v0;
-    __VdlySet__KeyGeneration__DOT__added1__v0 = 0;
-    CData/*0:0*/ __VdlySet__KeyGeneration__DOT__added1__v4;
-    __VdlySet__KeyGeneration__DOT__added1__v4 = 0;
-    CData/*0:0*/ __VdlySet__result__v0;
-    __VdlySet__result__v0 = 0;
-    CData/*0:0*/ __VdlySet__result__v8;
-    __VdlySet__result__v8 = 0;
     CData/*0:0*/ __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult0__polynomial_out__v0;
     __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult0__polynomial_out__v0 = 0;
     CData/*0:0*/ __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult0__polynomial_out__v4;
@@ -303,12 +473,6 @@ VL_INLINE_OPT void VKeyGeneration___024root___nba_sequent__TOP__0(VKeyGeneration
     CData/*0:0*/ __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v4;
     __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v4 = 0;
     // Body
-    __VdlySet__KeyGeneration__DOT__added1__v0 = 0U;
-    __VdlySet__KeyGeneration__DOT__added1__v4 = 0U;
-    __VdlySet__KeyGeneration__DOT__added__v0 = 0U;
-    __VdlySet__KeyGeneration__DOT__added__v4 = 0U;
-    __VdlySet__result__v0 = 0U;
-    __VdlySet__result__v8 = 0U;
     __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v0 = 0U;
     __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v4 = 0U;
     __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult2__polynomial_out__v0 = 0U;
@@ -328,71 +492,9 @@ VL_INLINE_OPT void VKeyGeneration___024root___nba_sequent__TOP__0(VKeyGeneration
         vlSelf->KeyGeneration__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
         vlSelf->KeyGeneration__DOT__unnamedblk1__DOT__i = 2U;
         vlSelf->KeyGeneration__DOT__unnamedblk3__DOT__i = 4U;
-        vlSelf->KeyGeneration__DOT__unnamedblk5__DOT__i = 4U;
     }
     if (vlSelf->rst_n) {
         if (vlSelf->enable) {
-            vlSelf->KeyGeneration__DOT__unnamedblk6__DOT__i = 4U;
-            vlSelf->KeyGeneration__DOT__unnamedblk7__DOT__i = 4U;
-            __VdlyVal__KeyGeneration__DOT__added1__v0 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out2
-                                     [0U] + vlSelf->KeyGeneration__DOT__poly_out3
-                                     [0U]), (IData)(0x11U));
-            __VdlySet__KeyGeneration__DOT__added1__v0 = 1U;
-            __VdlyVal__KeyGeneration__DOT__added1__v1 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out2
-                                     [1U] + vlSelf->KeyGeneration__DOT__poly_out3
-                                     [1U]), (IData)(0x11U));
-            __VdlyVal__KeyGeneration__DOT__added1__v2 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out2
-                                     [2U] + vlSelf->KeyGeneration__DOT__poly_out3
-                                     [2U]), (IData)(0x11U));
-            __VdlyVal__KeyGeneration__DOT__added1__v3 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out2
-                                     [3U] + vlSelf->KeyGeneration__DOT__poly_out3
-                                     [3U]), (IData)(0x11U));
-            __VdlyVal__KeyGeneration__DOT__added__v0 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out0
-                                     [0U] + vlSelf->KeyGeneration__DOT__poly_out1
-                                     [0U]), (IData)(0x11U));
-            __VdlySet__KeyGeneration__DOT__added__v0 = 1U;
-            __VdlyVal__KeyGeneration__DOT__added__v1 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out0
-                                     [1U] + vlSelf->KeyGeneration__DOT__poly_out1
-                                     [1U]), (IData)(0x11U));
-            __VdlyVal__KeyGeneration__DOT__added__v2 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out0
-                                     [2U] + vlSelf->KeyGeneration__DOT__poly_out1
-                                     [2U]), (IData)(0x11U));
-            __VdlyVal__KeyGeneration__DOT__added__v3 
-                = VL_MODDIV_III(32, (vlSelf->KeyGeneration__DOT__poly_out0
-                                     [3U] + vlSelf->KeyGeneration__DOT__poly_out1
-                                     [3U]), (IData)(0x11U));
-            __VdlyVal__result__v0 = (vlSelf->KeyGeneration__DOT__added
-                                     [0U] + vlSelf->KeyGeneration__DOT__e
-                                     [0U][0U]);
-            __VdlySet__result__v0 = 1U;
-            __VdlyVal__result__v1 = (vlSelf->KeyGeneration__DOT__added1
-                                     [0U] + vlSelf->KeyGeneration__DOT__e
-                                     [1U][0U]);
-            __VdlyVal__result__v2 = (vlSelf->KeyGeneration__DOT__added
-                                     [1U] + vlSelf->KeyGeneration__DOT__e
-                                     [0U][1U]);
-            __VdlyVal__result__v3 = (vlSelf->KeyGeneration__DOT__added1
-                                     [1U] + vlSelf->KeyGeneration__DOT__e
-                                     [1U][1U]);
-            __VdlyVal__result__v4 = (vlSelf->KeyGeneration__DOT__added
-                                     [2U] + vlSelf->KeyGeneration__DOT__e
-                                     [0U][2U]);
-            __VdlyVal__result__v5 = (vlSelf->KeyGeneration__DOT__added1
-                                     [2U] + vlSelf->KeyGeneration__DOT__e
-                                     [1U][2U]);
-            __VdlyVal__result__v6 = (vlSelf->KeyGeneration__DOT__added
-                                     [3U] + vlSelf->KeyGeneration__DOT__e
-                                     [0U][3U]);
-            __VdlyVal__result__v7 = (vlSelf->KeyGeneration__DOT__added1
-                                     [3U] + vlSelf->KeyGeneration__DOT__e
-                                     [1U][3U]);
             __VdlyVal__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v0 
                 = vlSelf->KeyGeneration__DOT__poly_mult3__DOT__temp_result
                 [0U];
@@ -539,9 +641,6 @@ VL_INLINE_OPT void VKeyGeneration___024root___nba_sequent__TOP__0(VKeyGeneration
             vlSelf->KeyGeneration__DOT__stop_random_generation = 1U;
         }
     } else {
-        __VdlySet__KeyGeneration__DOT__added1__v4 = 1U;
-        __VdlySet__KeyGeneration__DOT__added__v4 = 1U;
-        __VdlySet__result__v8 = 1U;
         __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v4 = 1U;
         __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult2__polynomial_out__v4 = 1U;
         __VdlySet__KeyGeneration__DOT____Vcellout__poly_mult1__polynomial_out__v4 = 1U;
@@ -839,50 +938,6 @@ VL_INLINE_OPT void VKeyGeneration___024root___nba_sequent__TOP__0(VKeyGeneration
     } else {
         vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number = 0U;
     }
-    if (__VdlySet__KeyGeneration__DOT__added__v0) {
-        vlSelf->KeyGeneration__DOT__added[0U] = __VdlyVal__KeyGeneration__DOT__added__v0;
-        vlSelf->KeyGeneration__DOT__added[1U] = __VdlyVal__KeyGeneration__DOT__added__v1;
-        vlSelf->KeyGeneration__DOT__added[2U] = __VdlyVal__KeyGeneration__DOT__added__v2;
-        vlSelf->KeyGeneration__DOT__added[3U] = __VdlyVal__KeyGeneration__DOT__added__v3;
-    }
-    if (__VdlySet__KeyGeneration__DOT__added__v4) {
-        vlSelf->KeyGeneration__DOT__added[0U] = 0U;
-        vlSelf->KeyGeneration__DOT__added[1U] = 0U;
-        vlSelf->KeyGeneration__DOT__added[2U] = 0U;
-        vlSelf->KeyGeneration__DOT__added[3U] = 0U;
-    }
-    if (__VdlySet__KeyGeneration__DOT__added1__v0) {
-        vlSelf->KeyGeneration__DOT__added1[0U] = __VdlyVal__KeyGeneration__DOT__added1__v0;
-        vlSelf->KeyGeneration__DOT__added1[1U] = __VdlyVal__KeyGeneration__DOT__added1__v1;
-        vlSelf->KeyGeneration__DOT__added1[2U] = __VdlyVal__KeyGeneration__DOT__added1__v2;
-        vlSelf->KeyGeneration__DOT__added1[3U] = __VdlyVal__KeyGeneration__DOT__added1__v3;
-    }
-    if (__VdlySet__KeyGeneration__DOT__added1__v4) {
-        vlSelf->KeyGeneration__DOT__added1[0U] = 0U;
-        vlSelf->KeyGeneration__DOT__added1[1U] = 0U;
-        vlSelf->KeyGeneration__DOT__added1[2U] = 0U;
-        vlSelf->KeyGeneration__DOT__added1[3U] = 0U;
-    }
-    if (__VdlySet__result__v0) {
-        vlSelf->result[0U][0U] = __VdlyVal__result__v0;
-        vlSelf->result[1U][0U] = __VdlyVal__result__v1;
-        vlSelf->result[0U][1U] = __VdlyVal__result__v2;
-        vlSelf->result[1U][1U] = __VdlyVal__result__v3;
-        vlSelf->result[0U][2U] = __VdlyVal__result__v4;
-        vlSelf->result[1U][2U] = __VdlyVal__result__v5;
-        vlSelf->result[0U][3U] = __VdlyVal__result__v6;
-        vlSelf->result[1U][3U] = __VdlyVal__result__v7;
-    }
-    if (__VdlySet__result__v8) {
-        vlSelf->result[0U][0U] = 0U;
-        vlSelf->result[1U][0U] = 0U;
-        vlSelf->result[0U][1U] = 0U;
-        vlSelf->result[1U][1U] = 0U;
-        vlSelf->result[0U][2U] = 0U;
-        vlSelf->result[1U][2U] = 0U;
-        vlSelf->result[0U][3U] = 0U;
-        vlSelf->result[1U][3U] = 0U;
-    }
     if (__VdlySet__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v0) {
         vlSelf->KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out[0U] 
             = __VdlyVal__KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out__v0;
@@ -1119,41 +1174,328 @@ VL_INLINE_OPT void VKeyGeneration___024root___nba_sequent__TOP__0(VKeyGeneration
         = vlSelf->KeyGeneration__DOT__A[3U][1U];
     vlSelf->KeyGeneration__DOT____Vcellinp__poly_mult3__polynomial1[0U] 
         = vlSelf->KeyGeneration__DOT__A[3U][0U];
-    vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable 
-        = ((~ (IData)(vlSelf->KeyGeneration__DOT__stop_random_generation)) 
-           & (IData)(vlSelf->enable));
-    vlSelf->KeyGeneration__DOT__rand_num[0x1fU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__31__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1eU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__30__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1dU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__29__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1cU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__28__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1bU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__27__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1aU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__26__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x19U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__25__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x18U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__24__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x17U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__23__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x16U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__22__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x15U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__21__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x14U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__20__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x13U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x12U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x11U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x10U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__16__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xfU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__15__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xeU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__14__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xdU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__13__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xcU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__12__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xbU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__11__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xaU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__10__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[9U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__9__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[8U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__8__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[7U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__7__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[6U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__6__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[5U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__5__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[4U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__4__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[3U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__3__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[2U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__2__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[1U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__1__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number;
+    if (vlSelf->enable) {
+        vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable 
+            = (1U & (~ (IData)(vlSelf->KeyGeneration__DOT__stop_random_generation)));
+        vlSelf->KeyGeneration__DOT__rand_num[0x1fU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__31__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1eU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__30__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1dU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__29__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1cU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__28__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1bU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__27__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1aU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__26__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x19U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__25__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x18U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__24__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x17U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__23__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x16U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__22__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x15U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__21__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x14U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__20__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x13U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x12U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x11U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x10U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__16__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xfU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__15__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xeU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__14__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xdU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__13__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xcU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__12__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xbU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__11__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xaU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__10__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[9U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__9__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[8U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__8__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[7U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__7__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[6U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__6__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[5U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__5__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[4U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__4__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[3U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__3__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[2U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__2__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[1U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__1__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__added[0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[0U] = 0U;
+        vlSelf->result[0U][0U] = 0U;
+        vlSelf->result[1U][0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[1U] = 0U;
+        vlSelf->result[0U][1U] = 0U;
+        vlSelf->result[1U][1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[2U] = 0U;
+        vlSelf->result[0U][2U] = 0U;
+        vlSelf->result[1U][2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[3U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[3U] = 0U;
+        vlSelf->result[0U][3U] = 0U;
+        vlSelf->result[1U][3U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[0U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [0U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [0U]);
+        vlSelf->KeyGeneration__DOT__added1[0U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [0U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [0U]);
+        vlSelf->KeyGeneration__DOT__added[0U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [0U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [0U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [0U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[0U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [0U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [0U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [0U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added[1U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [1U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [1U]);
+        vlSelf->KeyGeneration__DOT__added1[1U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [1U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [1U]);
+        vlSelf->KeyGeneration__DOT__added[1U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [1U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [1U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [1U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[1U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [1U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [1U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [1U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added[2U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [2U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [2U]);
+        vlSelf->KeyGeneration__DOT__added1[2U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [2U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [2U]);
+        vlSelf->KeyGeneration__DOT__added[2U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [2U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [2U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [2U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[2U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [2U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [2U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [2U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added[3U] = (vlSelf->KeyGeneration__DOT__poly_out0
+                                                 [3U] 
+                                                 + 
+                                                 vlSelf->KeyGeneration__DOT__poly_out1
+                                                 [3U]);
+        vlSelf->KeyGeneration__DOT__added1[3U] = (vlSelf->KeyGeneration__DOT__poly_out2
+                                                  [3U] 
+                                                  + 
+                                                  vlSelf->KeyGeneration__DOT__poly_out3
+                                                  [3U]);
+        vlSelf->KeyGeneration__DOT__added[3U] = (VL_GTS_III(32, 0U, 
+                                                            vlSelf->KeyGeneration__DOT__added
+                                                            [3U])
+                                                  ? 
+                                                 VL_MODDIVS_III(32, 
+                                                                ((IData)(0x11U) 
+                                                                 + 
+                                                                 VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added
+                                                                                [3U], (IData)(0x11U))), (IData)(0x11U))
+                                                  : 
+                                                 VL_MODDIVS_III(32, 
+                                                                vlSelf->KeyGeneration__DOT__added
+                                                                [3U], (IData)(0x11U)));
+        vlSelf->KeyGeneration__DOT__added1[3U] = (VL_GTS_III(32, 0U, 
+                                                             vlSelf->KeyGeneration__DOT__added1
+                                                             [3U])
+                                                   ? 
+                                                  VL_MODDIVS_III(32, 
+                                                                 ((IData)(0x11U) 
+                                                                  + 
+                                                                  VL_MODDIVS_III(32, 
+                                                                                vlSelf->KeyGeneration__DOT__added1
+                                                                                [3U], (IData)(0x11U))), (IData)(0x11U))
+                                                   : 
+                                                  VL_MODDIVS_III(32, 
+                                                                 vlSelf->KeyGeneration__DOT__added1
+                                                                 [3U], (IData)(0x11U)));
+        vlSelf->result[0U][0U] = (vlSelf->KeyGeneration__DOT__added
+                                  [0U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][0U]);
+        vlSelf->result[1U][0U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [0U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][0U]);
+        vlSelf->result[0U][1U] = (vlSelf->KeyGeneration__DOT__added
+                                  [1U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][1U]);
+        vlSelf->result[1U][1U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [1U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][1U]);
+        vlSelf->result[0U][2U] = (vlSelf->KeyGeneration__DOT__added
+                                  [2U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][2U]);
+        vlSelf->result[1U][2U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [2U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][2U]);
+        vlSelf->result[0U][3U] = (vlSelf->KeyGeneration__DOT__added
+                                  [3U] + vlSelf->KeyGeneration__DOT__e
+                                  [0U][3U]);
+        vlSelf->result[1U][3U] = (vlSelf->KeyGeneration__DOT__added1
+                                  [3U] + vlSelf->KeyGeneration__DOT__e
+                                  [1U][3U]);
+    } else {
+        vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable = 0U;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1fU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__31__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1eU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__30__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1dU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__29__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1cU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__28__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1bU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__27__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x1aU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__26__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x19U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__25__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x18U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__24__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x17U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__23__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x16U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__22__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x15U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__21__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x14U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__20__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x13U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x12U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x11U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0x10U] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__16__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xfU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__15__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xeU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__14__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xdU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__13__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xcU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__12__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xbU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__11__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0xaU] 
+            = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__10__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[9U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__9__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[8U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__8__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[7U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__7__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[6U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__6__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[5U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__5__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[4U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__4__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[3U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__3__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[2U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__2__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[1U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__1__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__rand_num[0U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number;
+        vlSelf->KeyGeneration__DOT__added[0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[0U] = 0U;
+        vlSelf->result[0U][0U] = 0U;
+        vlSelf->result[1U][0U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[1U] = 0U;
+        vlSelf->result[0U][1U] = 0U;
+        vlSelf->result[1U][1U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[2U] = 0U;
+        vlSelf->result[0U][2U] = 0U;
+        vlSelf->result[1U][2U] = 0U;
+        vlSelf->KeyGeneration__DOT__added[3U] = 0U;
+        vlSelf->KeyGeneration__DOT__added1[3U] = 0U;
+        vlSelf->result[0U][3U] = 0U;
+        vlSelf->result[1U][3U] = 0U;
+    }
     vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[0U] = 0U;
     vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[1U] = 0U;
     vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[2U] = 0U;
