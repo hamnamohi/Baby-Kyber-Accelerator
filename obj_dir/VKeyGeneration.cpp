@@ -15,6 +15,7 @@ VKeyGeneration::VKeyGeneration(VerilatedContext* _vcontextp__, const char* _vcna
     , enable{vlSymsp->TOP.enable}
     , secretkey{vlSymsp->TOP.secretkey}
     , result{vlSymsp->TOP.result}
+    , combined_output{vlSymsp->TOP.combined_output}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

@@ -1,6 +1,6 @@
 module RandomNumberGenerator #(
-    parameter int MIN_VALUE = -17, 
-    parameter int MAX_VALUE = 17  
+    parameter int MIN_VALUE, 
+    parameter int MAX_VALUE  
 )(
     input logic clk,
     input logic rst_n,

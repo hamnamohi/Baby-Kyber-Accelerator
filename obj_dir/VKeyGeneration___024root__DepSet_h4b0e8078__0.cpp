@@ -8,8 +8,8 @@
 
 extern "C" int generate_random_number(int min_value, int max_value);
 
-VL_INLINE_OPT void VKeyGeneration___024root____Vdpiimwrap_KeyGeneration__DOT__rng_loop__BRA__0__KET____DOT__rng__DOT__generate_random_number_TOP(IData/*31:0*/ min_value, IData/*31:0*/ max_value, IData/*31:0*/ &generate_random_number__Vfuncrtn) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VKeyGeneration___024root____Vdpiimwrap_KeyGeneration__DOT__rng_loop__BRA__0__KET____DOT__rng__DOT__generate_random_number_TOP\n"); );
+VL_INLINE_OPT void VKeyGeneration___024root____Vdpiimwrap_KeyGeneration__DOT__rng_loop1__BRA__0__KET____DOT__rng__DOT__generate_random_number_TOP(IData/*31:0*/ min_value, IData/*31:0*/ max_value, IData/*31:0*/ &generate_random_number__Vfuncrtn) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VKeyGeneration___024root____Vdpiimwrap_KeyGeneration__DOT__rng_loop1__BRA__0__KET____DOT__rng__DOT__generate_random_number_TOP\n"); );
     // Body
     int min_value__Vcvt;
     for (size_t min_value__Vidx = 0; min_value__Vidx < 1; ++min_value__Vidx) min_value__Vcvt = min_value;

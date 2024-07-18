@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
     Verilated::traceEverOn(true);
     VerilatedVcdC* m_trace = new VerilatedVcdC;
     dut->trace(m_trace, 99); 
-    m_trace->open("key_generation.vcd");
+    m_trace->open("keygen.vcd");
 
     dut->clk = 0;
     dut->rst_n = 0;
@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
         m_trace->dump(sim_time++);
         if (dut->clk) {
             std::cout << "Time: " << sim_time << std::endl;
+
             std::cout << "Secret Key 0: {";
             for (int j = 0; j < 4; j++) {
                 std::cout << dut->secretkey[0][j];
@@ -56,6 +57,30 @@ int main(int argc, char** argv) {
             for (int j = 0; j < 4; j++) {
                 std::cout << dut->result[1][j];
                 if (j < 3) std::cout << ", ";
+            }
+            std::cout << "}" << std::endl;
+
+            std::cout << "Combined Output 0: {" << std::endl;
+            for (int j = 0; j < 4; j++) {
+                std::cout << "  {";
+                for (int k = 0; k < 4; k++) {
+                    std::cout << dut->combined_output[0][j][k];
+                    if (k < 3) std::cout << ", ";
+                }
+                std::cout << "}";
+                if (j < 3) std::cout << "," << std::endl;
+            }
+            std::cout << "}" << std::endl;
+
+            std::cout << "Combined Output 1: {" << std::endl;
+            for (int j = 0; j < 2; j++) {
+                std::cout << "  {";
+                for (int k = 0; k < 4; k++) {
+                    std::cout << dut->combined_output[1][j][k];
+                    if (k < 3) std::cout << ", ";
+                }
+                std::cout << "}";
+                if (j < 1) std::cout << "," << std::endl;
             }
             std::cout << "}" << std::endl;
         }

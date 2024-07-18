@@ -3,10 +3,10 @@ module KeyGeneration (
     input logic rst_n,
     input logic enable,
     output logic [31:0] secretkey [1:0][3:0],
-    output logic [31:0] result [1:0][3:0]
+    output logic [31:0] result [1:0][3:0],
+    output logic [31:0] combined_output [1:0][4:0][4:0]
 );
 
-    // Internal wires for random numbers and polynomial outputs
     logic [31:0] rand_num [0:31];
     logic [31:0] A [3:0][3:0];
     logic [31:0] e [1:0][3:0];
@@ -20,8 +20,25 @@ module KeyGeneration (
 
     genvar idx;
     generate
-        for (idx = 0; idx < 32; idx++) begin : rng_loop
-            RandomNumberGenerator rng (
+        // Generate 28 random numbers with limits -17 to 17
+        for (idx = 0; idx < 24; idx++) begin : rng_loop1
+            RandomNumberGenerator #(
+                .MIN_VALUE(-17), 
+                .MAX_VALUE(17)
+            ) rng (
+                .clk(clk),
+                .rst_n(rst_n),
+                .enable(enable & !stop_random_generation),
+                .random_number(rand_num[idx])
+            );
+        end
+
+        // Generate 4 random numbers with limits -1 to 17
+        for (idx = 24; idx < 32; idx++) begin : rng_loop2
+            RandomNumberGenerator #(
+                .MIN_VALUE(-1), 
+                .MAX_VALUE(17)
+            ) rng (
                 .clk(clk),
                 .rst_n(rst_n),
                 .enable(enable & !stop_random_generation),
@@ -109,6 +126,15 @@ module KeyGeneration (
             e[1][1] <= rand_num[29];
             e[1][2] <= rand_num[30];
             e[1][3] <= rand_num[31];
+
+            $display("ee",e[1][0]);
+            $display("ee",e[1][1]);
+            $display("ee",e[1][2]);
+            $display("ee",e[1][3]);
+            $display("ee",e[0][0]);
+            $display("ee",e[0][1]);
+            $display("ee",e[0][2]);
+            $display("ee",e[0][3]);
             stop_random_generation <= 1; 
         end
     end
@@ -149,21 +175,17 @@ module KeyGeneration (
     );
 
     always_comb begin
-    // Initialize the arrays to zero
     for (int i = 0; i < 4; i++) begin
         added[i] = 0;
         added1[i] = 0;
         result[0][i] = 0;
         result[1][i] = 0;
     end
-
-    // Perform the addition and modulus operations
     if (enable) begin
         for (int i = 0; i < 4; i++) begin
             added[i] = (poly_out0[i] + poly_out1[i]);
             added1[i] = (poly_out2[i] + poly_out3[i]);
 
-            // Negative modulus handling
             if (added[i] < 0) begin
                 added[i] = (added[i] % 17 + 17) % 17;
             end else begin
@@ -176,16 +198,36 @@ module KeyGeneration (
                 added1[i] = (added1[i] % 17);
             end
         end
-
-        // Assign results with added values and e
         for (int i = 0; i < 4; i++) begin
             result[0][i] = added[i] + e[0][i];
             result[1][i] = added1[i] + e[1][i];
         end
     end
 end
-
+ always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            for (int i = 0; i < 2; i++) begin
+                for (int j = 0; j < 4; j++) begin
+                    for (int k = 0; k < 4; k++) begin
+                        combined_output[i][j][k] <= 0;
+                    end
+                end
+            end
+        end else if (enable) begin
+            for (int i = 0; i < 4; i++) begin
+                for (int j = 0; j < 4; j++) begin
+                combined_output[0][i][j] <= A[i][j];
+                
+            end
+            end
+            for (int i = 0; i < 2; i++) begin
+                for (int j = 0; j < 4; j++) begin
+                    combined_output[1][i][j] <= result[i][j];
+                //     $display("hi",combined_output[1][i][j]);
+                // $display("hi2",result[i][j]);
+                end
+            end
+        end
+    end
 
 endmodule
-
-// make the output (A,t)

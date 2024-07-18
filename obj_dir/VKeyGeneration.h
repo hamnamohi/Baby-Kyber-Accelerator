@@ -35,6 +35,7 @@ class alignas(VL_CACHE_LINE_BYTES) VKeyGeneration VL_NOT_FINAL : public Verilate
     VL_IN8(&enable,0,0);
     VL_OUT((&secretkey)[2][4],31,0);
     VL_OUT((&result)[2][4],31,0);
+    VL_OUT((&combined_output)[2][5][5],31,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

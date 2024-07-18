@@ -93,7 +93,7 @@ VL_ATTR_COLD void VKeyGeneration___024root___stl_sequent__TOP__0(VKeyGeneration_
     VKeyGeneration__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VKeyGeneration___024root___stl_sequent__TOP__0\n"); );
     // Body
-    vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable 
+    vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop1__BRA__0__KET____DOT__rng__enable 
         = ((~ (IData)(vlSelf->KeyGeneration__DOT__stop_random_generation)) 
            & (IData)(vlSelf->enable));
     vlSelf->KeyGeneration__DOT____Vcellinp__poly_mult0__polynomial2[3U] 
@@ -192,38 +192,38 @@ VL_ATTR_COLD void VKeyGeneration___024root___stl_sequent__TOP__0(VKeyGeneration_
         [1U];
     vlSelf->KeyGeneration__DOT__poly_out3[0U] = vlSelf->KeyGeneration__DOT____Vcellout__poly_mult3__polynomial_out
         [0U];
-    vlSelf->KeyGeneration__DOT__rand_num[0U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[1U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__1__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[2U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__2__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[3U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__3__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[4U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__4__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[5U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__5__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[6U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__6__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[7U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__7__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[8U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__8__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[9U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__9__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xaU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__10__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xbU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__11__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xcU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__12__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xdU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__13__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xeU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__14__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0xfU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__15__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x10U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__16__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x11U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x12U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x13U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x14U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__20__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x15U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__21__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x16U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__22__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x17U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__23__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x18U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__24__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x19U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__25__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1aU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__26__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1bU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__27__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1cU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__28__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1dU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__29__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1eU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__30__KET____DOT__rng__random_number;
-    vlSelf->KeyGeneration__DOT__rand_num[0x1fU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__31__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__0__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[1U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__1__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[2U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__2__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[3U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__3__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[4U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__4__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[5U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__5__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[6U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__6__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[7U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__7__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[8U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__8__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[9U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__9__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0xaU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__10__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0xbU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__11__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0xcU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__12__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0xdU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__13__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0xeU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__14__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0xfU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__15__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x10U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__16__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x11U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__17__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x12U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__18__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x13U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__19__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x14U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__20__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x15U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__21__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x16U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__22__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x17U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__23__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x18U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__24__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x19U] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__25__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x1aU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__26__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x1bU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__27__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x1cU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__28__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x1dU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__29__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x1eU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__30__KET____DOT__rng__random_number;
+    vlSelf->KeyGeneration__DOT__rand_num[0x1fU] = vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__31__KET____DOT__rng__random_number;
     vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[0U] = 0U;
     vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[1U] = 0U;
     vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[2U] = 0U;
@@ -982,6 +982,13 @@ VL_ATTR_COLD void VKeyGeneration___024root___ctor_var_reset(VKeyGeneration___024
             vlSelf->result[__Vi0][__Vi1] = VL_RAND_RESET_I(32);
         }
     }
+    for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
+        for (int __Vi1 = 0; __Vi1 < 5; ++__Vi1) {
+            for (int __Vi2 = 0; __Vi2 < 5; ++__Vi2) {
+                vlSelf->combined_output[__Vi0][__Vi1][__Vi2] = VL_RAND_RESET_I(32);
+            }
+        }
+    }
     for (int __Vi0 = 0; __Vi0 < 32; ++__Vi0) {
         vlSelf->KeyGeneration__DOT__rand_num[__Vi0] = VL_RAND_RESET_I(32);
     }
@@ -1050,45 +1057,54 @@ VL_ATTR_COLD void VKeyGeneration___024root___ctor_var_reset(VKeyGeneration___024
     for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
         vlSelf->KeyGeneration__DOT____Vcellinp__poly_mult3__polynomial1[__Vi0] = VL_RAND_RESET_I(32);
     }
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable = VL_RAND_RESET_I(1);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__1__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__2__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__3__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__4__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__5__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__6__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__7__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__8__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__9__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__10__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__11__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__12__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__13__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__14__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__15__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__16__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__20__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__21__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__22__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__23__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__24__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__25__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__26__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__27__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__28__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__29__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__30__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop__BRA__31__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__0__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellinp__rng_loop1__BRA__0__KET____DOT__rng__enable = VL_RAND_RESET_I(1);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__1__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__2__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__3__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__4__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__5__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__6__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__7__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__8__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__9__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__10__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__11__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__12__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__13__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__14__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__15__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__16__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__17__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__18__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__19__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__20__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__21__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__22__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop1__BRA__23__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__24__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__25__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__26__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__27__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__28__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__29__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__30__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vcellout__rng_loop2__BRA__31__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
     vlSelf->KeyGeneration__DOT__unnamedblk1__DOT__i = 0;
     vlSelf->KeyGeneration__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0;
     vlSelf->KeyGeneration__DOT__unnamedblk3__DOT__i = 0;
     vlSelf->KeyGeneration__DOT__unnamedblk3__DOT__unnamedblk4__DOT__j = 0;
     vlSelf->KeyGeneration__DOT__unnamedblk6__DOT__i = 0;
     vlSelf->KeyGeneration__DOT__unnamedblk7__DOT__i = 0;
+    vlSelf->KeyGeneration__DOT__unnamedblk11__DOT__i = 0;
+    vlSelf->KeyGeneration__DOT__unnamedblk11__DOT__unnamedblk12__DOT__j = 0;
+    vlSelf->KeyGeneration__DOT__unnamedblk13__DOT__i = 0;
+    vlSelf->KeyGeneration__DOT__unnamedblk13__DOT__unnamedblk14__DOT__j = 0;
+    vlSelf->KeyGeneration__DOT__unnamedblk8__DOT__i = 0;
+    vlSelf->KeyGeneration__DOT__unnamedblk8__DOT__unnamedblk9__DOT__j = 0;
+    vlSelf->KeyGeneration__DOT__unnamedblk8__DOT__unnamedblk9__DOT__unnamedblk10__DOT__k = 0;
+    vlSelf->KeyGeneration__DOT____Vlvbound_hbc7b04ab__0 = VL_RAND_RESET_I(32);
+    vlSelf->KeyGeneration__DOT____Vlvbound_h20097003__0 = VL_RAND_RESET_I(32);
     for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
         vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[__Vi0] = VL_RAND_RESET_I(32);
     }
