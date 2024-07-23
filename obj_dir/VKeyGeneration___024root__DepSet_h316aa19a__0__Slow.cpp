@@ -983,8 +983,8 @@ VL_ATTR_COLD void VKeyGeneration___024root___ctor_var_reset(VKeyGeneration___024
         }
     }
     for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
-        for (int __Vi1 = 0; __Vi1 < 5; ++__Vi1) {
-            for (int __Vi2 = 0; __Vi2 < 5; ++__Vi2) {
+        for (int __Vi1 = 0; __Vi1 < 4; ++__Vi1) {
+            for (int __Vi2 = 0; __Vi2 < 4; ++__Vi2) {
                 vlSelf->combined_output[__Vi0][__Vi1][__Vi2] = VL_RAND_RESET_I(32);
             }
         }
@@ -1103,8 +1103,6 @@ VL_ATTR_COLD void VKeyGeneration___024root___ctor_var_reset(VKeyGeneration___024
     vlSelf->KeyGeneration__DOT__unnamedblk8__DOT__i = 0;
     vlSelf->KeyGeneration__DOT__unnamedblk8__DOT__unnamedblk9__DOT__j = 0;
     vlSelf->KeyGeneration__DOT__unnamedblk8__DOT__unnamedblk9__DOT__unnamedblk10__DOT__k = 0;
-    vlSelf->KeyGeneration__DOT____Vlvbound_hbc7b04ab__0 = VL_RAND_RESET_I(32);
-    vlSelf->KeyGeneration__DOT____Vlvbound_h20097003__0 = VL_RAND_RESET_I(32);
     for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
         vlSelf->KeyGeneration__DOT__poly_mult0__DOT__temp_result[__Vi0] = VL_RAND_RESET_I(32);
     }

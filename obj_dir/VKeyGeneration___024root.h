@@ -71,19 +71,17 @@ class alignas(VL_CACHE_LINE_BYTES) VKeyGeneration___024root final : public Veril
         IData/*31:0*/ KeyGeneration__DOT__unnamedblk8__DOT__i;
         IData/*31:0*/ KeyGeneration__DOT__unnamedblk8__DOT__unnamedblk9__DOT__j;
         IData/*31:0*/ KeyGeneration__DOT__unnamedblk8__DOT__unnamedblk9__DOT__unnamedblk10__DOT__k;
-        IData/*31:0*/ KeyGeneration__DOT____Vlvbound_hbc7b04ab__0;
-        IData/*31:0*/ KeyGeneration__DOT____Vlvbound_h20097003__0;
         IData/*31:0*/ __VactIterCount;
         VL_OUT(secretkey[2][4],31,0);
         VL_OUT(result[2][4],31,0);
-        VL_OUT(combined_output[2][5][5],31,0);
+        VL_OUT(combined_output[2][4][4],31,0);
         VlUnpacked<IData/*31:0*/, 32> KeyGeneration__DOT__rand_num;
         VlUnpacked<VlUnpacked<IData/*31:0*/, 4>, 4> KeyGeneration__DOT__A;
         VlUnpacked<VlUnpacked<IData/*31:0*/, 4>, 2> KeyGeneration__DOT__e;
-    };
-    struct {
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__poly_out0;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__poly_out1;
+    };
+    struct {
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__poly_out2;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__poly_out3;
         VlUnpacked<IData/*31:0*/, 4> KeyGeneration__DOT__added;

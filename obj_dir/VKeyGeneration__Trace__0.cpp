@@ -260,8 +260,72 @@ void VKeyGeneration___024root__trace_chg_0_sub_0(VKeyGeneration___024root* vlSel
     bufp->chgIData(oldp+205,(vlSelf->result[1U][1U]),32);
     bufp->chgIData(oldp+206,(vlSelf->result[1U][2U]),32);
     bufp->chgIData(oldp+207,(vlSelf->result[1U][3U]),32);
-    bufp->chgIData(oldp+208,(vlSelf->KeyGeneration__DOT__unnamedblk6__DOT__i),32);
-    bufp->chgIData(oldp+209,(vlSelf->KeyGeneration__DOT__unnamedblk7__DOT__i),32);
+    bufp->chgIData(oldp+208,(vlSelf->combined_output
+                             [0U][0U][0U]),32);
+    bufp->chgIData(oldp+209,(vlSelf->combined_output
+                             [0U][0U][1U]),32);
+    bufp->chgIData(oldp+210,(vlSelf->combined_output
+                             [0U][0U][2U]),32);
+    bufp->chgIData(oldp+211,(vlSelf->combined_output
+                             [0U][0U][3U]),32);
+    bufp->chgIData(oldp+212,(vlSelf->combined_output
+                             [0U][1U][0U]),32);
+    bufp->chgIData(oldp+213,(vlSelf->combined_output
+                             [0U][1U][1U]),32);
+    bufp->chgIData(oldp+214,(vlSelf->combined_output
+                             [0U][1U][2U]),32);
+    bufp->chgIData(oldp+215,(vlSelf->combined_output
+                             [0U][1U][3U]),32);
+    bufp->chgIData(oldp+216,(vlSelf->combined_output
+                             [0U][2U][0U]),32);
+    bufp->chgIData(oldp+217,(vlSelf->combined_output
+                             [0U][2U][1U]),32);
+    bufp->chgIData(oldp+218,(vlSelf->combined_output
+                             [0U][2U][2U]),32);
+    bufp->chgIData(oldp+219,(vlSelf->combined_output
+                             [0U][2U][3U]),32);
+    bufp->chgIData(oldp+220,(vlSelf->combined_output
+                             [0U][3U][0U]),32);
+    bufp->chgIData(oldp+221,(vlSelf->combined_output
+                             [0U][3U][1U]),32);
+    bufp->chgIData(oldp+222,(vlSelf->combined_output
+                             [0U][3U][2U]),32);
+    bufp->chgIData(oldp+223,(vlSelf->combined_output
+                             [0U][3U][3U]),32);
+    bufp->chgIData(oldp+224,(vlSelf->combined_output
+                             [1U][0U][0U]),32);
+    bufp->chgIData(oldp+225,(vlSelf->combined_output
+                             [1U][0U][1U]),32);
+    bufp->chgIData(oldp+226,(vlSelf->combined_output
+                             [1U][0U][2U]),32);
+    bufp->chgIData(oldp+227,(vlSelf->combined_output
+                             [1U][0U][3U]),32);
+    bufp->chgIData(oldp+228,(vlSelf->combined_output
+                             [1U][1U][0U]),32);
+    bufp->chgIData(oldp+229,(vlSelf->combined_output
+                             [1U][1U][1U]),32);
+    bufp->chgIData(oldp+230,(vlSelf->combined_output
+                             [1U][1U][2U]),32);
+    bufp->chgIData(oldp+231,(vlSelf->combined_output
+                             [1U][1U][3U]),32);
+    bufp->chgIData(oldp+232,(vlSelf->combined_output
+                             [1U][2U][0U]),32);
+    bufp->chgIData(oldp+233,(vlSelf->combined_output
+                             [1U][2U][1U]),32);
+    bufp->chgIData(oldp+234,(vlSelf->combined_output
+                             [1U][2U][2U]),32);
+    bufp->chgIData(oldp+235,(vlSelf->combined_output
+                             [1U][2U][3U]),32);
+    bufp->chgIData(oldp+236,(vlSelf->combined_output
+                             [1U][3U][0U]),32);
+    bufp->chgIData(oldp+237,(vlSelf->combined_output
+                             [1U][3U][1U]),32);
+    bufp->chgIData(oldp+238,(vlSelf->combined_output
+                             [1U][3U][2U]),32);
+    bufp->chgIData(oldp+239,(vlSelf->combined_output
+                             [1U][3U][3U]),32);
+    bufp->chgIData(oldp+240,(vlSelf->KeyGeneration__DOT__unnamedblk6__DOT__i),32);
+    bufp->chgIData(oldp+241,(vlSelf->KeyGeneration__DOT__unnamedblk7__DOT__i),32);
 }
 
 void VKeyGeneration___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
