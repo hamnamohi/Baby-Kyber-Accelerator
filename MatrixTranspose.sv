@@ -1,8 +1,8 @@
 module MatrixTranspose #(
 ) (
     
-    input  logic [31:0] matrix_in [3:0][3:0], 
-    output logic [31:0] matrix_out [3:0][3:0] 
+    input  logic signed [31:0] matrix_in [3:0][3:0], 
+    output logic signed [31:0] matrix_out [3:0][3:0] 
 );
     always_comb begin
         matrix_out[0] = matrix_in[0];

@@ -1,5 +1,5 @@
 module DecimalToBitConverter (
-    input logic [31:0] input_value,  /
+    input logic [31:0] input_value,  
     output logic [3:0] coefficients  
 );
     logic [7:0] bit_list;  
