@@ -49,14 +49,11 @@ class alignas(VL_CACHE_LINE_BYTES) VEncrypt___024root final : public VerilatedMo
         IData/*31:0*/ Encrypt__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number;
         IData/*31:0*/ Encrypt__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number;
         IData/*31:0*/ Encrypt__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number;
-        IData/*31:0*/ Encrypt__DOT__unnamedblk4__DOT__i;
-        IData/*31:0*/ Encrypt__DOT__unnamedblk4__DOT__unnamedblk5__DOT__j;
-        IData/*31:0*/ Encrypt__DOT__unnamedblk6__DOT__i;
         IData/*31:0*/ Encrypt__DOT__unnamedblk1__DOT__i;
         IData/*31:0*/ Encrypt__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j;
         IData/*31:0*/ Encrypt__DOT__unnamedblk3__DOT__i;
-        IData/*31:0*/ Encrypt__DOT__unnamedblk8__DOT__i;
-        IData/*31:0*/ Encrypt__DOT__unnamedblk9__DOT__i;
+        IData/*31:0*/ Encrypt__DOT__unnamedblk5__DOT__i;
+        IData/*31:0*/ Encrypt__DOT__unnamedblk6__DOT__i;
         IData/*31:0*/ __VactIterCount;
         VL_IN(combined_output[2][4][4],31,0);
         VL_OUT(ciphertext[2][2][4],31,0);
@@ -80,11 +77,11 @@ class alignas(VL_CACHE_LINE_BYTES) VEncrypt___024root final : public VerilatedMo
         VlUnpacked<VlUnpacked<IData/*31:0*/, 4>, 4> Encrypt__DOT____Vcellinp__transpose_inst__matrix_in;
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst__polynomial2;
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst__polynomial1;
-    };
-    struct {
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst1__polynomial2;
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst1__polynomial1;
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst2__polynomial2;
+    };
+    struct {
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst2__polynomial1;
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst3__polynomial2;
         VlUnpacked<IData/*31:0*/, 4> Encrypt__DOT____Vcellinp__poly_mult_inst3__polynomial1;

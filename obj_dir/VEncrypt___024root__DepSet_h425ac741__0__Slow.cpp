@@ -251,8 +251,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                             [0U] + 
                                             vlSelf->Encrypt__DOT__poly_out5
                                             [0U]);
-        vlSelf->Encrypt__DOT__unnamedblk8__DOT__i = 4U;
-        vlSelf->Encrypt__DOT__unnamedblk9__DOT__i = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk5__DOT__i = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk6__DOT__i = 4U;
         vlSelf->Encrypt__DOT__added1[0U] = (vlSelf->Encrypt__DOT__poly_out2
                                             [0U] + 
                                             vlSelf->Encrypt__DOT__poly_out3
@@ -1631,14 +1631,11 @@ VL_ATTR_COLD void VEncrypt___024root___ctor_var_reset(VEncrypt___024root* vlSelf
     vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
     vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
     vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number = VL_RAND_RESET_I(32);
-    vlSelf->Encrypt__DOT__unnamedblk4__DOT__i = 0;
-    vlSelf->Encrypt__DOT__unnamedblk4__DOT__unnamedblk5__DOT__j = 0;
-    vlSelf->Encrypt__DOT__unnamedblk6__DOT__i = 0;
     vlSelf->Encrypt__DOT__unnamedblk1__DOT__i = 0;
     vlSelf->Encrypt__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0;
     vlSelf->Encrypt__DOT__unnamedblk3__DOT__i = 0;
-    vlSelf->Encrypt__DOT__unnamedblk8__DOT__i = 0;
-    vlSelf->Encrypt__DOT__unnamedblk9__DOT__i = 0;
+    vlSelf->Encrypt__DOT__unnamedblk5__DOT__i = 0;
+    vlSelf->Encrypt__DOT__unnamedblk6__DOT__i = 0;
     vlSelf->Encrypt__DOT__dec_to_bit__DOT__bit_list = VL_RAND_RESET_I(8);
     for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
         vlSelf->Encrypt__DOT__poly_mult_inst__DOT__temp_result[__Vi0] = VL_RAND_RESET_I(32);

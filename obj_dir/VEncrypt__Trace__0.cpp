@@ -178,8 +178,8 @@ void VEncrypt___024root__trace_chg_0_sub_0(VEncrypt___024root* vlSelf, Verilated
         bufp->chgIData(oldp+108,(vlSelf->Encrypt__DOT__poly_mult_inst5__DOT__temp_result[2]),32);
         bufp->chgIData(oldp+109,(vlSelf->Encrypt__DOT__poly_mult_inst5__DOT__temp_result[3]),32);
         bufp->chgBit(oldp+110,(vlSelf->Encrypt__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable));
-        bufp->chgIData(oldp+111,(vlSelf->Encrypt__DOT__unnamedblk8__DOT__i),32);
-        bufp->chgIData(oldp+112,(vlSelf->Encrypt__DOT__unnamedblk9__DOT__i),32);
+        bufp->chgIData(oldp+111,(vlSelf->Encrypt__DOT__unnamedblk5__DOT__i),32);
+        bufp->chgIData(oldp+112,(vlSelf->Encrypt__DOT__unnamedblk6__DOT__i),32);
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[2U])) {
         bufp->chgIData(oldp+113,(vlSelf->Encrypt__DOT__r
@@ -310,109 +310,106 @@ void VEncrypt___024root__trace_chg_0_sub_0(VEncrypt___024root* vlSelf, Verilated
         bufp->chgIData(oldp+222,(vlSelf->Encrypt__DOT__unnamedblk1__DOT__i),32);
         bufp->chgIData(oldp+223,(vlSelf->Encrypt__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j),32);
         bufp->chgIData(oldp+224,(vlSelf->Encrypt__DOT__unnamedblk3__DOT__i),32);
-        bufp->chgIData(oldp+225,(vlSelf->Encrypt__DOT__unnamedblk4__DOT__i),32);
-        bufp->chgIData(oldp+226,(vlSelf->Encrypt__DOT__unnamedblk4__DOT__unnamedblk5__DOT__j),32);
-        bufp->chgIData(oldp+227,(vlSelf->Encrypt__DOT__unnamedblk6__DOT__i),32);
     }
-    bufp->chgBit(oldp+228,(vlSelf->clk));
-    bufp->chgBit(oldp+229,(vlSelf->rst_n));
-    bufp->chgBit(oldp+230,(vlSelf->enable));
-    bufp->chgIData(oldp+231,(vlSelf->message),32);
-    bufp->chgIData(oldp+232,(vlSelf->combined_output
+    bufp->chgBit(oldp+225,(vlSelf->clk));
+    bufp->chgBit(oldp+226,(vlSelf->rst_n));
+    bufp->chgBit(oldp+227,(vlSelf->enable));
+    bufp->chgIData(oldp+228,(vlSelf->message),32);
+    bufp->chgIData(oldp+229,(vlSelf->combined_output
                              [0U][0U][0U]),32);
-    bufp->chgIData(oldp+233,(vlSelf->combined_output
+    bufp->chgIData(oldp+230,(vlSelf->combined_output
                              [0U][0U][1U]),32);
-    bufp->chgIData(oldp+234,(vlSelf->combined_output
+    bufp->chgIData(oldp+231,(vlSelf->combined_output
                              [0U][0U][2U]),32);
-    bufp->chgIData(oldp+235,(vlSelf->combined_output
+    bufp->chgIData(oldp+232,(vlSelf->combined_output
                              [0U][0U][3U]),32);
-    bufp->chgIData(oldp+236,(vlSelf->combined_output
+    bufp->chgIData(oldp+233,(vlSelf->combined_output
                              [0U][1U][0U]),32);
-    bufp->chgIData(oldp+237,(vlSelf->combined_output
+    bufp->chgIData(oldp+234,(vlSelf->combined_output
                              [0U][1U][1U]),32);
-    bufp->chgIData(oldp+238,(vlSelf->combined_output
+    bufp->chgIData(oldp+235,(vlSelf->combined_output
                              [0U][1U][2U]),32);
-    bufp->chgIData(oldp+239,(vlSelf->combined_output
+    bufp->chgIData(oldp+236,(vlSelf->combined_output
                              [0U][1U][3U]),32);
-    bufp->chgIData(oldp+240,(vlSelf->combined_output
+    bufp->chgIData(oldp+237,(vlSelf->combined_output
                              [0U][2U][0U]),32);
-    bufp->chgIData(oldp+241,(vlSelf->combined_output
+    bufp->chgIData(oldp+238,(vlSelf->combined_output
                              [0U][2U][1U]),32);
-    bufp->chgIData(oldp+242,(vlSelf->combined_output
+    bufp->chgIData(oldp+239,(vlSelf->combined_output
                              [0U][2U][2U]),32);
-    bufp->chgIData(oldp+243,(vlSelf->combined_output
+    bufp->chgIData(oldp+240,(vlSelf->combined_output
                              [0U][2U][3U]),32);
-    bufp->chgIData(oldp+244,(vlSelf->combined_output
+    bufp->chgIData(oldp+241,(vlSelf->combined_output
                              [0U][3U][0U]),32);
-    bufp->chgIData(oldp+245,(vlSelf->combined_output
+    bufp->chgIData(oldp+242,(vlSelf->combined_output
                              [0U][3U][1U]),32);
-    bufp->chgIData(oldp+246,(vlSelf->combined_output
+    bufp->chgIData(oldp+243,(vlSelf->combined_output
                              [0U][3U][2U]),32);
-    bufp->chgIData(oldp+247,(vlSelf->combined_output
+    bufp->chgIData(oldp+244,(vlSelf->combined_output
                              [0U][3U][3U]),32);
-    bufp->chgIData(oldp+248,(vlSelf->combined_output
+    bufp->chgIData(oldp+245,(vlSelf->combined_output
                              [1U][0U][0U]),32);
-    bufp->chgIData(oldp+249,(vlSelf->combined_output
+    bufp->chgIData(oldp+246,(vlSelf->combined_output
                              [1U][0U][1U]),32);
-    bufp->chgIData(oldp+250,(vlSelf->combined_output
+    bufp->chgIData(oldp+247,(vlSelf->combined_output
                              [1U][0U][2U]),32);
-    bufp->chgIData(oldp+251,(vlSelf->combined_output
+    bufp->chgIData(oldp+248,(vlSelf->combined_output
                              [1U][0U][3U]),32);
-    bufp->chgIData(oldp+252,(vlSelf->combined_output
+    bufp->chgIData(oldp+249,(vlSelf->combined_output
                              [1U][1U][0U]),32);
-    bufp->chgIData(oldp+253,(vlSelf->combined_output
+    bufp->chgIData(oldp+250,(vlSelf->combined_output
                              [1U][1U][1U]),32);
-    bufp->chgIData(oldp+254,(vlSelf->combined_output
+    bufp->chgIData(oldp+251,(vlSelf->combined_output
                              [1U][1U][2U]),32);
-    bufp->chgIData(oldp+255,(vlSelf->combined_output
+    bufp->chgIData(oldp+252,(vlSelf->combined_output
                              [1U][1U][3U]),32);
-    bufp->chgIData(oldp+256,(vlSelf->combined_output
+    bufp->chgIData(oldp+253,(vlSelf->combined_output
                              [1U][2U][0U]),32);
-    bufp->chgIData(oldp+257,(vlSelf->combined_output
+    bufp->chgIData(oldp+254,(vlSelf->combined_output
                              [1U][2U][1U]),32);
-    bufp->chgIData(oldp+258,(vlSelf->combined_output
+    bufp->chgIData(oldp+255,(vlSelf->combined_output
                              [1U][2U][2U]),32);
-    bufp->chgIData(oldp+259,(vlSelf->combined_output
+    bufp->chgIData(oldp+256,(vlSelf->combined_output
                              [1U][2U][3U]),32);
-    bufp->chgIData(oldp+260,(vlSelf->combined_output
+    bufp->chgIData(oldp+257,(vlSelf->combined_output
                              [1U][3U][0U]),32);
-    bufp->chgIData(oldp+261,(vlSelf->combined_output
+    bufp->chgIData(oldp+258,(vlSelf->combined_output
                              [1U][3U][1U]),32);
-    bufp->chgIData(oldp+262,(vlSelf->combined_output
+    bufp->chgIData(oldp+259,(vlSelf->combined_output
                              [1U][3U][2U]),32);
-    bufp->chgIData(oldp+263,(vlSelf->combined_output
+    bufp->chgIData(oldp+260,(vlSelf->combined_output
                              [1U][3U][3U]),32);
+    bufp->chgIData(oldp+261,(vlSelf->ciphertext[0U]
+                             [0U][0U]),32);
+    bufp->chgIData(oldp+262,(vlSelf->ciphertext[0U]
+                             [0U][1U]),32);
+    bufp->chgIData(oldp+263,(vlSelf->ciphertext[0U]
+                             [0U][2U]),32);
     bufp->chgIData(oldp+264,(vlSelf->ciphertext[0U]
-                             [0U][0U]),32);
+                             [0U][3U]),32);
     bufp->chgIData(oldp+265,(vlSelf->ciphertext[0U]
-                             [0U][1U]),32);
+                             [1U][0U]),32);
     bufp->chgIData(oldp+266,(vlSelf->ciphertext[0U]
-                             [0U][2U]),32);
+                             [1U][1U]),32);
     bufp->chgIData(oldp+267,(vlSelf->ciphertext[0U]
-                             [0U][3U]),32);
+                             [1U][2U]),32);
     bufp->chgIData(oldp+268,(vlSelf->ciphertext[0U]
-                             [1U][0U]),32);
-    bufp->chgIData(oldp+269,(vlSelf->ciphertext[0U]
-                             [1U][1U]),32);
-    bufp->chgIData(oldp+270,(vlSelf->ciphertext[0U]
-                             [1U][2U]),32);
-    bufp->chgIData(oldp+271,(vlSelf->ciphertext[0U]
                              [1U][3U]),32);
-    bufp->chgIData(oldp+272,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+269,(vlSelf->ciphertext[1U]
                              [0U][0U]),32);
-    bufp->chgIData(oldp+273,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+270,(vlSelf->ciphertext[1U]
                              [0U][1U]),32);
-    bufp->chgIData(oldp+274,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+271,(vlSelf->ciphertext[1U]
                              [0U][2U]),32);
-    bufp->chgIData(oldp+275,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+272,(vlSelf->ciphertext[1U]
                              [0U][3U]),32);
-    bufp->chgIData(oldp+276,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+273,(vlSelf->ciphertext[1U]
                              [1U][0U]),32);
-    bufp->chgIData(oldp+277,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+274,(vlSelf->ciphertext[1U]
                              [1U][1U]),32);
-    bufp->chgIData(oldp+278,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+275,(vlSelf->ciphertext[1U]
                              [1U][2U]),32);
-    bufp->chgIData(oldp+279,(vlSelf->ciphertext[1U]
+    bufp->chgIData(oldp+276,(vlSelf->ciphertext[1U]
                              [1U][3U]),32);
 }
 

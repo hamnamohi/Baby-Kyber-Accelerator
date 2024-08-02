@@ -120,24 +120,24 @@ module Encrypt (
             end
             stop_random_generation <= 0;
         end else if (enable) begin
-            for (int i = 0; i < 2; i++) begin
-                for (int j = 0; j < 4; j++) begin
-                    r[i][j] <= rand_num[i * 4 + j];
-                    e1[i][j] <= rand_num[8 + i * 4 + j];
-                end
-            end
-            for (int i = 0; i < 4; i++) begin
-                e2[i] <= rand_num[16 + i];
-            end
+            // for (int i = 0; i < 2; i++) begin
+            //     for (int j = 0; j < 4; j++) begin
+            //         r[i][j] <= rand_num[i * 4 + j];
+            //         e1[i][j] <= rand_num[8 + i * 4 + j];
+            //     end
+            // end
+            // for (int i = 0; i < 4; i++) begin
+            //     e2[i] <= rand_num[16 + i];
+            // end
           
-            stop_random_generation <= 1; 
-            // r[0][0] <= 0; r[0][1] <= 0; r[0][2] <= 1; r[0][3] <= -1;
-            // r[1][0] <= -1; r[1][1] <= 0; r[1][2] <= 1; r[1][3] <= 1;
+            // stop_random_generation <= 1; 
+            r[0][0] <= 0; r[0][1] <= 0; r[0][2] <= 1; r[0][3] <= -1;
+            r[1][0] <= -1; r[1][1] <= 0; r[1][2] <= 1; r[1][3] <= 1;
             
-            // e1[0][0] <= 0; e1[0][1] <= 1; e1[0][2] <= 1; e1[0][3] <= 0;
-            // e1[1][0] <= 0; e1[1][1] <= 0; e1[1][2] <= 1; e1[1][3] <= 0;
+            e1[0][0] <= 0; e1[0][1] <= 1; e1[0][2] <= 1; e1[0][3] <= 0;
+            e1[1][0] <= 0; e1[1][1] <= 0; e1[1][2] <= 1; e1[1][3] <= 0;
             
-            // e2[0] <= 0; e2[1] <= 0; e2[2] <= -1; e2[3] <= -1;
+            e2[0] <= 0; e2[1] <= 0; e2[2] <= -1; e2[3] <= -1;
         end
     end
 

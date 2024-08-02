@@ -113,8 +113,8 @@ VL_INLINE_OPT void VEncrypt___024root___ico_sequent__TOP__0(VEncrypt___024root* 
                                             [0U] + 
                                             vlSelf->Encrypt__DOT__poly_out5
                                             [0U]);
-        vlSelf->Encrypt__DOT__unnamedblk8__DOT__i = 4U;
-        vlSelf->Encrypt__DOT__unnamedblk9__DOT__i = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk5__DOT__i = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk6__DOT__i = 4U;
         vlSelf->Encrypt__DOT__added1[0U] = (vlSelf->Encrypt__DOT__poly_out2
                                             [0U] + 
                                             vlSelf->Encrypt__DOT__poly_out3
@@ -1368,46 +1368,6 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
     __Vfunc_Encrypt__DOT__rng_loop__BRA__18__KET____DOT__rng__DOT__generate_random_number__18__Vfuncout = 0;
     IData/*31:0*/ __Vfunc_Encrypt__DOT__rng_loop__BRA__19__KET____DOT__rng__DOT__generate_random_number__19__Vfuncout;
     __Vfunc_Encrypt__DOT__rng_loop__BRA__19__KET____DOT__rng__DOT__generate_random_number__19__Vfuncout = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v0;
-    __VdlyVal__Encrypt__DOT__e1__v0 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e2__v0;
-    __VdlyVal__Encrypt__DOT__e2__v0 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v1;
-    __VdlyVal__Encrypt__DOT__e1__v1 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e2__v1;
-    __VdlyVal__Encrypt__DOT__e2__v1 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v2;
-    __VdlyVal__Encrypt__DOT__e1__v2 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e2__v2;
-    __VdlyVal__Encrypt__DOT__e2__v2 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v3;
-    __VdlyVal__Encrypt__DOT__e1__v3 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e2__v3;
-    __VdlyVal__Encrypt__DOT__e2__v3 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v4;
-    __VdlyVal__Encrypt__DOT__e1__v4 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v5;
-    __VdlyVal__Encrypt__DOT__e1__v5 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v6;
-    __VdlyVal__Encrypt__DOT__e1__v6 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__e1__v7;
-    __VdlyVal__Encrypt__DOT__e1__v7 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v0;
-    __VdlyVal__Encrypt__DOT__r__v0 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v1;
-    __VdlyVal__Encrypt__DOT__r__v1 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v2;
-    __VdlyVal__Encrypt__DOT__r__v2 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v3;
-    __VdlyVal__Encrypt__DOT__r__v3 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v4;
-    __VdlyVal__Encrypt__DOT__r__v4 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v5;
-    __VdlyVal__Encrypt__DOT__r__v5 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v6;
-    __VdlyVal__Encrypt__DOT__r__v6 = 0;
-    IData/*31:0*/ __VdlyVal__Encrypt__DOT__r__v7;
-    __VdlyVal__Encrypt__DOT__r__v7 = 0;
     IData/*31:0*/ __VdlyVal__Encrypt__DOT__poly_out0__v0;
     __VdlyVal__Encrypt__DOT__poly_out0__v0 = 0;
     IData/*31:0*/ __VdlyVal__Encrypt__DOT__poly_out0__v1;
@@ -1456,26 +1416,18 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
     __VdlyVal__Encrypt__DOT__poly_out5__v2 = 0;
     IData/*31:0*/ __VdlyVal__Encrypt__DOT__poly_out5__v3;
     __VdlyVal__Encrypt__DOT__poly_out5__v3 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v0;
-    __VdlySet__Encrypt__DOT__e1__v0 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v1;
-    __VdlySet__Encrypt__DOT__e1__v1 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v2;
-    __VdlySet__Encrypt__DOT__e1__v2 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v3;
-    __VdlySet__Encrypt__DOT__e1__v3 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v4;
-    __VdlySet__Encrypt__DOT__e1__v4 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v5;
-    __VdlySet__Encrypt__DOT__e1__v5 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v6;
-    __VdlySet__Encrypt__DOT__e1__v6 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v7;
-    __VdlySet__Encrypt__DOT__e1__v7 = 0;
+    CData/*0:0*/ __VdlySet__Encrypt__DOT__r__v0;
+    __VdlySet__Encrypt__DOT__r__v0 = 0;
     CData/*0:0*/ __VdlySet__Encrypt__DOT__r__v8;
     __VdlySet__Encrypt__DOT__r__v8 = 0;
-    CData/*0:0*/ __VdlySet__Encrypt__DOT__r__v9;
-    __VdlySet__Encrypt__DOT__r__v9 = 0;
+    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v0;
+    __VdlySet__Encrypt__DOT__e1__v0 = 0;
+    CData/*0:0*/ __VdlySet__Encrypt__DOT__e1__v8;
+    __VdlySet__Encrypt__DOT__e1__v8 = 0;
+    CData/*0:0*/ __VdlySet__Encrypt__DOT__e2__v0;
+    __VdlySet__Encrypt__DOT__e2__v0 = 0;
+    CData/*0:0*/ __VdlySet__Encrypt__DOT__e2__v4;
+    __VdlySet__Encrypt__DOT__e2__v4 = 0;
     CData/*0:0*/ __VdlySet__Encrypt__DOT__poly_out0__v0;
     __VdlySet__Encrypt__DOT__poly_out0__v0 = 0;
     CData/*0:0*/ __VdlySet__Encrypt__DOT__poly_out0__v4;
@@ -1501,6 +1453,10 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
     CData/*0:0*/ __VdlySet__Encrypt__DOT__poly_out5__v4;
     __VdlySet__Encrypt__DOT__poly_out5__v4 = 0;
     // Body
+    __VdlySet__Encrypt__DOT__e2__v0 = 0U;
+    __VdlySet__Encrypt__DOT__e2__v4 = 0U;
+    __VdlySet__Encrypt__DOT__e1__v0 = 0U;
+    __VdlySet__Encrypt__DOT__e1__v8 = 0U;
     __VdlySet__Encrypt__DOT__poly_out5__v0 = 0U;
     __VdlySet__Encrypt__DOT__poly_out5__v4 = 0U;
     __VdlySet__Encrypt__DOT__poly_out4__v0 = 0U;
@@ -1513,18 +1469,18 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
     __VdlySet__Encrypt__DOT__poly_out1__v4 = 0U;
     __VdlySet__Encrypt__DOT__poly_out0__v0 = 0U;
     __VdlySet__Encrypt__DOT__poly_out0__v4 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v4 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v5 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v6 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v0 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v1 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v2 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v3 = 0U;
-    __VdlySet__Encrypt__DOT__e1__v7 = 0U;
+    __VdlySet__Encrypt__DOT__r__v0 = 0U;
     __VdlySet__Encrypt__DOT__r__v8 = 0U;
-    __VdlySet__Encrypt__DOT__r__v9 = 0U;
+    if ((1U & (~ (IData)(vlSelf->rst_n)))) {
+        vlSelf->Encrypt__DOT__unnamedblk3__DOT__i = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk1__DOT__i = 2U;
+        vlSelf->Encrypt__DOT__stop_random_generation = 0U;
+    }
     if (vlSelf->rst_n) {
         if (vlSelf->enable) {
+            __VdlySet__Encrypt__DOT__e2__v0 = 1U;
+            __VdlySet__Encrypt__DOT__e1__v0 = 1U;
             __VdlyVal__Encrypt__DOT__poly_out5__v0 
                 = vlSelf->Encrypt__DOT__poly_mult_inst5__DOT__temp_result
                 [0U];
@@ -1603,14 +1559,18 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
             __VdlyVal__Encrypt__DOT__poly_out0__v3 
                 = vlSelf->Encrypt__DOT__poly_mult_inst__DOT__temp_result
                 [3U];
+            __VdlySet__Encrypt__DOT__r__v0 = 1U;
         }
     } else {
+        __VdlySet__Encrypt__DOT__e2__v4 = 1U;
+        __VdlySet__Encrypt__DOT__e1__v8 = 1U;
         __VdlySet__Encrypt__DOT__poly_out5__v4 = 1U;
         __VdlySet__Encrypt__DOT__poly_out4__v4 = 1U;
         __VdlySet__Encrypt__DOT__poly_out3__v4 = 1U;
         __VdlySet__Encrypt__DOT__poly_out2__v4 = 1U;
         __VdlySet__Encrypt__DOT__poly_out1__v4 = 1U;
         __VdlySet__Encrypt__DOT__poly_out0__v4 = 1U;
+        __VdlySet__Encrypt__DOT__r__v8 = 1U;
     }
     if (vlSelf->rst_n) {
         if (vlSelf->Encrypt__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable) {
@@ -1792,84 +1752,37 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
     } else {
         vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number = 0U;
     }
-    if (vlSelf->rst_n) {
-        if (VL_UNLIKELY(vlSelf->enable)) {
-            VL_WRITEF_NX("r0%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [0U][0U]);
-            vlSelf->Encrypt__DOT__unnamedblk4__DOT__unnamedblk5__DOT__j = 4U;
-            vlSelf->Encrypt__DOT__unnamedblk4__DOT__i = 2U;
-            vlSelf->Encrypt__DOT__unnamedblk6__DOT__i = 4U;
-            __VdlyVal__Encrypt__DOT__e1__v0 = vlSelf->Encrypt__DOT__rand_num
-                [8U];
-            __VdlySet__Encrypt__DOT__e1__v0 = 1U;
-            __VdlyVal__Encrypt__DOT__e2__v0 = vlSelf->Encrypt__DOT__rand_num
-                [0x10U];
-            VL_WRITEF_NX("r1%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [0U][1U]);
-            vlSelf->Encrypt__DOT__stop_random_generation = 1U;
-            __VdlyVal__Encrypt__DOT__e1__v1 = vlSelf->Encrypt__DOT__rand_num
-                [9U];
-            __VdlySet__Encrypt__DOT__e1__v1 = 1U;
-            __VdlyVal__Encrypt__DOT__e2__v1 = vlSelf->Encrypt__DOT__rand_num
-                [0x11U];
-            VL_WRITEF_NX("r2%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [0U][2U]);
-            __VdlyVal__Encrypt__DOT__e1__v2 = vlSelf->Encrypt__DOT__rand_num
-                [0xaU];
-            __VdlySet__Encrypt__DOT__e1__v2 = 1U;
-            __VdlyVal__Encrypt__DOT__e2__v2 = vlSelf->Encrypt__DOT__rand_num
-                [0x12U];
-            VL_WRITEF_NX("r3%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [0U][3U]);
-            __VdlyVal__Encrypt__DOT__e1__v3 = vlSelf->Encrypt__DOT__rand_num
-                [0xbU];
-            __VdlySet__Encrypt__DOT__e1__v3 = 1U;
-            __VdlyVal__Encrypt__DOT__e2__v3 = vlSelf->Encrypt__DOT__rand_num
-                [0x13U];
-            VL_WRITEF_NX("r4%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [1U][0U]);
-            __VdlyVal__Encrypt__DOT__e1__v4 = vlSelf->Encrypt__DOT__rand_num
-                [0xcU];
-            __VdlySet__Encrypt__DOT__e1__v4 = 1U;
-            VL_WRITEF_NX("r5%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [1U][1U]);
-            __VdlyVal__Encrypt__DOT__e1__v5 = vlSelf->Encrypt__DOT__rand_num
-                [0xdU];
-            __VdlySet__Encrypt__DOT__e1__v5 = 1U;
-            VL_WRITEF_NX("r6%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [1U][2U]);
-            __VdlyVal__Encrypt__DOT__e1__v6 = vlSelf->Encrypt__DOT__rand_num
-                [0xeU];
-            __VdlySet__Encrypt__DOT__e1__v6 = 1U;
-            VL_WRITEF_NX("r7%11d\n",0,32,vlSelf->Encrypt__DOT__r
-                         [1U][3U]);
-            __VdlyVal__Encrypt__DOT__e1__v7 = vlSelf->Encrypt__DOT__rand_num
-                [0xfU];
-            __VdlySet__Encrypt__DOT__e1__v7 = 1U;
-            __VdlyVal__Encrypt__DOT__r__v0 = vlSelf->Encrypt__DOT__rand_num
-                [0U];
-            __VdlyVal__Encrypt__DOT__r__v1 = vlSelf->Encrypt__DOT__rand_num
-                [1U];
-            __VdlyVal__Encrypt__DOT__r__v2 = vlSelf->Encrypt__DOT__rand_num
-                [2U];
-            __VdlyVal__Encrypt__DOT__r__v3 = vlSelf->Encrypt__DOT__rand_num
-                [3U];
-            __VdlyVal__Encrypt__DOT__r__v4 = vlSelf->Encrypt__DOT__rand_num
-                [4U];
-            __VdlyVal__Encrypt__DOT__r__v5 = vlSelf->Encrypt__DOT__rand_num
-                [5U];
-            __VdlyVal__Encrypt__DOT__r__v6 = vlSelf->Encrypt__DOT__rand_num
-                [6U];
-            __VdlyVal__Encrypt__DOT__r__v7 = vlSelf->Encrypt__DOT__rand_num
-                [7U];
-        }
-    } else {
-        vlSelf->Encrypt__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-        vlSelf->Encrypt__DOT__unnamedblk1__DOT__i = 2U;
-        vlSelf->Encrypt__DOT__unnamedblk3__DOT__i = 4U;
-        __VdlySet__Encrypt__DOT__r__v8 = 1U;
-        vlSelf->Encrypt__DOT__stop_random_generation = 0U;
-        __VdlySet__Encrypt__DOT__r__v9 = 1U;
+    if (__VdlySet__Encrypt__DOT__e2__v0) {
+        vlSelf->Encrypt__DOT__e2[0U] = 0U;
+        vlSelf->Encrypt__DOT__e2[1U] = 0U;
+        vlSelf->Encrypt__DOT__e2[2U] = 0xffffffffU;
+        vlSelf->Encrypt__DOT__e2[3U] = 0xffffffffU;
+    }
+    if (__VdlySet__Encrypt__DOT__e2__v4) {
+        vlSelf->Encrypt__DOT__e2[0U] = 0U;
+        vlSelf->Encrypt__DOT__e2[1U] = 0U;
+        vlSelf->Encrypt__DOT__e2[2U] = 0U;
+        vlSelf->Encrypt__DOT__e2[3U] = 0U;
+    }
+    if (__VdlySet__Encrypt__DOT__e1__v0) {
+        vlSelf->Encrypt__DOT__e1[0U][0U] = 0U;
+        vlSelf->Encrypt__DOT__e1[0U][1U] = 1U;
+        vlSelf->Encrypt__DOT__e1[0U][2U] = 1U;
+        vlSelf->Encrypt__DOT__e1[0U][3U] = 0U;
+        vlSelf->Encrypt__DOT__e1[1U][0U] = 0U;
+        vlSelf->Encrypt__DOT__e1[1U][1U] = 0U;
+        vlSelf->Encrypt__DOT__e1[1U][2U] = 1U;
+        vlSelf->Encrypt__DOT__e1[1U][3U] = 0U;
+    }
+    if (__VdlySet__Encrypt__DOT__e1__v8) {
+        vlSelf->Encrypt__DOT__e1[0U][0U] = 0U;
+        vlSelf->Encrypt__DOT__e1[0U][1U] = 0U;
+        vlSelf->Encrypt__DOT__e1[0U][2U] = 0U;
+        vlSelf->Encrypt__DOT__e1[0U][3U] = 0U;
+        vlSelf->Encrypt__DOT__e1[1U][0U] = 0U;
+        vlSelf->Encrypt__DOT__e1[1U][1U] = 0U;
+        vlSelf->Encrypt__DOT__e1[1U][2U] = 0U;
+        vlSelf->Encrypt__DOT__e1[1U][3U] = 0U;
     }
     if (__VdlySet__Encrypt__DOT__poly_out5__v0) {
         vlSelf->Encrypt__DOT__poly_out5[0U] = __VdlyVal__Encrypt__DOT__poly_out5__v0;
@@ -1943,60 +1856,18 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
         vlSelf->Encrypt__DOT__poly_out0[2U] = 0U;
         vlSelf->Encrypt__DOT__poly_out0[3U] = 0U;
     }
-    if (__VdlySet__Encrypt__DOT__e1__v0) {
-        vlSelf->Encrypt__DOT__e2[0U] = __VdlyVal__Encrypt__DOT__e2__v0;
-        vlSelf->Encrypt__DOT__e1[0U][0U] = __VdlyVal__Encrypt__DOT__e1__v0;
-    }
-    if (__VdlySet__Encrypt__DOT__e1__v1) {
-        vlSelf->Encrypt__DOT__e2[1U] = __VdlyVal__Encrypt__DOT__e2__v1;
-        vlSelf->Encrypt__DOT__e1[0U][1U] = __VdlyVal__Encrypt__DOT__e1__v1;
-    }
-    if (__VdlySet__Encrypt__DOT__e1__v2) {
-        vlSelf->Encrypt__DOT__e2[2U] = __VdlyVal__Encrypt__DOT__e2__v2;
-        vlSelf->Encrypt__DOT__e1[0U][2U] = __VdlyVal__Encrypt__DOT__e1__v2;
-    }
-    if (__VdlySet__Encrypt__DOT__e1__v3) {
-        vlSelf->Encrypt__DOT__e2[3U] = __VdlyVal__Encrypt__DOT__e2__v3;
-        vlSelf->Encrypt__DOT__e1[0U][3U] = __VdlyVal__Encrypt__DOT__e1__v3;
-    }
-    if (__VdlySet__Encrypt__DOT__r__v8) {
-        vlSelf->Encrypt__DOT__e2[0U] = 0U;
-    }
-    if (__VdlySet__Encrypt__DOT__e1__v4) {
-        vlSelf->Encrypt__DOT__e1[1U][0U] = __VdlyVal__Encrypt__DOT__e1__v4;
-    }
-    if (__VdlySet__Encrypt__DOT__e1__v5) {
-        vlSelf->Encrypt__DOT__e1[1U][1U] = __VdlyVal__Encrypt__DOT__e1__v5;
-    }
-    if (__VdlySet__Encrypt__DOT__e1__v6) {
-        vlSelf->Encrypt__DOT__e1[1U][2U] = __VdlyVal__Encrypt__DOT__e1__v6;
-    }
-    if (__VdlySet__Encrypt__DOT__e1__v7) {
-        vlSelf->Encrypt__DOT__e1[1U][3U] = __VdlyVal__Encrypt__DOT__e1__v7;
-        vlSelf->Encrypt__DOT__r[0U][0U] = __VdlyVal__Encrypt__DOT__r__v0;
-        vlSelf->Encrypt__DOT__r[0U][1U] = __VdlyVal__Encrypt__DOT__r__v1;
-        vlSelf->Encrypt__DOT__r[0U][2U] = __VdlyVal__Encrypt__DOT__r__v2;
-        vlSelf->Encrypt__DOT__r[0U][3U] = __VdlyVal__Encrypt__DOT__r__v3;
-        vlSelf->Encrypt__DOT__r[1U][0U] = __VdlyVal__Encrypt__DOT__r__v4;
-        vlSelf->Encrypt__DOT__r[1U][1U] = __VdlyVal__Encrypt__DOT__r__v5;
-        vlSelf->Encrypt__DOT__r[1U][2U] = __VdlyVal__Encrypt__DOT__r__v6;
-        vlSelf->Encrypt__DOT__r[1U][3U] = __VdlyVal__Encrypt__DOT__r__v7;
-    }
-    if (__VdlySet__Encrypt__DOT__r__v8) {
-        vlSelf->Encrypt__DOT__e1[0U][0U] = 0U;
+    if (__VdlySet__Encrypt__DOT__r__v0) {
         vlSelf->Encrypt__DOT__r[0U][0U] = 0U;
+        vlSelf->Encrypt__DOT__r[0U][1U] = 0U;
+        vlSelf->Encrypt__DOT__r[0U][2U] = 1U;
+        vlSelf->Encrypt__DOT__r[0U][3U] = 0xffffffffU;
+        vlSelf->Encrypt__DOT__r[1U][0U] = 0xffffffffU;
+        vlSelf->Encrypt__DOT__r[1U][1U] = 0U;
+        vlSelf->Encrypt__DOT__r[1U][2U] = 1U;
+        vlSelf->Encrypt__DOT__r[1U][3U] = 1U;
     }
-    if (__VdlySet__Encrypt__DOT__r__v9) {
-        vlSelf->Encrypt__DOT__e2[1U] = 0U;
-        vlSelf->Encrypt__DOT__e2[2U] = 0U;
-        vlSelf->Encrypt__DOT__e2[3U] = 0U;
-        vlSelf->Encrypt__DOT__e1[0U][1U] = 0U;
-        vlSelf->Encrypt__DOT__e1[0U][2U] = 0U;
-        vlSelf->Encrypt__DOT__e1[0U][3U] = 0U;
-        vlSelf->Encrypt__DOT__e1[1U][0U] = 0U;
-        vlSelf->Encrypt__DOT__e1[1U][1U] = 0U;
-        vlSelf->Encrypt__DOT__e1[1U][2U] = 0U;
-        vlSelf->Encrypt__DOT__e1[1U][3U] = 0U;
+    if (__VdlySet__Encrypt__DOT__r__v8) {
+        vlSelf->Encrypt__DOT__r[0U][0U] = 0U;
         vlSelf->Encrypt__DOT__r[0U][1U] = 0U;
         vlSelf->Encrypt__DOT__r[0U][2U] = 0U;
         vlSelf->Encrypt__DOT__r[0U][3U] = 0U;
@@ -2005,29 +1876,6 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
         vlSelf->Encrypt__DOT__r[1U][2U] = 0U;
         vlSelf->Encrypt__DOT__r[1U][3U] = 0U;
     }
-    vlSelf->Encrypt__DOT__rand_num[0x13U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0x12U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0x11U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0x10U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__16__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0xfU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__15__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0xeU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__14__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0xdU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__13__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0xcU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__12__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0xbU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__11__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0xaU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__10__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[9U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__9__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[8U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__8__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[7U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__7__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[6U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__6__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[5U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__5__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[4U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__4__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[3U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__3__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[2U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__2__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[1U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__1__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT__rand_num[0U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number;
-    vlSelf->Encrypt__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable 
-        = ((~ (IData)(vlSelf->Encrypt__DOT__stop_random_generation)) 
-           & (IData)(vlSelf->enable));
     vlSelf->Encrypt__DOT__added[0U] = 0U;
     vlSelf->Encrypt__DOT__added1[0U] = 0U;
     vlSelf->Encrypt__DOT__added2[0U] = 0U;
@@ -2058,8 +1906,8 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
                                             [0U] + 
                                             vlSelf->Encrypt__DOT__poly_out5
                                             [0U]);
-        vlSelf->Encrypt__DOT__unnamedblk8__DOT__i = 4U;
-        vlSelf->Encrypt__DOT__unnamedblk9__DOT__i = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk5__DOT__i = 4U;
+        vlSelf->Encrypt__DOT__unnamedblk6__DOT__i = 4U;
         vlSelf->Encrypt__DOT__added1[0U] = (vlSelf->Encrypt__DOT__poly_out2
                                             [0U] + 
                                             vlSelf->Encrypt__DOT__poly_out3
@@ -2320,6 +2168,29 @@ VL_INLINE_OPT void VEncrypt___024root___nba_sequent__TOP__0(VEncrypt___024root* 
         = vlSelf->Encrypt__DOT__r[1U][1U];
     vlSelf->Encrypt__DOT____Vcellinp__poly_mult_inst5__polynomial2[0U] 
         = vlSelf->Encrypt__DOT__r[1U][0U];
+    vlSelf->Encrypt__DOT____Vcellinp__rng_loop__BRA__0__KET____DOT__rng__enable 
+        = ((~ (IData)(vlSelf->Encrypt__DOT__stop_random_generation)) 
+           & (IData)(vlSelf->enable));
+    vlSelf->Encrypt__DOT__rand_num[0x13U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__19__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0x12U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__18__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0x11U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__17__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0x10U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__16__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0xfU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__15__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0xeU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__14__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0xdU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__13__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0xcU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__12__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0xbU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__11__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0xaU] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__10__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[9U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__9__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[8U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__8__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[7U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__7__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[6U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__6__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[5U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__5__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[4U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__4__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[3U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__3__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[2U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__2__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[1U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__1__KET____DOT__rng__random_number;
+    vlSelf->Encrypt__DOT__rand_num[0U] = vlSelf->Encrypt__DOT____Vcellout__rng_loop__BRA__0__KET____DOT__rng__random_number;
     vlSelf->Encrypt__DOT__v[0U] = ((vlSelf->Encrypt__DOT__added2
                                     [0U] + vlSelf->Encrypt__DOT__e2
                                     [0U]) - vlSelf->Encrypt__DOT__coefficients_scaled
