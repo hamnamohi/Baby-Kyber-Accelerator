@@ -5,4 +5,4 @@ make -j -C obj_dir -f VDecrypt.mk VDecrypt
 
  ./obj_dir/VDecrypt
 
- gtkwave decrypt.vcd
+#  gtkwave decrypt.vcd

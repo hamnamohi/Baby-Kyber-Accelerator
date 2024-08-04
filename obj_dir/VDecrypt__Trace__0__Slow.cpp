@@ -110,8 +110,7 @@ VL_ATTR_COLD void VDecrypt___024root__trace_init_sub__TOP__0(VDecrypt___024root*
     tracep->popPrefix();
     tracep->declBus(c+60,0,"m_b",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 3,0);
     tracep->declBus(c+61,0,"decimal_value",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 3,0);
-    tracep->declBus(c+66,0,"D",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
-    tracep->declBus(c+67,0,"Q",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+66,0,"Q",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->pushPrefix("poly_out0", VerilatedTracePrefixType::ARRAY_UNPACKED);
     for (int i = 0; i < 4; ++i) {
         tracep->declBus(c+25+i*1,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 31,0);
@@ -152,22 +151,22 @@ VL_ATTR_COLD void VDecrypt___024root__trace_init_sub__TOP__0(VDecrypt___024root*
     }
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk2", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->pushPrefix("unnamedblk3", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+69,0,"j",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+68,0,"j",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk4", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->pushPrefix("unnamedblk5", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"b",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"b",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk6", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->popPrefix();
     tracep->pushPrefix("poly_mult2", VerilatedTracePrefixType::SCOPE_MODULE);
@@ -195,32 +194,32 @@ VL_ATTR_COLD void VDecrypt___024root__trace_init_sub__TOP__0(VDecrypt___024root*
     }
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk2", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->pushPrefix("unnamedblk3", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+69,0,"j",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+68,0,"j",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk4", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->pushPrefix("unnamedblk5", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"b",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"b",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk6", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"k",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk2", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->pushPrefix("unnamedblk3", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+68,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+67,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->popPrefix();
     tracep->popPrefix();
 }
@@ -267,10 +266,9 @@ VL_ATTR_COLD void VDecrypt___024root__trace_const_0_sub_0(VDecrypt___024root* vl
     // Init
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
     // Body
-    bufp->fullIData(oldp+66,(4U),32);
-    bufp->fullIData(oldp+67,(0x11U),32);
-    bufp->fullIData(oldp+68,(4U),32);
-    bufp->fullIData(oldp+69,(1U),32);
+    bufp->fullIData(oldp+66,(0x11U),32);
+    bufp->fullIData(oldp+67,(4U),32);
+    bufp->fullIData(oldp+68,(1U),32);
 }
 
 VL_ATTR_COLD void VDecrypt___024root__trace_full_0_sub_0(VDecrypt___024root* vlSelf, VerilatedVcd::Buffer* bufp);

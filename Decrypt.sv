@@ -11,6 +11,7 @@ module Decrypt (
     logic signed [31:0] poly_out0 [3:0];
     logic signed [31:0] poly_out1 [3:0];
     logic signed [31:0] temp_m_n [3:0];
+    
 
     PolynomialMatrixMultiplication poly_mult1 (
         .clk(clk),
@@ -62,6 +63,8 @@ module Decrypt (
             end
 
             decimal_value = (m_b[3] ? 8 : 0) | (m_b[2] ? 4 : 0) | (m_b[1] ? 2 : 0) | (m_b[0] ? 1 : 0);
+            
+            
 
             $display("m_b = %b", m_b);
             $display("decimal_value = %0d", decimal_value);

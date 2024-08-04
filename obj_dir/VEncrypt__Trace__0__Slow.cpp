@@ -925,7 +925,7 @@ VL_ATTR_COLD void VEncrypt___024root__trace_const_0_sub_0(VEncrypt___024root* vl
     bufp->fullIData(oldp+279,(2U),32);
     bufp->fullIData(oldp+280,(1U),32);
     bufp->fullIData(oldp+281,(0xffffffffU),32);
-    bufp->fullIData(oldp+282,(0x11U),32);
+    bufp->fullIData(oldp+282,(1U),32);
 }
 
 VL_ATTR_COLD void VEncrypt___024root__trace_full_0_sub_0(VEncrypt___024root* vlSelf, VerilatedVcd::Buffer* bufp);

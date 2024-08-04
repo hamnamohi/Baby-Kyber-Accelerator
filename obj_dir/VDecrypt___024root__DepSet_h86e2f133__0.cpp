@@ -226,11 +226,7 @@ VL_INLINE_OPT void VDecrypt___024root___ico_sequent__TOP__0(VDecrypt___024root* 
                                           ? 2U : 0U)) 
                                      | ((1U & (IData)(vlSelf->m_b))
                                          ? 1U : 0U)));
-    VL_WRITEF_NX("temp_m_n[0] = %0d, temp_m_n[1] = %0d, temp_m_n[2] = %0d, temp_m_n[3] = %0d\nm_b = %b\ndecimal_value = %0#\n",0,
-                 32,vlSelf->Decrypt__DOT__temp_m_n[0U],
-                 32,vlSelf->Decrypt__DOT__temp_m_n[1U],
-                 32,vlSelf->Decrypt__DOT__temp_m_n[2U],
-                 32,vlSelf->Decrypt__DOT__temp_m_n[3U],
+    VL_WRITEF_NX("m_b = %b\ndecimal_value = %0#\n",0,
                  4,vlSelf->m_b,4,(IData)(vlSelf->decimal_value));
     vlSelf->Decrypt__DOT____Vcellinp__poly_mult1__polynomial2[3U] 
         = vlSelf->secret_key[0U][3U];
@@ -836,11 +832,7 @@ VL_INLINE_OPT void VDecrypt___024root___nba_sequent__TOP__0(VDecrypt___024root* 
                                           ? 2U : 0U)) 
                                      | ((1U & (IData)(vlSelf->m_b))
                                          ? 1U : 0U)));
-    VL_WRITEF_NX("temp_m_n[0] = %0d, temp_m_n[1] = %0d, temp_m_n[2] = %0d, temp_m_n[3] = %0d\nm_b = %b\ndecimal_value = %0#\n",0,
-                 32,vlSelf->Decrypt__DOT__temp_m_n[0U],
-                 32,vlSelf->Decrypt__DOT__temp_m_n[1U],
-                 32,vlSelf->Decrypt__DOT__temp_m_n[2U],
-                 32,vlSelf->Decrypt__DOT__temp_m_n[3U],
+    VL_WRITEF_NX("m_b = %b\ndecimal_value = %0#\n",0,
                  4,vlSelf->m_b,4,(IData)(vlSelf->decimal_value));
 }
 

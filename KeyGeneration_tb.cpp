@@ -25,6 +25,7 @@ int main(int argc, char** argv) {
     dut->eval();
     m_trace->dump(sim_time++);
     dut->enable = 1;
+
     for (int i = 0; i < 15; i++) { 
         dut->clk = !dut->clk; 
         dut->eval();
@@ -34,28 +35,28 @@ int main(int argc, char** argv) {
 
             std::cout << "Secret Key 0: {";
             for (int j = 0; j < 4; j++) {
-                std::cout << dut->secretkey[0][j];
+                std::cout << (int32_t)dut->secretkey[0][j];
                 if (j < 3) std::cout << ", ";
             }
             std::cout << "}" << std::endl;
 
             std::cout << "Secret Key 1: {";
             for (int j = 0; j < 4; j++) {
-                std::cout << dut->secretkey[1][j];
+                std::cout << (int32_t)dut->secretkey[1][j];
                 if (j < 3) std::cout << ", ";
             }
             std::cout << "}" << std::endl;
 
             std::cout << "Result 0: {";
             for (int j = 0; j < 4; j++) {
-                std::cout << dut->result[0][j];
+                std::cout << (int32_t)dut->result[0][j];
                 if (j < 3) std::cout << ", ";
             }
             std::cout << "}" << std::endl;
 
             std::cout << "Result 1: {";
             for (int j = 0; j < 4; j++) {
-                std::cout << dut->result[1][j];
+                std::cout << (int32_t)dut->result[1][j];
                 if (j < 3) std::cout << ", ";
             }
             std::cout << "}" << std::endl;
@@ -64,7 +65,7 @@ int main(int argc, char** argv) {
             for (int j = 0; j < 4; j++) {
                 std::cout << "  {";
                 for (int k = 0; k < 4; k++) {
-                    std::cout << dut->combined_output[0][j][k];
+                    std::cout << (int32_t)dut->combined_output[0][j][k];
                     if (k < 3) std::cout << ", ";
                 }
                 std::cout << "}";
@@ -76,7 +77,7 @@ int main(int argc, char** argv) {
             for (int j = 0; j < 2; j++) {
                 std::cout << "  {";
                 for (int k = 0; k < 4; k++) {
-                    std::cout << dut->combined_output[1][j][k];
+                    std::cout << (int32_t)dut->combined_output[1][j][k];
                     if (k < 3) std::cout << ", ";
                 }
                 std::cout << "}";

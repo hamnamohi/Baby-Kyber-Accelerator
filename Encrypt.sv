@@ -38,7 +38,7 @@ module Encrypt (
         for (idx = 0; idx < 20; idx++) begin : rng_loop
             RandomNumberGenerator #(
                 .MIN_VALUE(-1), 
-                .MAX_VALUE(17)
+                .MAX_VALUE(1)
             ) rng (
                 .clk(clk),
                 .rst_n(rst_n),
@@ -120,24 +120,25 @@ module Encrypt (
             end
             stop_random_generation <= 0;
         end else if (enable) begin
-            // for (int i = 0; i < 2; i++) begin
-            //     for (int j = 0; j < 4; j++) begin
-            //         r[i][j] <= rand_num[i * 4 + j];
-            //         e1[i][j] <= rand_num[8 + i * 4 + j];
-            //     end
-            // end
-            // for (int i = 0; i < 4; i++) begin
-            //     e2[i] <= rand_num[16 + i];
-            // end
+            // $display("coef",coefficients);
+            for (int i = 0; i < 2; i++) begin
+                for (int j = 0; j < 4; j++) begin
+                    r[i][j] <= rand_num[i * 4 + j];
+                    e1[i][j] <= rand_num[8 + i * 4 + j];
+                end
+            end
+            for (int i = 0; i < 4; i++) begin
+                e2[i] <= rand_num[16 + i];
+            end
           
-            // stop_random_generation <= 1; 
-            r[0][0] <= 0; r[0][1] <= 0; r[0][2] <= 1; r[0][3] <= -1;
-            r[1][0] <= -1; r[1][1] <= 0; r[1][2] <= 1; r[1][3] <= 1;
+            stop_random_generation <= 1; 
+            // r[0][0] <= 0; r[0][1] <= 0; r[0][2] <= 1; r[0][3] <= -1;
+            // r[1][0] <= -1; r[1][1] <= 0; r[1][2] <= 1; r[1][3] <= 1;
             
-            e1[0][0] <= 0; e1[0][1] <= 1; e1[0][2] <= 1; e1[0][3] <= 0;
-            e1[1][0] <= 0; e1[1][1] <= 0; e1[1][2] <= 1; e1[1][3] <= 0;
+            // e1[0][0] <= 0; e1[0][1] <= 1; e1[0][2] <= 1; e1[0][3] <= 0;
+            // e1[1][0] <= 0; e1[1][1] <= 0; e1[1][2] <= 1; e1[1][3] <= 0;
             
-            e2[0] <= 0; e2[1] <= 0; e2[2] <= -1; e2[3] <= -1;
+            // e2[0] <= 0; e2[1] <= 0; e2[2] <= -1; e2[3] <= -1;
         end
     end
 
@@ -150,14 +151,14 @@ module Encrypt (
             u[1][i] = 0;
         end
         if (enable) begin
-            // $display("tt",combined_output[1][1][0]);
-            // $display("tt",combined_output[1][1][1]);
-            // $display("tt",combined_output[1][1][2]);
-            // $display("tt",combined_output[1][1][3]);
-            // $display("rr",r[1][0]);
-            // $display("rr",r[1][1]);
-            // $display("rr",r[1][2]);
-            // $display("rr",r[1][3]);
+            $display("tt",combined_output[1][0][0]);
+            $display("tt",combined_output[1][0][1]);
+            $display("tt",combined_output[1][0][2]);
+            $display("tt",combined_output[1][0][3]);
+            $display("rr",r[0][0]);
+            $display("rr",r[0][1]);
+            $display("rr",r[0][2]);
+            $display("rr",r[0][3]);
             for (int i = 0; i < 4; i++) begin
                 
                 $display("poly",poly_out4[i]);
@@ -188,11 +189,6 @@ module Encrypt (
                 u[0][i] = added[i] + e1[0][i];
                 u[1][i] = added1[i] + e1[1][i];
                 
-                // Print the values of u for debugging
-                // $display("u[0]", u[0][1]);
-                // $display("u[1]", u[0][2]);
-                // $display("u[2]", u[0][3]);
-                // $display("u[1][%0d]: %0d", i, u[1][i]);
             end
         end
     end
@@ -215,10 +211,10 @@ module Encrypt (
                 end else begin
                      v[i] = ( v[i] % 17);
                 end
-                // $display("dp0", coefficients_scaled[0]);
-                // $display("dp1", coefficients_scaled[1]);
-                // $display("dp2", coefficients_scaled[2]);
-                // $display("dp3", coefficients_scaled[3]);
+                // $display("dp0", added2[0]);
+                // $display("dp1", added2[1]);
+                // $display("dp2", added2[2]);
+                // $display("dp3", added2[3]);
         end
         for (int i = 0; i < 2; i++) begin
             

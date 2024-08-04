@@ -18,7 +18,7 @@ VEncrypt__Syms::VEncrypt__Syms(VerilatedContext* contextp, const char* namep, VE
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(1213);
+        Verilated::stackCheck(1207);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);

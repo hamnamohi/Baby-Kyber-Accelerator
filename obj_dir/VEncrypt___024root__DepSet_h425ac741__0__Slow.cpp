@@ -242,8 +242,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
     vlSelf->Encrypt__DOT__u[0U][3U] = 0U;
     vlSelf->Encrypt__DOT__u[1U][3U] = 0U;
     if (VL_UNLIKELY(vlSelf->enable)) {
-        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
-                     [0U]);
+        VL_WRITEF_NX("tt%11d\n",0,32,vlSelf->combined_output
+                     [1U][0U][0U]);
         vlSelf->Encrypt__DOT__added[0U] = (vlSelf->Encrypt__DOT__poly_out0
                                            [0U] + vlSelf->Encrypt__DOT__poly_out1
                                            [0U]);
@@ -253,6 +253,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                             [0U]);
         vlSelf->Encrypt__DOT__unnamedblk5__DOT__i = 4U;
         vlSelf->Encrypt__DOT__unnamedblk6__DOT__i = 4U;
+        VL_WRITEF_NX("tt%11d\n",0,32,vlSelf->combined_output
+                     [1U][0U][1U]);
         vlSelf->Encrypt__DOT__added1[0U] = (vlSelf->Encrypt__DOT__poly_out2
                                             [0U] + 
                                             vlSelf->Encrypt__DOT__poly_out3
@@ -269,8 +271,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                              : VL_MODDIVS_III(32, 
                                                               vlSelf->Encrypt__DOT__added2
                                                               [0U], (IData)(0x11U)));
-        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
-                     [1U]);
+        VL_WRITEF_NX("tt%11d\n",0,32,vlSelf->combined_output
+                     [1U][0U][2U]);
         vlSelf->Encrypt__DOT__added[0U] = (VL_GTS_III(32, 0U, 
                                                       vlSelf->Encrypt__DOT__added
                                                       [0U])
@@ -287,8 +289,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                             [1U] + 
                                             vlSelf->Encrypt__DOT__poly_out5
                                             [1U]);
-        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
-                     [2U]);
+        VL_WRITEF_NX("tt%11d\n",0,32,vlSelf->combined_output
+                     [1U][0U][3U]);
         vlSelf->Encrypt__DOT__added1[0U] = (VL_GTS_III(32, 0U, 
                                                        vlSelf->Encrypt__DOT__added1
                                                        [0U])
@@ -313,8 +315,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                              : VL_MODDIVS_III(32, 
                                                               vlSelf->Encrypt__DOT__added2
                                                               [1U], (IData)(0x11U)));
-        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
-                     [3U]);
+        VL_WRITEF_NX("rr%11d\n",0,32,vlSelf->Encrypt__DOT__r
+                     [0U][0U]);
         vlSelf->Encrypt__DOT__added[1U] = (vlSelf->Encrypt__DOT__poly_out0
                                            [1U] + vlSelf->Encrypt__DOT__poly_out1
                                            [1U]);
@@ -322,6 +324,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                             [2U] + 
                                             vlSelf->Encrypt__DOT__poly_out5
                                             [2U]);
+        VL_WRITEF_NX("rr%11d\n",0,32,vlSelf->Encrypt__DOT__r
+                     [0U][1U]);
         vlSelf->Encrypt__DOT__added1[1U] = (vlSelf->Encrypt__DOT__poly_out2
                                             [1U] + 
                                             vlSelf->Encrypt__DOT__poly_out3
@@ -338,6 +342,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                              : VL_MODDIVS_III(32, 
                                                               vlSelf->Encrypt__DOT__added2
                                                               [2U], (IData)(0x11U)));
+        VL_WRITEF_NX("rr%11d\n",0,32,vlSelf->Encrypt__DOT__r
+                     [0U][2U]);
         vlSelf->Encrypt__DOT__added[1U] = (VL_GTS_III(32, 0U, 
                                                       vlSelf->Encrypt__DOT__added
                                                       [1U])
@@ -354,6 +360,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                             [3U] + 
                                             vlSelf->Encrypt__DOT__poly_out5
                                             [3U]);
+        VL_WRITEF_NX("rr%11d\n",0,32,vlSelf->Encrypt__DOT__r
+                     [0U][3U]);
         vlSelf->Encrypt__DOT__added1[1U] = (VL_GTS_III(32, 0U, 
                                                        vlSelf->Encrypt__DOT__added1
                                                        [1U])
@@ -378,13 +386,19 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                              : VL_MODDIVS_III(32, 
                                                               vlSelf->Encrypt__DOT__added2
                                                               [3U], (IData)(0x11U)));
+        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
+                     [0U]);
         vlSelf->Encrypt__DOT__added[2U] = (vlSelf->Encrypt__DOT__poly_out0
                                            [2U] + vlSelf->Encrypt__DOT__poly_out1
                                            [2U]);
+        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
+                     [1U]);
         vlSelf->Encrypt__DOT__added1[2U] = (vlSelf->Encrypt__DOT__poly_out2
                                             [2U] + 
                                             vlSelf->Encrypt__DOT__poly_out3
                                             [2U]);
+        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
+                     [2U]);
         vlSelf->Encrypt__DOT__added[2U] = (VL_GTS_III(32, 0U, 
                                                       vlSelf->Encrypt__DOT__added
                                                       [2U])
@@ -409,6 +423,8 @@ VL_ATTR_COLD void VEncrypt___024root___stl_sequent__TOP__0(VEncrypt___024root* v
                                              : VL_MODDIVS_III(32, 
                                                               vlSelf->Encrypt__DOT__added1
                                                               [2U], (IData)(0x11U)));
+        VL_WRITEF_NX("poly%11d\n",0,32,vlSelf->Encrypt__DOT__poly_out4
+                     [3U]);
         vlSelf->Encrypt__DOT__added[3U] = (vlSelf->Encrypt__DOT__poly_out0
                                            [3U] + vlSelf->Encrypt__DOT__poly_out1
                                            [3U]);
