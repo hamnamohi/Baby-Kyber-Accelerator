@@ -6,7 +6,6 @@ module KeyGeneration (
     output logic [31:0] result [1:0][3:0],
     output logic signed [31:0] combined_output [1:0][3:0][3:0]
 );
-
     logic signed [31:0] rand_num [0:31];
     logic signed [31:0] A [3:0][3:0];
     logic signed[31:0] e [1:0][3:0];
@@ -20,7 +19,6 @@ module KeyGeneration (
 
     genvar idx;
     generate
-        // Generate 28 random numbers with limits -17 to 17
         for (idx = 0; idx < 16; idx++) begin : rng_loop1
             RandomNumberGenerator #(
                 .MIN_VALUE(-16), 
@@ -32,8 +30,6 @@ module KeyGeneration (
                 .random_number(rand_num[idx])
             );
         end
-
-        // Generate 4 random numbers with limits -1 to 17
         for (idx = 16; idx < 32; idx++) begin : rng_loop2
             RandomNumberGenerator #(
                 .MIN_VALUE(-1), 
@@ -62,38 +58,6 @@ module KeyGeneration (
             end
             stop_random_generation <= 0;
         end else if (enable) begin
-            // secretkey[0][0] <= 0;
-            // secretkey[0][1] <= 1;
-            // secretkey[0][2] <= -1;
-            // secretkey[0][3] <= -1;
-            // secretkey[1][0] <= 0;
-            // secretkey[1][1] <= -1;
-            // secretkey[1][2] <= 0;
-            // secretkey[1][3] <= -1;
-            // A[0][0] <= 11;
-            // A[0][1] <= 16;
-            // A[0][2] <= 16;
-            // A[0][3] <= 6;
-            // A[1][0] <= 3;    
-            // A[1][1] <= 6;
-            // A[1][2] <= 4;
-            // A[1][3] <= 9;    
-            // A[2][0] <= 1;
-            // A[2][1] <= 10;
-            // A[2][2] <= 3;
-            // A[2][3] <= 5;
-            // A[3][0] <= 15;
-            // A[3][1] <= 9;
-            // A[3][2] <= 1;
-            // A[3][3] <= 6;
-            // e[0][0] <= 0;
-            // e[0][1] <= 0;
-            // e[0][2] <= 1;
-            // e[0][3] <= 0;
-            // e[1][0] <= 0;
-            // e[1][1] <= -1;
-            // e[1][2] <= 1;
-            // e[1][3] <= 0;
 
             A[0][0] <= rand_num[0];
             A[0][1] <= rand_num[1];
@@ -129,33 +93,6 @@ module KeyGeneration (
             e[1][1] <= rand_num[29];
             e[1][2] <= rand_num[30];
             e[1][3] <= rand_num[31];
-
-           
-            $display("A",A[0][0]);
-            $display("A",A[0][1]);
-            $display("A",A[0][2]);
-            $display("A",A[0][3]);
-            $display("A",A[1][0]);
-            $display("A",A[1][1]);
-            $display("A",A[1][2]);
-            $display("A",A[1][3]);
-            $display("A",A[2][0]);
-            $display("A",A[2][1]);
-            $display("A",A[2][2]);
-            $display("A",A[2][3]);
-            $display("A",A[3][0]);
-            $display("A",A[3][1]);
-            $display("A",A[3][2]);
-            $display("A",A[3][3]);
-
-            $display("ee",e[0][0]);
-            $display("ee",e[0][1]);
-            $display("ee",e[0][2]);
-            $display("ee",e[0][3]);
-            $display("ee",e[1][0]);
-            $display("ee",e[1][1]);
-            $display("ee",e[1][2]);
-            $display("ee",e[1][3]);
             stop_random_generation <= 1; 
         end
     end

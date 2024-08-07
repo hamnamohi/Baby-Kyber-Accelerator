@@ -29,179 +29,127 @@ VL_INLINE_OPT void VDecrypt___024root___ico_sequent__TOP__0(VDecrypt___024root* 
                                              [0U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [0U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [0U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[0U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[0U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [0U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [0U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[0] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[0U] = VL_MODDIVS_III(32, 
+                                                                            [0U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [0U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[0] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    }
+                                                            [0U], (IData)(0x11U)));
     vlSelf->Decrypt__DOT__temp_m_n[1U] = (vlSelf->ciphertext
                                           [1U][0U][1U] 
                                           - (vlSelf->Decrypt__DOT__poly_out0
                                              [1U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [1U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [1U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[1U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[1U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [1U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [1U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[1] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[1U] = VL_MODDIVS_III(32, 
+                                                                            [1U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [1U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[1] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    }
+                                                            [1U], (IData)(0x11U)));
     vlSelf->Decrypt__DOT__temp_m_n[2U] = (vlSelf->ciphertext
                                           [1U][0U][2U] 
                                           - (vlSelf->Decrypt__DOT__poly_out0
                                              [2U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [2U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [2U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[2U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[2U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [2U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [2U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[2] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[2U] = VL_MODDIVS_III(32, 
+                                                                            [2U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [2U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[2] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    }
+                                                            [2U], (IData)(0x11U)));
     vlSelf->Decrypt__DOT__temp_m_n[3U] = (vlSelf->ciphertext
                                           [1U][0U][3U] 
                                           - (vlSelf->Decrypt__DOT__poly_out0
                                              [3U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [3U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [3U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[3U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[3U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [3U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [3U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[3] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[3U] = VL_MODDIVS_III(32, 
+                                                                            [3U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [3U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[3] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [0U]))) {
+                                                            [3U], (IData)(0x11U)));
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [0U])) {
         vlSelf->Decrypt__DOT__temp_m_n[0U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [0U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [0U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [0U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [0U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[0U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [0U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [0U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [0U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [0U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[0U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
     }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [1U]))) {
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [1U])) {
         vlSelf->Decrypt__DOT__temp_m_n[1U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [1U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [1U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [1U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [1U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[1U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [1U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [1U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [1U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [1U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[1U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
     }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [2U]))) {
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [2U])) {
         vlSelf->Decrypt__DOT__temp_m_n[2U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [2U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [2U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [2U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [2U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[2U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [2U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [2U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [2U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [2U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[2U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
     }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [3U]))) {
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [3U])) {
         vlSelf->Decrypt__DOT__temp_m_n[3U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [3U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [3U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [3U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [3U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[3U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [3U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [3U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [3U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [3U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[3U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
     }
     vlSelf->m_b = ((0xcU & (IData)(vlSelf->m_b)) | 
                    (((9U == vlSelf->Decrypt__DOT__temp_m_n
@@ -635,179 +583,127 @@ VL_INLINE_OPT void VDecrypt___024root___nba_sequent__TOP__0(VDecrypt___024root* 
                                              [0U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [0U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [0U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[0U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[0U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [0U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [0U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[0] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[0U] = VL_MODDIVS_III(32, 
+                                                                            [0U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [0U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[0] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    }
+                                                            [0U], (IData)(0x11U)));
     vlSelf->Decrypt__DOT__temp_m_n[1U] = (vlSelf->ciphertext
                                           [1U][0U][1U] 
                                           - (vlSelf->Decrypt__DOT__poly_out0
                                              [1U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [1U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [1U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[1U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[1U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [1U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [1U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[1] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[1U] = VL_MODDIVS_III(32, 
+                                                                            [1U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [1U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[1] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    }
+                                                            [1U], (IData)(0x11U)));
     vlSelf->Decrypt__DOT__temp_m_n[2U] = (vlSelf->ciphertext
                                           [1U][0U][2U] 
                                           - (vlSelf->Decrypt__DOT__poly_out0
                                              [2U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [2U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [2U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[2U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[2U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [2U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [2U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[2] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[2U] = VL_MODDIVS_III(32, 
+                                                                            [2U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [2U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[2] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    }
+                                                            [2U], (IData)(0x11U)));
     vlSelf->Decrypt__DOT__temp_m_n[3U] = (vlSelf->ciphertext
                                           [1U][0U][3U] 
                                           - (vlSelf->Decrypt__DOT__poly_out0
                                              [3U] + 
                                              vlSelf->Decrypt__DOT__poly_out1
                                              [3U]));
-    if (VL_GTS_III(32, 0U, vlSelf->Decrypt__DOT__temp_m_n
-                   [3U])) {
-        vlSelf->Decrypt__DOT__temp_m_n[3U] = VL_MODDIVS_III(32, 
+    vlSelf->Decrypt__DOT__temp_m_n[3U] = (VL_GTS_III(32, 0U, 
+                                                     vlSelf->Decrypt__DOT__temp_m_n
+                                                     [3U])
+                                           ? VL_MODDIVS_III(32, 
                                                             ((IData)(0x11U) 
                                                              + 
                                                              VL_MODDIVS_III(32, 
                                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                                            [3U], (IData)(0x11U))), (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[3] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    } else {
-        vlSelf->Decrypt__DOT__temp_m_n[3U] = VL_MODDIVS_III(32, 
+                                                                            [3U], (IData)(0x11U))), (IData)(0x11U))
+                                           : VL_MODDIVS_III(32, 
                                                             vlSelf->Decrypt__DOT__temp_m_n
-                                                            [3U], (IData)(0x11U));
-        VL_WRITEF_NX("temp after normalization[3] = %0d\n",0,
-                     32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [0U]))) {
+                                                            [3U], (IData)(0x11U)));
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [0U])) {
         vlSelf->Decrypt__DOT__temp_m_n[0U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [0U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [0U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [0U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [0U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[0U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [0U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [0U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [0U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [0U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[0U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [0U]);
     }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [1U]))) {
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [1U])) {
         vlSelf->Decrypt__DOT__temp_m_n[1U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [1U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [1U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [1U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [1U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[1U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [1U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [1U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [1U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [1U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[1U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [1U]);
     }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [2U]))) {
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [2U])) {
         vlSelf->Decrypt__DOT__temp_m_n[2U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [2U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [2U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [2U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [2U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[2U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [2U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [2U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [2U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [2U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[2U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [2U]);
     }
-    if (VL_UNLIKELY(VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                               [3U]))) {
+    if (VL_GTS_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                   [3U])) {
         vlSelf->Decrypt__DOT__temp_m_n[3U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    } else if (VL_UNLIKELY((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
-                                        [3U]) & VL_GTES_III(32, 0xdU, 
-                                                            vlSelf->Decrypt__DOT__temp_m_n
-                                                            [3U])))) {
+    } else if ((VL_LTES_III(32, 5U, vlSelf->Decrypt__DOT__temp_m_n
+                            [3U]) & VL_GTES_III(32, 0xdU, 
+                                                vlSelf->Decrypt__DOT__temp_m_n
+                                                [3U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[3U] = 9U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
-    } else if (VL_UNLIKELY((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
-                                       [3U]) & VL_GTES_III(32, 0x11U, 
-                                                           vlSelf->Decrypt__DOT__temp_m_n
-                                                           [3U])))) {
+    } else if ((VL_LTS_III(32, 0xdU, vlSelf->Decrypt__DOT__temp_m_n
+                           [3U]) & VL_GTES_III(32, 0x11U, 
+                                               vlSelf->Decrypt__DOT__temp_m_n
+                                               [3U]))) {
         vlSelf->Decrypt__DOT__temp_m_n[3U] = 0U;
-        VL_WRITEF_NX("temp_m_n%11d\n",0,32,vlSelf->Decrypt__DOT__temp_m_n
-                     [3U]);
     }
     vlSelf->m_b = ((0xcU & (IData)(vlSelf->m_b)) | 
                    (((9U == vlSelf->Decrypt__DOT__temp_m_n

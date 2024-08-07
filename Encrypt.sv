@@ -132,13 +132,6 @@ module Encrypt (
             end
           
             stop_random_generation <= 1; 
-            // r[0][0] <= 0; r[0][1] <= 0; r[0][2] <= 1; r[0][3] <= -1;
-            // r[1][0] <= -1; r[1][1] <= 0; r[1][2] <= 1; r[1][3] <= 1;
-            
-            // e1[0][0] <= 0; e1[0][1] <= 1; e1[0][2] <= 1; e1[0][3] <= 0;
-            // e1[1][0] <= 0; e1[1][1] <= 0; e1[1][2] <= 1; e1[1][3] <= 0;
-            
-            // e2[0] <= 0; e2[1] <= 0; e2[2] <= -1; e2[3] <= -1;
         end
     end
 
@@ -211,10 +204,6 @@ module Encrypt (
                 end else begin
                      v[i] = ( v[i] % 17);
                 end
-                // $display("dp0", added2[0]);
-                // $display("dp1", added2[1]);
-                // $display("dp2", added2[2]);
-                // $display("dp3", added2[3]);
         end
         for (int i = 0; i < 2; i++) begin
             
@@ -224,9 +213,5 @@ module Encrypt (
             end
         end
     end
-    // 7 0 7 0
-    // 0 0 -1 -1
-    // 9 9  0 9
-
 
 endmodule

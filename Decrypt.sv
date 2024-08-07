@@ -36,22 +36,20 @@ module Decrypt (
             temp_m_n[i] = ciphertext[1][0][i] - (poly_out0[i] + poly_out1[i]);
             if (temp_m_n[i] < 0) begin
                     temp_m_n[i] = (temp_m_n[i] % Q + Q) % Q;
-                    $display("temp after normalization[%0d] = %0d", i, temp_m_n[i]);
                 end else begin
                     temp_m_n[i] = (temp_m_n[i] % Q);
-                    $display("temp after normalization[%0d] = %0d", i, temp_m_n[i]);
                 end
         end
         for (int i = 0; i < 4; i++) begin
                 if (temp_m_n[i] < 5) begin
                     temp_m_n[i] = 0;
-                    $display("temp_m_n",temp_m_n[i]);
+                   
                 end else if (temp_m_n[i] >= 5 && temp_m_n[i] <= 13) begin
                     temp_m_n[i] = 9;
-                    $display("temp_m_n",temp_m_n[i]);
+                    
                 end else if (temp_m_n[i] > 13 && temp_m_n[i] <= 17) begin
                     temp_m_n[i] = 0;
-                    $display("temp_m_n",temp_m_n[i]);
+                   
                 end 
             end
             for (int i = 0; i < 4; i++) begin
