@@ -1,6 +1,6 @@
 #!/bin/bash
 
-verilator -Wall --trace -cc /home/hamna/Baby-Kyber-Accelerator/rtl/Decrypt.sv --exe /home/hamna/Baby-Kyber-Accelerator/rtl/Decrypt_tb.cpp -I /home/hamna/Baby-Kyber-Accelerator/rtl/PolynomialMatrixMultiplication.sv
+verilator -Wall --trace -cc Decrypt.sv --exe Decrypt_tb.cpp 
 make -j -C obj_dir -f VDecrypt.mk VDecrypt
 
  ./obj_dir/VDecrypt

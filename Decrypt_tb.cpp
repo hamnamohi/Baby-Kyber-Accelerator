@@ -18,30 +18,30 @@ int main(int argc, char** argv) {
     dut->rst_n = 0;
     dut->enable = 0;
 
-    dut->secret_key[0][0] = -1;
-    dut->secret_key[0][1] = 0;
-    dut->secret_key[0][2] = 1;
+    dut->secret_key[0][0] = 0;
+    dut->secret_key[0][1] = -1;
+    dut->secret_key[0][2] = -1;
     dut->secret_key[0][3] = -1;
 
-    dut->secret_key[1][0] = 0;
+    dut->secret_key[1][0] = -1;
     dut->secret_key[1][1] = 1;
     dut->secret_key[1][2] = 1;
     dut->secret_key[1][3] = 1;
 
-    dut->ciphertext[0][0][0] = 0;
-    dut->ciphertext[0][0][1] = 12;
-    dut->ciphertext[0][0][2] = 9;
-    dut->ciphertext[0][0][3] = 1;
+    dut->ciphertext[0][0][0] = 2;
+    dut->ciphertext[0][0][1] = 5;
+    dut->ciphertext[0][0][2] = 14;
+    dut->ciphertext[0][0][3] = 14;
 
-    dut->ciphertext[0][1][0] = 11;
-    dut->ciphertext[0][1][1] = 15;
-    dut->ciphertext[0][1][2] = 16;
-    dut->ciphertext[0][1][3] = 11;
+    dut->ciphertext[0][1][0] = 5;
+    dut->ciphertext[0][1][1] = 0;
+    dut->ciphertext[0][1][2] = 3;
+    dut->ciphertext[0][1][3] = 6;
 
-    dut->ciphertext[1][0][0] = 12;
-    dut->ciphertext[1][0][1] = 3;
-    dut->ciphertext[1][0][2] = 9;
-    dut->ciphertext[1][0][3] = 5;
+    dut->ciphertext[1][0][0] = 8;
+    dut->ciphertext[1][0][1] = 0;
+    dut->ciphertext[1][0][2] = 13;
+    dut->ciphertext[1][0][3] = 16;
 
     dut->ciphertext[1][1][0] = 0;
     dut->ciphertext[1][1][1] = 0;
