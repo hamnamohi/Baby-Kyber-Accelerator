@@ -57,7 +57,7 @@ module Decrypt (
                 m[i] = 0;
             end else if (temp_m_n[i] >= 5 && temp_m_n[i] <= 14) begin
                 m[i] = 9;
-            end else if (temp_m_n[i] > 13 && temp_m_n[i] <= 17) begin
+            end else if (temp_m_n[i] > 14 && temp_m_n[i] <= 17) begin
                 m[i] = 0;
             end else begin
                 m[i] = 0; // Ensure m[i] is always assigned
