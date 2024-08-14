@@ -1,4 +1,4 @@
-# Baby Kyber Accelerator
+# KyberLite - Baby Kyber Accelerator
 
 [![Join the chat at https://matrix.to/#/#merledu_baby_kyber_accelerator:matrix.org](https://badges.gitter.im/merledu/nucleusrv.svg)](https://matrix.to/#/#merledu_baby_kyber_accelerator:matrix.org)
 
