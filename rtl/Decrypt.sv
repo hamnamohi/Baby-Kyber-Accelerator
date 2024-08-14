@@ -44,7 +44,7 @@ module Decrypt (
                 if (temp_m_n[i] < 5) begin
                     temp_m_n[i] = 0;
                    
-                end else if (temp_m_n[i] >= 5 && temp_m_n[i] <= 13) begin
+                end else if (temp_m_n[i] >= 5 && temp_m_n[i] <= 14) begin
                     temp_m_n[i] = 9;
                     
                 end else if (temp_m_n[i] > 13 && temp_m_n[i] <= 17) begin
@@ -60,11 +60,11 @@ module Decrypt (
                 end
             end
 
-            decimal_value = (m_b[3] ? 8 : 0) | (m_b[2] ? 4 : 0) | (m_b[1] ? 2 : 0) | (m_b[0] ? 1 : 0);
+            decimal_value = (m_b[0] ? 8 : 0) | (m_b[1] ? 4 : 0) | (m_b[2] ? 2 : 0) | (m_b[3] ? 1 : 0);
             
             
 
-            $display("m_b = %b", m_b);
+            $display("m_b = %b", m_b[0],m_b[1],m_b[2],m_b[3]);
             $display("decimal_value = %0d", decimal_value);
     end
 

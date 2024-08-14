@@ -32,7 +32,6 @@ module PolynomialMatrixMultiplication #() (
     end else begin
         temp_result[k] = temp_result[k] % 17;
     end
-    // $display(temp_result[k]);
 end
 
 

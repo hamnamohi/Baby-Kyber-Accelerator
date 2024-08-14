@@ -3,7 +3,7 @@ module KeyGeneration (
     input logic rst_n,
     input logic enable,
     output logic signed [31:0] secretkey [1:0][3:0],
-    output logic [31:0] result [1:0][3:0],
+    output logic signed [31:0] result [1:0][3:0],
     output logic signed [31:0] combined_output [1:0][3:0][3:0]
 );
     logic signed [31:0] rand_num [0:31];
@@ -140,6 +140,7 @@ module KeyGeneration (
         result[1][i] = 0;
     end
     if (enable) begin
+    
         for (int i = 0; i < 4; i++) begin
             added[i] = (poly_out0[i] + poly_out1[i]);
             added1[i] = (poly_out2[i] + poly_out3[i]);
@@ -159,9 +160,22 @@ module KeyGeneration (
         for (int i = 0; i < 4; i++) begin
             result[0][i] = added[i] + e[0][i];
             result[1][i] = added1[i] + e[1][i];
+            if (result[0][i] < 0) begin
+                
+                result[0][i] = (result[0][i] % 17 + 17) % 17;
+            end else begin
+                result[0][i] = (result[0][i] % 17);
+            end
+            if (result[1][i] < 0) begin
+                 
+                result[1][i] = (result[1][i] % 17 + 17) % 17;
+            end else begin
+                result[1][i] = (result[1][i] % 17);
         end
+        
     end
 end
+    end
  always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             for (int i = 0; i < 2; i++) begin

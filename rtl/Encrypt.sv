@@ -28,10 +28,10 @@ module Encrypt (
     logic signed [31:0] u [1:0][3:0];
     logic signed [31:0] v [3:0];
 
-    DecimalToBitConverter dec_to_bit (
-        .input_value(message),
-        .coefficients(coefficients)
-    );
+    // DecimalToBitConverter dec_to_bit (
+    //     .input_value(message),
+    //     .coefficients(coefficients)
+    // );
 
     genvar idx;
     generate
@@ -120,7 +120,10 @@ module Encrypt (
             end
             stop_random_generation <= 0;
         end else if (enable) begin
-            // $display("coef",coefficients);
+            coefficients[0] <= message[0];
+            coefficients[1] <= message[1];
+            coefficients[2] <= message[2];
+            coefficients[3] <= message[3]; 
             for (int i = 0; i < 2; i++) begin
                 for (int j = 0; j < 4; j++) begin
                     r[i][j] <= rand_num[i * 4 + j];
@@ -144,17 +147,7 @@ module Encrypt (
             u[1][i] = 0;
         end
         if (enable) begin
-            $display("tt",combined_output[1][0][0]);
-            $display("tt",combined_output[1][0][1]);
-            $display("tt",combined_output[1][0][2]);
-            $display("tt",combined_output[1][0][3]);
-            $display("rr",r[0][0]);
-            $display("rr",r[0][1]);
-            $display("rr",r[0][2]);
-            $display("rr",r[0][3]);
             for (int i = 0; i < 4; i++) begin
-                
-                $display("poly",poly_out4[i]);
                 added[i] = (poly_out0[i] + poly_out1[i]);
                 added1[i] = (poly_out2[i] + poly_out3[i]);
                 added2[i] = (poly_out4[i] + poly_out5[i]); 
@@ -181,12 +174,24 @@ module Encrypt (
             for (int i = 0; i < 4; i++) begin
                 u[0][i] = added[i] + e1[0][i];
                 u[1][i] = added1[i] + e1[1][i];
+                 if ( u[0][i]  < 0) begin
+                     u[0][i]  = ( u[0][i]  % 17 + 17) % 17;
+                end else begin
+                     u[0][i]  = ( u[0][i]  % 17);
+                end
+                if ( u[1][i]  < 0) begin
+                     u[1][i]  = ( u[1][i]  % 17 + 17) % 17;
+                end else begin
+                     u[1][i]  = ( u[1][i]  % 17);
+
                 
+            end
             end
         end
     end
 
     always_comb begin
+
         for (int i = 0; i < 4; i++) begin
             if (coefficients[i] == 1) begin
                 coefficients_scaled[i] = 9;  // Multiply by qhalf = 9
@@ -198,7 +203,7 @@ module Encrypt (
 
     always_comb begin
         for (int i = 0; i < 4; i++) begin
-            v[i] = added2[i] + e2[i]  - coefficients_scaled[i];
+            v[i] = added2[i] + e2[i]  - coefficients_scaled[3-i];
              if ( v[i] < 0) begin
                      v[i] = ( v[i] % 17 + 17) % 17;
                 end else begin
