@@ -6,8 +6,6 @@ module Encrypt (
     input logic signed [31:0] combined_output [1:0][3:0][3:0],
     output logic signed [31:0] ciphertext[1:0] [1:0][3:0]
 );
-
-    // Intermediate variables
     logic signed [31:0] r [1:0][3:0];
     logic signed [31:0] e1 [1:0][3:0];
     logic signed [31:0] e2 [3:0];
@@ -133,7 +131,7 @@ module Encrypt (
             for (int i = 0; i < 4; i++) begin
                 e2[i] <= rand_num[16 + i];
             end
-          
+            
             stop_random_generation <= 1; 
         end
     end
@@ -153,19 +151,19 @@ module Encrypt (
                 added2[i] = (poly_out4[i] + poly_out5[i]); 
 
                 if (added[i] < 0) begin
-                    added[i] = (added[i] % 17 + 17) % 17;
+                    added[i] = added[i];
                 end else begin
                     added[i] = (added[i] % 17);
                 end
 
                 if (added1[i] < 0) begin
-                    added1[i] = (added1[i] % 17 + 17) % 17;
+                    added1[i] = added1[i];
                 end else begin
                     added1[i] = (added1[i] % 17);
                 end
 
                 if (added2[i] < 0) begin
-                    added2[i] = (added2[i] % 17 + 17) % 17;
+                    added2[i] = added2[i];
                 end else begin
                     added2[i] = (added2[i] % 17);
                 end
@@ -175,12 +173,12 @@ module Encrypt (
                 u[0][i] = added[i] + e1[0][i];
                 u[1][i] = added1[i] + e1[1][i];
                  if ( u[0][i]  < 0) begin
-                     u[0][i]  = ( u[0][i]  % 17 + 17) % 17;
+                     u[0][i]  = u[0][i] ;
                 end else begin
                      u[0][i]  = ( u[0][i]  % 17);
                 end
                 if ( u[1][i]  < 0) begin
-                     u[1][i]  = ( u[1][i]  % 17 + 17) % 17;
+                     u[1][i]  =  u[1][i] ;
                 end else begin
                      u[1][i]  = ( u[1][i]  % 17);
 
@@ -205,7 +203,7 @@ module Encrypt (
         for (int i = 0; i < 4; i++) begin
             v[i] = added2[i] + e2[i]  - coefficients_scaled[3-i];
              if ( v[i] < 0) begin
-                     v[i] = ( v[i] % 17 + 17) % 17;
+                     v[i] =  v[i]+ 17;
                 end else begin
                      v[i] = ( v[i] % 17);
                 end

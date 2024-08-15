@@ -22,36 +22,36 @@ int main(int argc, char** argv) {
 
     // Set combined_output values
     // Combined Output 0
-    dut->combined_output[0][0][0] = 8;
-    dut->combined_output[0][0][1] = 7;
-    dut->combined_output[0][0][2] = -1;
-    dut->combined_output[0][0][3] = -4;
+    dut->combined_output[0][0][0] = -7;
+    dut->combined_output[0][0][1] = 4;
+    dut->combined_output[0][0][2] = -16;
+    dut->combined_output[0][0][3] = 1;
 
-    dut->combined_output[0][1][0] = 15;
-    dut->combined_output[0][1][1] = 14;
-    dut->combined_output[0][1][2] = -9;
-    dut->combined_output[0][1][3] = -7;
+    dut->combined_output[0][1][0] = -13;
+    dut->combined_output[0][1][1] = 16;
+    dut->combined_output[0][1][2] = -10;
+    dut->combined_output[0][1][3] = 6;
 
-    dut->combined_output[0][2][0] = 0;
-    dut->combined_output[0][2][1] = 8;
-    dut->combined_output[0][2][2] = -13;
-    dut->combined_output[0][2][3] = 8;
+    dut->combined_output[0][2][0] = -2;
+    dut->combined_output[0][2][1] = -1;
+    dut->combined_output[0][2][2] = 2;
+    dut->combined_output[0][2][3] = 1;
 
-    dut->combined_output[0][3][0] = 8;
-    dut->combined_output[0][3][1] = -1;
-    dut->combined_output[0][3][2] = -7;
-    dut->combined_output[0][3][3] = 10;
+    dut->combined_output[0][3][0] = -3;
+    dut->combined_output[0][3][1] = 1;
+    dut->combined_output[0][3][2] = -6;
+    dut->combined_output[0][3][3] = -1;
 
     // Combined Output 1
-    dut->combined_output[1][0][0] = 13;
-    dut->combined_output[1][0][1] = 11;
-    dut->combined_output[1][0][2] = 14;
-    dut->combined_output[1][0][3] = 1;
+    dut->combined_output[1][0][0] = 1;
+    dut->combined_output[1][0][1] = 7;
+    dut->combined_output[1][0][2] = 10;
+    dut->combined_output[1][0][3] = 0;
 
-    dut->combined_output[1][1][0] = 2;
-    dut->combined_output[1][1][1] = 13;
-    dut->combined_output[1][1][2] = 9;
-    dut->combined_output[1][1][3] = 16;
+    dut->combined_output[1][1][0] = 8;
+    dut->combined_output[1][1][1] = 11;
+    dut->combined_output[1][1][2] = 0;
+    dut->combined_output[1][1][3] = 11;
 
     // Reset the module
     dut->rst_n = 0;
@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
     m_trace->dump(sim_time++);
 
     // Apply test vectors
-    dut->message = 8; // Example test message value
+    dut->message = 12; // Example test message value
     dut->enable = 1;
 
     // Clock cycle simulation

@@ -140,19 +140,18 @@ module KeyGeneration (
         result[1][i] = 0;
     end
     if (enable) begin
-    
         for (int i = 0; i < 4; i++) begin
             added[i] = (poly_out0[i] + poly_out1[i]);
             added1[i] = (poly_out2[i] + poly_out3[i]);
 
             if (added[i] < 0) begin
-                added[i] = (added[i] % 17 + 17) % 17;
+                added[i] = added[i] ;
             end else begin
                 added[i] = (added[i] % 17);
             end
 
             if (added1[i] < 0) begin
-                added1[i] = (added1[i] % 17 + 17) % 17;
+                added1[i] = added1[i] ;
             end else begin
                 added1[i] = (added1[i] % 17);
             end
@@ -162,13 +161,13 @@ module KeyGeneration (
             result[1][i] = added1[i] + e[1][i];
             if (result[0][i] < 0) begin
                 
-                result[0][i] = (result[0][i] % 17 + 17) % 17;
+                result[0][i] = result[0][i] ;
             end else begin
                 result[0][i] = (result[0][i] % 17);
             end
             if (result[1][i] < 0) begin
                  
-                result[1][i] = (result[1][i] % 17 + 17) % 17;
+                result[1][i] = result[1][i] ;
             end else begin
                 result[1][i] = (result[1][i] % 17);
         end
