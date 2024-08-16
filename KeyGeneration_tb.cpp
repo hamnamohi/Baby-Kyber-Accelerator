@@ -1,9 +1,53 @@
 #include <iostream>
+#include <fstream>
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 #include "VKeyGeneration.h"
 
 vluint64_t sim_time = 0;
+
+void readValuesFromFile(VKeyGeneration* dut) {
+    std::ifstream infile("/home/hamna/test/A1_values.txt");
+    if (!infile) {
+        std::cerr << "Error opening A1_values.txt. Please check the file path and permissions." << std::endl;
+        exit(1);
+    }
+
+    std::ifstream infile1("/home/hamna/test/s_values.txt");
+    if (!infile1) {
+        std::cerr << "Error opening s_values.txt. Please check the file path and permissions." << std::endl;
+        exit(1);
+    }
+
+    std::ifstream infile2("/home/hamna/test/e_values.txt");
+    if (!infile2) {
+        std::cerr << "Error opening e_values.txt. Please check the file path and permissions." << std::endl;
+        exit(1);
+    }
+
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (!(infile >> dut->A[i][j])) {
+                std::cerr << "Error reading A1_values.txt at index [" << i << "][" << j << "]." << std::endl;
+                exit(1);
+            }
+        }
+    }
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (!(infile1 >> dut->secret_key[i][j])) {
+                std::cerr << "Error reading s_values.txt at index [" << i << "][" << j << "]." << std::endl;
+                exit(1);
+            }
+            if (!(infile2 >> dut->e_[i][j])) {
+                std::cerr << "Error reading e_values.txt at index [" << i << "][" << j << "]." << std::endl;
+                exit(1);
+            }
+        }
+    }
+}
+
 
 int main(int argc, char** argv) {
     Verilated::commandArgs(argc, argv);
@@ -26,7 +70,10 @@ int main(int argc, char** argv) {
     m_trace->dump(sim_time++);
     dut->enable = 1;
 
-    for (int i = 0; i < 15; i++) { 
+    // Read values from file and set them
+    readValuesFromFile(dut);
+
+    for (int i = 0; i < 7; i++) { 
         dut->clk = !dut->clk; 
         dut->eval();
         m_trace->dump(sim_time++);
@@ -47,19 +94,7 @@ int main(int argc, char** argv) {
             }
             std::cout << "}" << std::endl;
 
-            std::cout << "Result 0: {";
-            for (int j = 0; j < 4; j++) {
-                std::cout << (int32_t)dut->result[0][j];
-                if (j < 3) std::cout << ", ";
-            }
-            std::cout << "}" << std::endl;
-
-            std::cout << "Result 1: {";
-            for (int j = 0; j < 4; j++) {
-                std::cout << (int32_t)dut->result[1][j];
-                if (j < 3) std::cout << ", ";
-            }
-            std::cout << "}" << std::endl;
+            
 
             std::cout << "Combined Output 0: {" << std::endl;
             for (int j = 0; j < 4; j++) {

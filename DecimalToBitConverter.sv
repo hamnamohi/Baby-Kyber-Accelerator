@@ -3,9 +3,11 @@ module DecimalToBitConverter (
     output logic [3:0] coefficients  
 );
     logic [7:0] bit_list;  
+    reg [31:0] expanded_value;
 
     always_comb begin
-        bit_list = input_value[7:0]; 
+        m = input_value[3:0];
+
         for (int i = 0; i < 4; i++) begin
             coefficients[i] = 0; 
             for (int j = 0; j < 2; j++) begin

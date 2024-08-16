@@ -1,9 +1,42 @@
 #include <iostream>
+#include <fstream>
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 #include "VDecrypt.h"
 
 vluint64_t sim_time = 0;
+
+void readValuesFromFile(VDecrypt* dut) {
+    std::ifstream ciphertext_file("/home/hamna/test/ciphertext_values.txt");
+    std::ifstream secret_key_file("/home/hamna/test/privatekey.txt");
+
+    if (!ciphertext_file || !secret_key_file) {
+        std::cerr << "Error opening one or more files. Please check the file paths and permissions." << std::endl;
+        exit(1);
+    }
+
+    // Read secret_key values
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (!(secret_key_file >> dut->secret_key[i][j])) {
+                std::cerr << "Error reading s.txt at index [" << i << "][" << j << "]." << std::endl;
+                exit(1);
+            }
+        }
+    }
+
+    // Read ciphertext values
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < 4; k++) {
+                if (!(ciphertext_file >> dut->ciphertext[i][j][k])) {
+                    std::cerr << "Error reading ciphertext.txt at index [" << i << "][" << j << "][" << k << "]." << std::endl;
+                    exit(1);
+                }
+            }
+        }
+    }
+}
 
 int main(int argc, char** argv) {
     Verilated::commandArgs(argc, argv);
@@ -14,40 +47,28 @@ int main(int argc, char** argv) {
     dut->trace(m_trace, 99);
     m_trace->open("decrypt.vcd");
 
+    // Initialize inputs
     dut->clk = 0;
     dut->rst_n = 0;
     dut->enable = 0;
 
-    dut->secret_key[0][0] = 0;
-    dut->secret_key[0][1] = -1;
-    dut->secret_key[0][2] = 0;
-    dut->secret_key[0][3] = -1;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < 4; k++) {
+                dut->ciphertext[i][j][k] = 0;
+            }
+        }
+    }
 
-    dut->secret_key[1][0] = 1;
-    dut->secret_key[1][1] = 0;
-    dut->secret_key[1][2] = -1;
-    dut->secret_key[1][3] = 1;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 4; j++) {
+            dut->secret_key[i][j] = 0;
+        }
+    }
+    // Read values from file and set them
+    readValuesFromFile(dut);
 
-    dut->ciphertext[0][0][0] = 16;
-    dut->ciphertext[0][0][1] = 6;
-    dut->ciphertext[0][0][2] = 2;
-    dut->ciphertext[0][0][3] = 12;
-
-    dut->ciphertext[0][1][0] = 15;
-    dut->ciphertext[0][1][1] = 4;
-    dut->ciphertext[0][1][2] = 4;
-    dut->ciphertext[0][1][3] = 12;
-
-    dut->ciphertext[1][0][0] = 8;
-    dut->ciphertext[1][0][1] = 6;
-    dut->ciphertext[1][0][2] = 1;
-    dut->ciphertext[1][0][3] = 4;
-
-    dut->ciphertext[1][1][0] = 0;
-    dut->ciphertext[1][1][1] = 0;
-    dut->ciphertext[1][1][2] = 0;
-    dut->ciphertext[1][1][3] = 0;
-
+    // Reset and evaluate
     dut->rst_n = 0;
     dut->eval();
     m_trace->dump(sim_time++);
@@ -55,7 +76,10 @@ int main(int argc, char** argv) {
     dut->eval();
     m_trace->dump(sim_time++);
 
+    // Apply test vectors
     dut->enable = 1;
+
+    // Clock cycle simulation
     for (int j = 0; j < 10; j++) {
         dut->clk = !dut->clk;
         dut->eval();

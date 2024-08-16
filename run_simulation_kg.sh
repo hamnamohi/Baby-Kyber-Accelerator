@@ -1,8 +1,8 @@
 #!/bin/bash
 
-g++ -c generate_random_number.cpp
-verilator -Wall --trace -cc KeyGeneration.sv --exe KeyGeneration_tb.cpp generate_random_number.cpp
-make -j -C obj_dir -f VKeyGeneration.mk VKeyGeneration
+g++ -c /home/hamna/test/Baby-Kyber-Accelerator/generate_random_number.cpp
+verilator -Wall --trace -cc /home/hamna/test/Baby-Kyber-Accelerator/KeyGeneration.sv --exe /home/hamna/test/Baby-Kyber-Accelerator/KeyGeneration_tb.cpp /home/hamna/test/Baby-Kyber-Accelerator/generate_random_number.cpp -I /home/hamna/test/Baby-Kyber-Accelerator/PolynomialMatrixMultiplication.sv
+make -j -C obj_dir -f VKeyGeneration.mk VKeyGeneration 
 
  ./obj_dir/VKeyGeneration
 

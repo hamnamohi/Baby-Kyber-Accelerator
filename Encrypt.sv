@@ -3,12 +3,17 @@ module Encrypt (
     input logic rst_n,
     input logic enable,
     input logic [31:0] message,
+    input logic signed [31:0] r [1:0][3:0],
+    input logic signed [31:0] e1 [1:0][3:0],
+    input logic signed [31:0] e2 [3:0],
     input logic signed [31:0] combined_output [1:0][3:0][3:0],
     output logic signed [31:0] ciphertext[1:0] [1:0][3:0]
 );
-    logic signed [31:0] r [1:0][3:0];
-    logic signed [31:0] e1 [1:0][3:0];
-    logic signed [31:0] e2 [3:0];
+
+    // Intermediate variables
+    // logic signed [31:0] r [1:0][3:0];
+    // logic signed [31:0] e1 [1:0][3:0];
+    // logic signed [31:0] e2 [3:0];
     logic signed [31:0] rand_num [0:19];
     logic signed [31:0] transposed_matrix [3:0][3:0];
     logic stop_random_generation;
@@ -21,30 +26,31 @@ module Encrypt (
     logic signed [31:0] added [3:0];
     logic signed [31:0] added1 [3:0];
     logic signed [31:0] added2 [3:0];
-    logic [3:0] coefficients;
+    logic signed [3:0] coefficients;
     logic signed [31:0] coefficients_scaled [3:0];
     logic signed [31:0] u [1:0][3:0];
     logic signed [31:0] v [3:0];
+    logic signed [31:0] temp [3:0];
 
     // DecimalToBitConverter dec_to_bit (
     //     .input_value(message),
     //     .coefficients(coefficients)
     // );
 
-    genvar idx;
-    generate
-        for (idx = 0; idx < 20; idx++) begin : rng_loop
-            RandomNumberGenerator #(
-                .MIN_VALUE(-1), 
-                .MAX_VALUE(1)
-            ) rng (
-                .clk(clk),
-                .rst_n(rst_n),
-                .enable(enable & !stop_random_generation),
-                .random_number(rand_num[idx])
-            );
-        end
-    endgenerate
+    // genvar idx;
+    // generate
+    //     for (idx = 0; idx < 20; idx++) begin : rng_loop
+    //         RandomNumberGenerator #(
+    //             .MIN_VALUE(-1), 
+    //             .MAX_VALUE(1)
+    //         ) rng (
+    //             .clk(clk),
+    //             .rst_n(rst_n),
+    //             .enable(enable & !stop_random_generation),
+    //             .random_number(rand_num[idx])
+    //         );
+    //     end
+    // endgenerate
 
     MatrixTranspose transpose_inst (
         .matrix_in(combined_output[0]),
@@ -121,17 +127,32 @@ module Encrypt (
             coefficients[0] <= message[0];
             coefficients[1] <= message[1];
             coefficients[2] <= message[2];
-            coefficients[3] <= message[3]; 
-            for (int i = 0; i < 2; i++) begin
-                for (int j = 0; j < 4; j++) begin
-                    r[i][j] <= rand_num[i * 4 + j];
-                    e1[i][j] <= rand_num[8 + i * 4 + j];
-                end
-            end
-            for (int i = 0; i < 4; i++) begin
-                e2[i] <= rand_num[16 + i];
-            end
+            coefficients[3] <= message[3];
             
+           
+        
+            // coefficients <= message;
+            // r[0][0] <= r_[0][0];
+            // r[0][1] <= r_[0][1];
+            // r[0][2] <= r_[0][2];
+            // r[0][3] <= r_[0][3];
+            // r[1][0] <= r_[1][0];
+            // r[1][1] <= r_[1][1];
+            // r[1][2] <= r_[1][2];
+            // r[1][3] <= r_[1][3];
+            // e1[0][0] <= e1_[0][0];
+            // e1[0][1] <= e1_[0][1];
+            // e1[0][2] <= e1_[0][2];
+            // e1[0][3] <= e1_[0][3];
+            // e1[1][0] <= e1_[1][0];
+            // e1[1][1] <= e1_[1][1];
+            // e1[1][2] <= e1_[1][2];
+            // e1[1][3] <= e1_[1][3];
+            // e2[0] <= e2_[0];
+            // e2[1] <= e2_[1];
+            // e2[2] <= e2_[2];
+            // e2[3] <= e2_[3];
+
             stop_random_generation <= 1; 
         end
     end
@@ -145,19 +166,21 @@ module Encrypt (
             u[1][i] = 0;
         end
         if (enable) begin
+            
             for (int i = 0; i < 4; i++) begin
+                
                 added[i] = (poly_out0[i] + poly_out1[i]);
                 added1[i] = (poly_out2[i] + poly_out3[i]);
                 added2[i] = (poly_out4[i] + poly_out5[i]); 
 
                 if (added[i] < 0) begin
-                    added[i] = added[i];
+                    added[i] = added[i]; 
                 end else begin
                     added[i] = (added[i] % 17);
                 end
 
                 if (added1[i] < 0) begin
-                    added1[i] = added1[i];
+                    added1[i] = added1[i] ;
                 end else begin
                     added1[i] = (added1[i] % 17);
                 end
@@ -169,6 +192,7 @@ module Encrypt (
                 end
                
             end
+           
             for (int i = 0; i < 4; i++) begin
                 u[0][i] = added[i] + e1[0][i];
                 u[1][i] = added1[i] + e1[1][i];
@@ -178,18 +202,16 @@ module Encrypt (
                      u[0][i]  = ( u[0][i]  % 17);
                 end
                 if ( u[1][i]  < 0) begin
-                     u[1][i]  =  u[1][i] ;
+                     u[1][i]  = u[1][i] ;
                 end else begin
                      u[1][i]  = ( u[1][i]  % 17);
 
                 
             end
-            end
         end
     end
-
+    end
     always_comb begin
-
         for (int i = 0; i < 4; i++) begin
             if (coefficients[i] == 1) begin
                 coefficients_scaled[i] = 9;  // Multiply by qhalf = 9
@@ -200,13 +222,16 @@ module Encrypt (
     end
 
     always_comb begin
+
         for (int i = 0; i < 4; i++) begin
-            v[i] = added2[i] + e2[i]  - coefficients_scaled[3-i];
+            
+            v[i] = (added2[i] + e2[i]) - coefficients_scaled[3-i];
              if ( v[i] < 0) begin
-                     v[i] =  v[i]+ 17;
+                     v[i] = v[i] + 17;
                 end else begin
                      v[i] = ( v[i] % 17);
                 end
+            
         end
         for (int i = 0; i < 2; i++) begin
             
