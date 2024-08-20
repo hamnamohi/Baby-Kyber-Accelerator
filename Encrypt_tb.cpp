@@ -7,11 +7,11 @@
 vluint64_t sim_time = 0;
 
 void readValuesFromFile(VEncrypt* dut) {
-    std::ifstream r_file("/home/hamna/test/r_values.txt");
-    std::ifstream e1_file("/home/hamna/test/e1_values.txt");
-    std::ifstream e2_file("/home/hamna/test/e2_values.txt");
-    std::ifstream combined_file("/home/hamna/test/publickey_values.txt");
-    std::ifstream message("/home/hamna/test/message.txt");
+    std::ifstream r_file("/home/hamna/Baby-Kyber-Accelerator/r_values.txt");
+    std::ifstream e1_file("/home/hamna/Baby-Kyber-Accelerator/e1_values.txt");
+    std::ifstream e2_file("/home/hamna/Baby-Kyber-Accelerator/e2_values.txt");
+    std::ifstream combined_file("/home/hamna/Baby-Kyber-Accelerator/publickey_values.txt");
+    std::ifstream message("/home/hamna/Baby-Kyber-Accelerator/message.txt");
 
     if (!r_file || !e1_file || !e2_file || !combined_file || !message) {
         std::cerr << "Error opening one or more files. Please check the file paths and permissions." << std::endl;

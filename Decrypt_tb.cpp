@@ -7,8 +7,8 @@
 vluint64_t sim_time = 0;
 
 void readValuesFromFile(VDecrypt* dut) {
-    std::ifstream ciphertext_file("/home/hamna/test/ciphertext_values.txt");
-    std::ifstream secret_key_file("/home/hamna/test/privatekey.txt");
+    std::ifstream ciphertext_file("/home/hamna/Baby-Kyber-Accelerator/ciphertext_values.txt");
+    std::ifstream secret_key_file("/home/hamna/Baby-Kyber-Accelerator/privatekey.txt");
 
     if (!ciphertext_file || !secret_key_file) {
         std::cerr << "Error opening one or more files. Please check the file paths and permissions." << std::endl;

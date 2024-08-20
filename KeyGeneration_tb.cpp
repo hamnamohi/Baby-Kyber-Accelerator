@@ -7,19 +7,19 @@
 vluint64_t sim_time = 0;
 
 void readValuesFromFile(VKeyGeneration* dut) {
-    std::ifstream infile("/home/hamna/test/A1_values.txt");
+    std::ifstream infile("/home/hamna/Baby-Kyber-Accelerator/A1_values.txt");
     if (!infile) {
         std::cerr << "Error opening A1_values.txt. Please check the file path and permissions." << std::endl;
         exit(1);
     }
 
-    std::ifstream infile1("/home/hamna/test/s_values.txt");
+    std::ifstream infile1("/home/hamna/Baby-Kyber-Accelerator/s_values.txt");
     if (!infile1) {
         std::cerr << "Error opening s_values.txt. Please check the file path and permissions." << std::endl;
         exit(1);
     }
 
-    std::ifstream infile2("/home/hamna/test/e_values.txt");
+    std::ifstream infile2("/home/hamna/Baby-Kyber-Accelerator/e_values.txt");
     if (!infile2) {
         std::cerr << "Error opening e_values.txt. Please check the file path and permissions." << std::endl;
         exit(1);
@@ -40,7 +40,7 @@ void readValuesFromFile(VKeyGeneration* dut) {
                 std::cerr << "Error reading s_values.txt at index [" << i << "][" << j << "]." << std::endl;
                 exit(1);
             }
-            if (!(infile2 >> dut->e_[i][j])) {
+            if (!(infile2 >> dut->e[i][j])) {
                 std::cerr << "Error reading e_values.txt at index [" << i << "][" << j << "]." << std::endl;
                 exit(1);
             }

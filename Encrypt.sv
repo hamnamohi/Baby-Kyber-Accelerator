@@ -10,13 +10,7 @@ module Encrypt (
     output logic signed [31:0] ciphertext[1:0] [1:0][3:0]
 );
 
-    // Intermediate variables
-    // logic signed [31:0] r [1:0][3:0];
-    // logic signed [31:0] e1 [1:0][3:0];
-    // logic signed [31:0] e2 [3:0];
-    logic signed [31:0] rand_num [0:19];
     logic signed [31:0] transposed_matrix [3:0][3:0];
-    logic stop_random_generation;
     logic signed [31:0] poly_out0 [3:0];
     logic signed [31:0] poly_out1 [3:0];
     logic signed [31:0] poly_out2 [3:0];
@@ -36,21 +30,6 @@ module Encrypt (
     //     .input_value(message),
     //     .coefficients(coefficients)
     // );
-
-    // genvar idx;
-    // generate
-    //     for (idx = 0; idx < 20; idx++) begin : rng_loop
-    //         RandomNumberGenerator #(
-    //             .MIN_VALUE(-1), 
-    //             .MAX_VALUE(1)
-    //         ) rng (
-    //             .clk(clk),
-    //             .rst_n(rst_n),
-    //             .enable(enable & !stop_random_generation),
-    //             .random_number(rand_num[idx])
-    //         );
-    //     end
-    // endgenerate
 
     MatrixTranspose transpose_inst (
         .matrix_in(combined_output[0]),
@@ -113,47 +92,19 @@ module Encrypt (
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            for (int i = 0; i < 2; i++) begin
                 for (int j = 0; j < 4; j++) begin
-                    r[i][j] <= 0;
-                    e1[i][j] <= 0;
-                end
-            end
-            for (int i = 0; i < 4; i++) begin
-                e2[i] <= 0;
-            end
-            stop_random_generation <= 0;
-        end else if (enable) begin
-            coefficients[0] <= message[0];
-            coefficients[1] <= message[1];
-            coefficients[2] <= message[2];
-            coefficients[3] <= message[3];
-            
-           
-        
-            // coefficients <= message;
-            // r[0][0] <= r_[0][0];
-            // r[0][1] <= r_[0][1];
-            // r[0][2] <= r_[0][2];
-            // r[0][3] <= r_[0][3];
-            // r[1][0] <= r_[1][0];
-            // r[1][1] <= r_[1][1];
-            // r[1][2] <= r_[1][2];
-            // r[1][3] <= r_[1][3];
-            // e1[0][0] <= e1_[0][0];
-            // e1[0][1] <= e1_[0][1];
-            // e1[0][2] <= e1_[0][2];
-            // e1[0][3] <= e1_[0][3];
-            // e1[1][0] <= e1_[1][0];
-            // e1[1][1] <= e1_[1][1];
-            // e1[1][2] <= e1_[1][2];
-            // e1[1][3] <= e1_[1][3];
-            // e2[0] <= e2_[0];
-            // e2[1] <= e2_[1];
-            // e2[2] <= e2_[2];
-            // e2[3] <= e2_[3];
+                    coefficients[j] <= 0;
 
-            stop_random_generation <= 1; 
+                end
+            
+        end else if (enable) begin
+            
+            for (int i = 0; i < 4; i++) begin
+                    coefficients[i] <= message[i];
+
+                end
+
+           
         end
     end
 
