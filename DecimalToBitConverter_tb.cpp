@@ -1,3 +1,4 @@
+/* Created by Hamna Mohiuddin @hamnamohi as a part of the Google Summer of Code 2024 Project. */
 #include <iostream>
 #include <verilated.h>
 #include <verilated_vcd_c.h>

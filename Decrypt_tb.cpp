@@ -1,3 +1,5 @@
+/* Created by Hamna Mohiuddin @hamnamohi as a part of the Google Summer of Code 2024 Project. */
+
 #include <iostream>
 #include <fstream>
 #include <verilated.h>
@@ -15,7 +17,6 @@ void readValuesFromFile(VDecrypt* dut) {
         exit(1);
     }
 
-    // Read secret_key values
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 4; j++) {
             if (!(secret_key_file >> dut->secret_key[i][j])) {
@@ -25,7 +26,6 @@ void readValuesFromFile(VDecrypt* dut) {
         }
     }
 
-    // Read ciphertext values
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             for (int k = 0; k < 4; k++) {
@@ -47,7 +47,6 @@ int main(int argc, char** argv) {
     dut->trace(m_trace, 99);
     m_trace->open("decrypt.vcd");
 
-    // Initialize inputs
     dut->clk = 0;
     dut->rst_n = 0;
     dut->enable = 0;
@@ -65,10 +64,8 @@ int main(int argc, char** argv) {
             dut->secret_key[i][j] = 0;
         }
     }
-    // Read values from file and set them
     readValuesFromFile(dut);
 
-    // Reset and evaluate
     dut->rst_n = 0;
     dut->eval();
     m_trace->dump(sim_time++);
@@ -76,10 +73,8 @@ int main(int argc, char** argv) {
     dut->eval();
     m_trace->dump(sim_time++);
 
-    // Apply test vectors
     dut->enable = 1;
 
-    // Clock cycle simulation
     for (int j = 0; j < 10; j++) {
         dut->clk = !dut->clk;
         dut->eval();

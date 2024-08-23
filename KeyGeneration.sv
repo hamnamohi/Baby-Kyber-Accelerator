@@ -1,3 +1,17 @@
+/* Created By Hamna Mohiuddin @hamnamohi as a Google Summer of Code 2024 Project.
+
+DESCRIPTION:
+The secret key s consists of two polynomials with small, randomly generated coefficients. 
+These coefficients are directly assigned to the secret key output array.
+
+The public key is composed of two primary components:
+1. A matrix of random polynomials A, generated with random coefficients modulo q.
+2. A vector of polynomials t, obtained through matrix multiplication of A with the secret key s, 
+plus an error vector e. These results are summed and reduced modulo q to form the final vector t, completing the public key.
+                                            t = A* s + e
+
+
+ */
 module KeyGeneration (
    
     input logic signed [31:0] A [3:0][3:0],
@@ -17,31 +31,6 @@ module KeyGeneration (
     logic signed [31:0] poly_out3 [3:0];
     logic signed [31:0] added [3:0];
     logic signed [31:0] added1 [3:0];
-    
-    // generate
-    //     for (idx = 0; idx < 16; idx++) begin : rng_loop1
-    //         RandomNumberGenerator #(
-    //             .MIN_VALUE(-16), 
-    //             .MAX_VALUE(16)
-    //         ) rng (
-    //             .clk(clk),
-    //             .rst_n(rst_n),
-    //             .enable(enable & !stop_random_generation),
-    //             .random_number(rand_num[idx])
-    //         );
-    //     end
-    //     for (idx = 16; idx < 32; idx++) begin : rng_loop2
-    //         RandomNumberGenerator #(
-    //             .MIN_VALUE(-1), 
-    //             .MAX_VALUE(1)
-    //         ) rng (
-    //             .clk(clk),
-    //             .rst_n(rst_n),
-    //             .enable(enable & !stop_random_generation),
-    //             .random_number(rand_num[idx])
-    //         );
-    //     end
-    // endgenerate
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin

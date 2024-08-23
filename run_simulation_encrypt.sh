@@ -1,3 +1,4 @@
+# /* Created by Hamna Mohiuddin @hamnamohi as a part of the Google Summer of Code 2024 Project. */
 #!/bin/bash
 
 g++ -c /home/hamna/Baby-Kyber-Accelerator/generate_random_number.cpp

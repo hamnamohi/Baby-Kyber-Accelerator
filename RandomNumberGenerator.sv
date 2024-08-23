@@ -1,3 +1,5 @@
+/* Created by Hamna Mohiuddin @hamnamohi as a part of the Google Summer of Code 2024 Project. */
+
 module RandomNumberGenerator #(
     parameter int MIN_VALUE, 
     parameter int MAX_VALUE  

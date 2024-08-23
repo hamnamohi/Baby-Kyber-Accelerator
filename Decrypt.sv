@@ -1,3 +1,19 @@
+/* Created By Hamna Mohiuddin @hamnamohi as a Google Summer of Code 2024 Project.
+
+DESCRIPTION:
+Decryption in Baby Kyber reconstructs the original binary message from the ciphertext 
+using the secret key. 
+The process involves calculating a noisy polynomial mn​, reducing it modulo q, and then recovering 
+the original binary message mb​ by analyzing the coefficients.
+The ciphertext and secret key are multiplied using the PolynomialMatrixMultiplication module, 
+yielding polynomial products. These products are subtracted from the ciphertext to obtain the noisy result mn​:
+                                                        mn = v - sT*u
+Negative values in mn are adjusted to ensure all coefficients are within the range [0, q].
+The coefficients of mn are rounded based on their proximity to ⌊ q / 2 ⌉ = 9, 
+determining whether the corresponding binary bit in mb should be 1 or 0. 
+The rounded coefficients are then converted into the binary message mb​, representing the original plaintext.
+ */
+
 module Decrypt (
     input logic clk,
     input logic rst_n,

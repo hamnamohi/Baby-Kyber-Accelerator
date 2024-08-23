@@ -1,3 +1,16 @@
+/* Created By Hamna Mohiuddin @hamnamohi as a Google Summer of Code 2024 Project.
+
+DESCRIPTION:
+The is component performs the multiplication between 2 polynomials based on the method described in Baby Kyber.
+The first nested loop iterates through the coefficients of the two input polynomials (polynomial1 and polynomial2).
+For each pair of coefficients, it calculates the product and adds it to the corresponding position in the temp_result array.
+
+The second nested loop is responsible for handling the modular arithmetic inherent in the polynomial multiplication process. 
+Specifically, it subtracts the high-order terms (those that exceed the polynomial degree of 3) and appropriately wraps them 
+around to ensure that the result remains within the polynomial's degree.
+
+ */
+
 module PolynomialMatrixMultiplication (
     input logic clk,
     input logic rst_n,
@@ -32,7 +45,6 @@ module PolynomialMatrixMultiplication (
     end else begin
         temp_result[k] = temp_result[k] % 17;
     end
-    // $display(temp_result[k]);
 end
 
 

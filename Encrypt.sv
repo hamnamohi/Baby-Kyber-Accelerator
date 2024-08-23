@@ -1,3 +1,25 @@
+/* Created By Hamna Mohiuddin @hamnamohi as a Google Summer of Code 2024 Project.
+
+DESCRIPTION:
+Encryption in Baby Kyber involves generating a ciphertext from a given message using the public key, 
+random polynomial vectors, and error polynomials. The process includes polynomial matrix multiplication, 
+modular reduction, and the addition of error vectors.
+
+The message is converted into a polynomial based on its binary representation. 
+For example, the binary representation of the number 11 is 1011, leading to the polynomial mb = x3 + x + 1. 
+This polynomial is then scaled by multiplying it with ⌊ q / 2 ⌉ = 9 , where q = 17, resulting in the scaled 
+polynomial m = 9x3+ 9x +9.
+
+The public key, consisting of a matrix A and a vector t, is multiplied by the random polynomial vector r to 
+compute the intermediate values u and v. These intermediate results are reduced modulo q and combined with error vectors e1 and e2​, 
+as well as the scaled message polynomial m, to form the final ciphertext:
+
+                                                    u = AT*r + e1
+
+                                                    v = tT*r + e2 +m
+
+ */
+
 module Encrypt (
     input logic clk,
     input logic rst_n,
@@ -25,11 +47,6 @@ module Encrypt (
     logic signed [31:0] u [1:0][3:0];
     logic signed [31:0] v [3:0];
     logic signed [31:0] temp [3:0];
-
-    // DecimalToBitConverter dec_to_bit (
-    //     .input_value(message),
-    //     .coefficients(coefficients)
-    // );
 
     MatrixTranspose transpose_inst (
         .matrix_in(combined_output[0]),

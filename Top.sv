@@ -1,3 +1,9 @@
+/* Created By Hamna Mohiuddin @hamnamohi as a Google Summer of Code 2024 Project.
+
+DESCRIPTION:
+The top module serves as the interface between the host device and the accelerator using the MMIO Approach with starting address 0x40007000.
+ */
+
 module Top (
     input logic clk,
     input logic rst_n,
@@ -10,11 +16,6 @@ module Top (
 
 );
 
-// logic [31:0] addr_Req;
-// logic [31:0] data_Req;
-// logic wen_Req;
-// logic [7:0] bytelane_Req;
-// logic [31:0] data_Resp;
 logic signed [31:0] secretkey [1:0][3:0];
 logic signed [31:0] result [1:0][3:0];
 logic signed [31:0] public_key [1:0][3:0][3:0];
@@ -28,11 +29,6 @@ logic signed [31:0] e2 [3:0];
 logic signed [31:0] decimal_value;
 logic signed [3:0] m_b;
 
-
-
-
-// logic signed [31:0] secretkey_reg [1:0][3:0];
-// logic signed [31:0] result [1:0][3:0];
 //Key Generation Input Registers
 logic signed [31:0] A_t000;
 logic signed [31:0] A_t001;
