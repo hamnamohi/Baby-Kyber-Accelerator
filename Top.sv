@@ -1,8 +1,4 @@
-/* Created By Hamna Mohiuddin @hamnamohi as a Google Summer of Code 2024 Project.
-
-DESCRIPTION:
-The top module serves as the interface between the host device and the accelerator using the MMIO Approach with starting address 0x40007000.
- */
+/* Created By Hamna Mohiuddin @hamnamohi as a Google Summer of Code 2024 Project.*/
 
 module Top (
     input logic clk,
@@ -11,11 +7,13 @@ module Top (
     input logic signed [31:0] data_Req,
     input logic signed [31:0] addr_Req,
     input logic wen_Req,
-    input logic [7:0] bytelane_Req,
-    output logic signed [31:0] data_Resp
+    input logic [3:0] bytelane_Req,
+    output logic signed [31:0] data_Resp,
+    output logic error
 
 );
 
+// logic [31:0] data_Resp;
 logic signed [31:0] secretkey [1:0][3:0];
 logic signed [31:0] result [1:0][3:0];
 logic signed [31:0] public_key [1:0][3:0][3:0];
@@ -64,8 +62,6 @@ logic signed [31:0] e_10;
 logic signed [31:0] e_11;
 logic signed [31:0] e_12;
 logic signed [31:0] e_13;
-
-//Key Generation Output Registers
 
 //Encrypt Input Registers
 logic signed [31:0] message;
@@ -133,23 +129,6 @@ logic signed [31:0] ciphertext102;
 logic signed [31:0] ciphertext103;
 
 
-// DataRequest dataReq (
-//     .addr(addr_Req),
-//     .data(data_Req),
-//     .wen(wen_Req),
-//     .ren(ren_Req),
-//     .bytelane(bytelane_Req),
-//     .ready(ready_Req),
-//     .valid(valid_Req)
-// );
-// DataResponse dataResp(
-//     .ready(ready_Resp),
-//     .data(data_Resp),
-//     .error(1'b0),
-//     .valid(valid_Resp)
-
-// );
-
 KeyGeneration keygen (
     .clk(clk),
     .rst_n(rst_n),
@@ -207,7 +186,6 @@ Decrypt decryption (
                 end
             end
 
-            // Resetting e2 to zero
             for (int i = 0; i < 4; i++) begin
                 e2[i] <= 32'b0;
             end
@@ -317,12 +295,13 @@ Decrypt decryption (
             ciphertext102 <= 32'b0;
             ciphertext103 <= 32'b0;
 
-            // decimal_value <= 32'b0;
+           
 
         end else if (enable) begin 
             //keygen
             if (wen_Req == 1'b1  )begin  
                 data_Resp <= 1;
+                error <= 0;                                                                             
                 $display("checking");
             if ( addr_Req == 'h40007000  )begin
                 A_t000 <= data_Req;
@@ -333,265 +312,265 @@ Decrypt decryption (
             else if (addr_Req == 'h40007008 )begin
                 A_t002 <= data_Req;
             end
-            else if (addr_Req == 'h40007012 )begin
+            else if (addr_Req == 'h4000700C )begin
                 A_t003 <= data_Req;
             end
-            else if (addr_Req == 'h40007016 )begin
+            else if (addr_Req == 'h40007010 )begin
                 A_t010 <= data_Req;
             end
-            else if (addr_Req == 'h40007020 )begin
+            else if (addr_Req == 'h40007014 )begin
                 A_t011 <= data_Req;
             end
-            else if (addr_Req == 'h40007024 )begin
+            else if (addr_Req == 'h40007018 )begin
                 A_t012 <= data_Req;
             end
-            else if (addr_Req == 'h40007028 )begin
+            else if (addr_Req == 'h4000701C )begin
                 A_t013 <= data_Req;
             end
-            else if (addr_Req == 'h40007032 )begin
+            else if (addr_Req == 'h40007020 )begin
                 A_t020 <= data_Req;
             end
-            else if (addr_Req == 'h40007036 )begin
+            else if (addr_Req == 'h40007024 )begin
                 A_t021 <= data_Req;
             end
-            else if (addr_Req == 'h40007040 )begin
+            else if (addr_Req == 'h40007028 )begin
                 A_t022 <= data_Req;
             end
-            else if (addr_Req == 'h40007044 )begin
+            else if (addr_Req == 'h4000702C )begin
                 A_t023 <= data_Req;
             end
-            else if (addr_Req == 'h40007048 )begin
+            else if (addr_Req == 'h40007030 )begin
                 A_t030 <= data_Req;
             end
-            else if (addr_Req == 'h40007052 )begin
+            else if (addr_Req == 'h40007034 )begin
                 A_t031 <= data_Req;
             end
-            else if (addr_Req == 'h40007056 )begin
+            else if (addr_Req == 'h40007038 )begin
                 A_t032 <= data_Req;
             end
-            else if (addr_Req == 'h40007060 )begin
+            else if (addr_Req == 'h4000703C )begin
                 A_t033 <= data_Req;
             end
-            else if (addr_Req == 'h40007064 )begin
+            else if (addr_Req == 'h40007040 )begin
                 s_00 <= data_Req;
             end
-            else if (addr_Req == 'h40007068 )begin
+            else if (addr_Req == 'h40007044 )begin
                 s_01 <= data_Req;
             end
-            else if (addr_Req == 'h40007072 )begin
+            else if (addr_Req == 'h40007048 )begin
                 s_02 <= data_Req;
             end
-            else if (addr_Req == 'h40007076 )begin
+            else if (addr_Req == 'h4000704C )begin
                 s_03 <= data_Req;
             end
-            else if (addr_Req == 'h40007080 )begin
+            else if (addr_Req == 'h40007050 )begin
                 s_10 <= data_Req;
             end
-            else if (addr_Req == 'h40007084 )begin
+            else if (addr_Req == 'h40007054 )begin
                 s_11 <= data_Req;
             end
-            else if (addr_Req == 'h40007088 )begin
+            else if (addr_Req == 'h40007058 )begin
                 s_12 <= data_Req;
             end
-            else if (addr_Req == 'h40007092 )begin
+            else if (addr_Req == 'h4000705C )begin
                 s_13 <= data_Req;
             end
-            else if (addr_Req == 'h40007096 )begin
+            else if (addr_Req == 'h40007060 )begin
                 e_00 <= data_Req;
             end
-            else if (addr_Req == 'h40007100 )begin
+            else if (addr_Req == 'h40007064 )begin
                 e_01 <= data_Req;
             end
-            else if (addr_Req == 'h40007104 )begin
+            else if (addr_Req == 'h40007068 )begin
                 e_02 <= data_Req;
             end
-            else if (addr_Req == 'h40007108 )begin
+            else if (addr_Req == 'h4000706C )begin
                 e_03 <= data_Req;
             end
-            else if (addr_Req == 'h40007112 )begin
+            else if (addr_Req == 'h40007070 )begin
                 e_10 <= data_Req;
             end
-            else if (addr_Req == 'h40007116 )begin
+            else if (addr_Req == 'h40007074 )begin
                 e_11 <= data_Req;
             end
-            else if (addr_Req == 'h40007120 )begin
+            else if (addr_Req == 'h40007078 )begin
                 e_12 <= data_Req;
             end
-            else if (addr_Req == 'h40007124 )begin
+            else if (addr_Req == 'h4000707C )begin
                 e_13 <= data_Req;
             end
-            else if (addr_Req == 'h40007128 )begin //encrypt
+            else if (addr_Req == 'h40007080 )begin //encrypt
                 message <= data_Req;
             end
-            else if (addr_Req == 'h40007132 )begin
+            else if (addr_Req == 'h40007084 )begin
                 public_key000 <= data_Req;
             end
-            else if (addr_Req == 'h40007136 )begin
+            else if (addr_Req == 'h40007088 )begin
                 public_key001 <= data_Req;
             end
-            else if (addr_Req == 'h40007140 )begin
+            else if (addr_Req == 'h4000708C )begin
                 public_key002 <= data_Req;
             end
-            else if (addr_Req == 'h40007144 )begin
+            else if (addr_Req == 'h40007090 )begin
                 public_key003 <= data_Req;
             end
-            else if (addr_Req == 'h40007148 )begin
+            else if (addr_Req == 'h40007094 )begin
                 public_key010 <= data_Req;
             end
-            else if (addr_Req == 'h40007152 )begin
+            else if (addr_Req == 'h40007098 )begin
                 public_key011 <= data_Req;
             end
-            else if (addr_Req == 'h40007156 )begin
+            else if (addr_Req == 'h4000709C )begin
                 public_key012 <= data_Req;
             end
-            else if (addr_Req == 'h40007160 )begin
+            else if (addr_Req == 'h400070A0 )begin
                 public_key013 <= data_Req;
             end
-            else if (addr_Req == 'h40007164 )begin
+            else if (addr_Req == 'h400070A4 )begin
                 public_key020 <= data_Req;
             end
-            else if (addr_Req == 'h40007168 )begin
+            else if (addr_Req == 'h400070A8 )begin
                 public_key021 <= data_Req;
             end
-            else if (addr_Req == 'h40007172 )begin
+            else if (addr_Req == 'h400070AC )begin
                 public_key022 <= data_Req;
             end
-            else if (addr_Req == 'h40007176 )begin
+            else if (addr_Req == 'h400070B0 )begin
                 public_key023 <= data_Req;
             end
-            else if (addr_Req == 'h40007180 )begin
+            else if (addr_Req == 'h400070B4 )begin
                 public_key030 <= data_Req;
             end
-            else if (addr_Req == 'h40007184 )begin
+            else if (addr_Req == 'h400070B8 )begin
                 public_key031 <= data_Req;
             end
-            else if (addr_Req == 'h40007188 )begin
+            else if (addr_Req == 'h400070BC )begin
                 public_key032 <= data_Req;
             end
-            else if (addr_Req == 'h40007192 )begin
+            else if (addr_Req == 'h400070C0 )begin
                 public_key033 <= data_Req;
             end
-            else if (addr_Req == 'h40007196 )begin
+            else if (addr_Req == 'h400070C4 )begin
                 public_key100 <= data_Req;
             end
-            else if (addr_Req == 'h40007200 )begin
+            else if (addr_Req == 'h400070C8 )begin
                 public_key101 <= data_Req;
             end
-            else if (addr_Req == 'h40007204 )begin
+            else if (addr_Req == 'h400070CC )begin
                 public_key102 <= data_Req;
             end
-            else if (addr_Req == 'h40007208 )begin
+            else if (addr_Req == 'h400070D0 )begin
                 public_key103 <= data_Req;
             end
-            else if (addr_Req == 'h40007212 )begin
+            else if (addr_Req == 'h400070D4 )begin
                 public_key110 <= data_Req;
             end
-            else if (addr_Req == 'h40007216 )begin
+            else if (addr_Req == 'h400070D8 )begin
                 public_key111 <= data_Req;
             end
-            else if (addr_Req == 'h40007220 )begin
+            else if (addr_Req == 'h400070DC )begin
                 public_key112 <= data_Req;
             end
-            else if (addr_Req == 'h40007224 )begin
+            else if (addr_Req == 'h400070E0 )begin
                 public_key113 <= data_Req;
             end
-            else if (addr_Req == 'h40007228 )begin
+            else if (addr_Req == 'h400070E4 )begin
                 r_00 <= data_Req;
             end
-            else if (addr_Req == 'h40007232 )begin
+            else if (addr_Req == 'h400070E8 )begin
                 r_01 <= data_Req;
             end
-            else if (addr_Req == 'h40007236 )begin
+            else if (addr_Req == 'h400070EC )begin
                 r_02 <= data_Req;
             end
-            else if (addr_Req == 'h40007240 )begin
+            else if (addr_Req == 'h400070F0 )begin
                 r_03 <= data_Req;
             end
-            else if (addr_Req == 'h40007244 )begin
+            else if (addr_Req == 'h400070F4 )begin
                 r_10 <= data_Req;
             end
-            else if (addr_Req == 'h40007248 )begin
+            else if (addr_Req == 'h400070F8 )begin
                 r_11 <= data_Req;
             end
-            else if (addr_Req == 'h40007252 )begin
+            else if (addr_Req == 'h400070FC )begin
                 r_12 <= data_Req;
             end
-            else if (addr_Req == 'h40007256 )begin
+            else if (addr_Req == 'h40007100 )begin
                 r_13 <= data_Req;
             end
-            else if (addr_Req == 'h40007260 )begin
+            else if (addr_Req == 'h40007104 )begin
                 e1_00 <= data_Req;
             end
-            else if (addr_Req == 'h40007264 )begin
+            else if (addr_Req == 'h40007108 )begin
                 e1_01 <= data_Req;
             end
-            else if (addr_Req == 'h40007268 )begin
+            else if (addr_Req == 'h4000710C )begin
                 e1_02 <= data_Req;
             end
-            else if (addr_Req == 'h40007272 )begin
+            else if (addr_Req == 'h40007110 )begin
                 e1_03 <= data_Req;
             end
-            else if (addr_Req == 'h40007276 )begin
+            else if (addr_Req == 'h40007114 )begin
                 e1_10 <= data_Req;
             end
-            else if (addr_Req == 'h40007280 )begin
+            else if (addr_Req == 'h40007118 )begin
                 e1_11 <= data_Req;
             end
-            else if (addr_Req == 'h40007284 )begin
+            else if (addr_Req == 'h4000711C )begin
                 e1_12 <= data_Req;
             end
-            else if (addr_Req == 'h40007288 )begin
+            else if (addr_Req == 'h40007120 )begin
                 e1_13 <= data_Req;
             end
-            else if (addr_Req == 'h40007292 )begin
+            else if (addr_Req == 'h40007124 )begin
                 e2_0 <= data_Req;
             end
-            else if (addr_Req == 'h40007296 )begin
+            else if (addr_Req == 'h40007128 )begin
                 e2_1 <= data_Req;
             end
-            else if (addr_Req == 'h40007300 )begin
+            else if (addr_Req == 'h4000712C )begin
                 e2_2 <= data_Req;
             end
-            else if (addr_Req == 'h40007304 )begin
+            else if (addr_Req == 'h40007130 )begin
                 e2_3 <= data_Req;
             end
-            else if (addr_Req == 'h40007308)begin
+            else if (addr_Req == 'h40007134)begin
                 ciphertext000 <= data_Req;
             end
-            else if (addr_Req == 'h40007312 )begin
+            else if (addr_Req == 'h40007138 )begin
                 ciphertext001 <= data_Req;
             end
-            else if (addr_Req == 'h40007316 )begin
+            else if (addr_Req == 'h4000713C )begin
                 ciphertext002 <= data_Req;
             end
-            else if (addr_Req == 'h40007320 )begin
+            else if (addr_Req == 'h40007140 )begin
                 ciphertext003 <= data_Req;
             end
-            else if (addr_Req == 'h40007324 )begin
+            else if (addr_Req == 'h40007144 )begin
                 ciphertext010 <= data_Req;
             end
-            else if (addr_Req == 'h40007328 )begin
+            else if (addr_Req == 'h40007148 )begin
                 ciphertext011 <= data_Req;
             end
-            else if (addr_Req == 'h40007332 )begin
+            else if (addr_Req == 'h4000714C )begin
                 ciphertext012 <= data_Req;
             end
-            else if (addr_Req == 'h40007336 )begin
+            else if (addr_Req == 'h40007150 )begin
                 ciphertext013 <= data_Req;
             end
-            else if (addr_Req == 'h40007340 )begin
+            else if (addr_Req == 'h40007154 )begin
                 ciphertext100 <= data_Req;
             end
-            else if (addr_Req == 'h40007344 )begin
+            else if (addr_Req == 'h40007158 )begin
                 ciphertext101 <= data_Req;
             end
-            else if (addr_Req == 'h40007348 )begin
+            else if (addr_Req == 'h4000715C )begin
                 ciphertext102 <= data_Req;
             end
-            else if (addr_Req == 'h40007352 )begin
+            else if (addr_Req == 'h40007160 )begin
                 ciphertext103 <= data_Req;
             end
-            else if (addr_Req == 'h40007356 )begin
+            else if (addr_Req == 'h40007164 )begin
 
                 //key generation inputs
                 A_reg[0][0] <= A_t000;
@@ -660,7 +639,7 @@ Decrypt decryption (
 
                 s_reg <= secretkey;
             end
-            else if (addr_Req == 'h40007360 )begin
+            else if (addr_Req == 'h40007168 )begin
                 //encrypt inputs
                 message <= data_Req;
                 public_key[0][0][0] <= public_key000;
@@ -726,7 +705,7 @@ Decrypt decryption (
                 ciphertext103 <= ciphertext[1][0][3];
 
             end
-            else if (addr_Req == 'h40007364 )begin
+            else if (addr_Req == 'h4000716C )begin
                 //decrypt
                 ciphertext[0][0][0] <= ciphertext000;
                 ciphertext[0][0][1] <= ciphertext001;
@@ -747,6 +726,7 @@ Decrypt decryption (
             end
             end 
             else if (wen_Req == 1'b0  ) begin 
+                error <= 0;  
                 if (addr_Req == 'h40007000) begin 
                     data_Resp <= public_key000;
                 end
@@ -756,106 +736,106 @@ Decrypt decryption (
                 else if (addr_Req == 'h40007008) begin 
                     data_Resp <= public_key002;
                 end
-                else if (addr_Req == 'h40007012) begin 
+                else if (addr_Req == 'h4000700C) begin 
                     data_Resp <= public_key003;
                 end
-                else if (addr_Req == 'h40007016) begin 
+                else if (addr_Req == 'h40007010) begin 
                     data_Resp <= public_key010;
                 end
-                else if (addr_Req == 'h40007020) begin 
+                else if (addr_Req == 'h40007014) begin 
                     data_Resp <= public_key011;
                 end
-                else if (addr_Req == 'h40007024) begin 
+                else if (addr_Req == 'h40007018) begin 
                     data_Resp <= public_key012;
                 end
-                else if (addr_Req == 'h40007028) begin 
+                else if (addr_Req == 'h4000701C) begin 
                     data_Resp <= public_key013;
                 end
-                else if (addr_Req == 'h40007032) begin 
+                else if (addr_Req == 'h40007020) begin 
                     data_Resp <= public_key020;
                 end
-                else if (addr_Req == 'h40007036) begin 
+                else if (addr_Req == 'h40007024) begin 
                     data_Resp <= public_key021;
                 end
-                else if (addr_Req == 'h40007040) begin 
+                else if (addr_Req == 'h40007028) begin 
                     data_Resp <= public_key022;
                 end
-                else if (addr_Req == 'h40007044) begin 
+                else if (addr_Req == 'h4000702C) begin 
                     data_Resp <= public_key023;
                 end
-                else if (addr_Req == 'h40007048) begin 
+                else if (addr_Req == 'h40007030) begin 
                     data_Resp <= public_key030;
                 end
-                else if (addr_Req == 'h40007052) begin 
+                else if (addr_Req == 'h40007034) begin 
                     data_Resp <= public_key031;
                 end
-                else if (addr_Req == 'h40007056) begin 
+                else if (addr_Req == 'h40007038) begin 
                     data_Resp <= public_key032;
                 end
-                else if (addr_Req == 'h40007060) begin 
+                else if (addr_Req == 'h4000703C) begin 
                     data_Resp <= public_key033;
                 end
-                else if (addr_Req == 'h40007064) begin 
+                else if (addr_Req == 'h40007040) begin 
                     data_Resp <= public_key100;
                 end
-                else if (addr_Req == 'h40007068) begin 
+                else if (addr_Req == 'h40007044) begin 
                     data_Resp <= public_key101;
                 end
-                else if (addr_Req == 'h40007072) begin 
+                else if (addr_Req == 'h40007048) begin 
                     data_Resp <= public_key102;
                 end
-                else if (addr_Req == 'h40007076) begin 
+                else if (addr_Req == 'h4000704C) begin 
                     data_Resp <= public_key103;
                 end
-                else if (addr_Req == 'h40007080) begin 
+                else if (addr_Req == 'h40007050) begin 
                     data_Resp <= public_key110;
                 end
-                else if (addr_Req == 'h40007084) begin 
+                else if (addr_Req == 'h40007054) begin 
                     data_Resp <= public_key111;
                 end
-                else if (addr_Req == 'h40007088) begin 
+                else if (addr_Req == 'h40007058) begin 
                     data_Resp <= public_key112;
                 end
-                else if (addr_Req == 'h40007092) begin 
+                else if (addr_Req == 'h4000705C) begin 
                     data_Resp <= public_key113;
                 end
-                else if (addr_Req == 'h40007096) begin 
+                else if (addr_Req == 'h40007060) begin 
                     data_Resp <= ciphertext000;
                 end
-                else if (addr_Req == 'h40007100) begin 
+                else if (addr_Req == 'h40007064) begin 
                     data_Resp <= ciphertext001;
                 end
-                else if (addr_Req == 'h40007104) begin 
+                else if (addr_Req == 'h40007068) begin 
                     data_Resp <= ciphertext002;
                 end
-                else if (addr_Req == 'h40007108) begin 
+                else if (addr_Req == 'h4000706C) begin 
                     data_Resp <= ciphertext003;
                 end
-                else if (addr_Req == 'h40007112) begin 
+                else if (addr_Req == 'h40007070) begin 
                     data_Resp <= ciphertext010;
                 end
-                else if (addr_Req == 'h40007116) begin 
+                else if (addr_Req == 'h40007074) begin 
                     data_Resp <= ciphertext011;
                 end
-                else if (addr_Req == 'h40007120) begin 
+                else if (addr_Req == 'h40007078) begin 
                     data_Resp <= ciphertext012;
                 end
-                else if (addr_Req == 'h40007124) begin 
+                else if (addr_Req == 'h4000707C) begin 
                     data_Resp <= ciphertext013;
                 end
-                else if (addr_Req == 'h40007128) begin 
+                else if (addr_Req == 'h40007080) begin 
                     data_Resp <= ciphertext100;
                 end
-                else if (addr_Req == 'h40007132) begin 
+                else if (addr_Req == 'h40007084) begin 
                     data_Resp <= ciphertext101;
                 end
-                else if (addr_Req == 'h40007136) begin 
+                else if (addr_Req == 'h40007088) begin 
                     data_Resp <= ciphertext102;
                 end
-                else if (addr_Req == 'h40007140) begin 
+                else if (addr_Req == 'h4000708C) begin 
                     data_Resp <= ciphertext103;
                 end
-                else if (addr_Req == 'h40007144) begin 
+                else if (addr_Req == 'h40007090) begin 
                     data_Resp <= message;
                 end
                 
